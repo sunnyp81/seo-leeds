@@ -1,0 +1,363 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'SEO Leeds | Local SEO Consultant';
+const description = 'SEO consultant in Leeds helping Yorkshire businesses rank higher in Google and AI search. Technical SEO, local search, content strategy.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SEO Leeds",
+    "url": "https://seo-leeds.uk",
+    "email": "2012.infinite@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Sunny Patel",
+      "sameAs": "https://sunnypatel.co.uk"
+    },
+    "description": "Local SEO consultancy for Leeds and West Yorkshire businesses."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "SEO Leeds",
+    "url": "https://seo-leeds.uk",
+    "email": "2012.infinite@gmail.com",
+    "description": "SEO consultant in Leeds helping Yorkshire businesses rank higher in Google and AI search.",
+    "founder": {
+      "@type": "Person",
+      "name": "Sunny Patel",
+      "sameAs": "https://sunnypatel.co.uk"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Leeds" },
+      { "@type": "Place", "name": "Headingley" },
+      { "@type": "Place", "name": "Roundhay" },
+      { "@type": "Place", "name": "Horsforth" },
+      { "@type": "Place", "name": "Chapel Allerton" },
+      { "@type": "Place", "name": "Bradford" },
+      { "@type": "Place", "name": "Wakefield" },
+      { "@type": "Place", "name": "Huddersfield" },
+      { "@type": "Place", "name": "West Yorkshire" }
+    ],
+    "priceRange": "$$"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://seo-leeds.uk/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SEO Leeds | Local SEO Consultant",
+    "url": "https://seo-leeds.uk/",
+    "description": "SEO consultant in Leeds helping Yorkshire businesses rank higher in Google and AI search. Technical SEO, local search, content strategy.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does SEO cost in Leeds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO services in Leeds typically range from £500 to £3,000 per month depending on the scope, competition in your industry, and whether you need local, national, or e-commerce SEO. A standalone SEO audit starts from £300. Visit our pricing page for detailed packages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does SEO take to work for a Leeds business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most Leeds businesses see measurable improvements within 3 to 6 months. Local SEO changes like Google Business Profile optimisation can show results within weeks. Competitive terms in sectors like legal or financial services may take 6 to 12 months to reach page one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need local SEO or national SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your customers are primarily in Leeds and West Yorkshire, local SEO is the priority. This focuses on Google Business Profile, local citations, and geo-targeted content. If you sell products or services nationwide, you need a national SEO strategy with broader keyword targeting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is AI search optimisation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI search optimisation ensures your business appears in AI-generated answers from tools like ChatGPT, Google AI Overviews, Perplexity, and Claude. It involves structuring content so AI systems can extract and cite your information directly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with Google penalties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We diagnose manual actions and algorithmic penalties through detailed technical audits, identify toxic backlinks, fix on-page issues, and file reconsideration requests where needed. Recovery timelines vary but typically take 2 to 6 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with small businesses in Leeds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Many of our clients are small and medium-sized businesses across Leeds and West Yorkshire. We offer flexible pricing and scalable packages designed for businesses that need results without enterprise-level budgets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas around Leeds do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover all of Leeds including Headingley, Roundhay, Horsforth, Chapel Allerton, Morley, and Pudsey, plus the wider West Yorkshire region including Bradford, Wakefield, Huddersfield, Harrogate, and York."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with SEO for my Leeds business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with a free SEO audit. We analyse your website, competitors, and local search landscape, then provide a clear action plan with priorities and expected timelines. No obligation, no jargon."
+        }
+      }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <section class="px-4 py-12">
+    <div class="prose">
+      <h1>SEO Leeds — Local Search Marketing for Yorkshire Businesses</h1>
+
+      <div class="quick-answer">
+        <p>SEO Leeds provides data-driven search engine optimisation for businesses across Leeds and West Yorkshire. We combine technical SEO, local search strategy, and AI search optimisation to help Yorkshire companies rank higher in Google, get found in AI answers, and convert more organic traffic into revenue.</p>
+      </div>
+
+      <p>SEO Leeds is a specialist search marketing consultancy based in Leeds, West Yorkshire. We help local businesses, professional services firms, and e-commerce companies improve their visibility in Google, Bing, and the growing number of AI-powered search tools that are reshaping how people find products and services. Whether you run a legal practice near Park Row, a fintech startup at Wellington Place, or a retail brand with a presence at Trinity Leeds, our approach is the same: understand your market, fix your technical foundations, build content that earns rankings, and measure everything against revenue.</p>
+
+      <p>Leeds is the third-largest city in England by population and the economic centre of West Yorkshire. The city has undergone significant transformation over the past decade, with the arrival of Channel 4's national headquarters at South Bank, the continued growth of the financial district around Park Row and Wellington Place, and the expansion of the digital and tech sector across Leeds Dock and beyond. This growth means more competition for local search visibility. Businesses that relied on word of mouth or a basic website five years ago now face competitors with optimised Google Business Profiles, structured data, and content strategies designed to capture every relevant search query.</p>
+
+      <p>That is where we come in. SEO Leeds works with businesses across every major sector in the city to build search visibility that lasts. We do not chase algorithm tricks or promise overnight rankings. We build technically sound websites, create content that matches what people actually search for, and ensure your business appears wherever your customers are looking, including the AI-powered tools that are rapidly changing search behaviour.</p>
+
+      <h2>Why Leeds Businesses Need SEO</h2>
+
+      <p>Leeds is a city of opportunity and competition. As the largest legal and financial centre outside London, it hosts major employers including DLA Piper, Eversheds Sutherland, and dozens of mid-tier law firms, alongside financial institutions and fintech companies clustered around the city centre. The arrival of Channel 4's headquarters at South Bank and the growth of companies like Sky Betting and Gaming have cemented Leeds as a Northern Powerhouse for media and technology. NHS Digital operates from Leeds, making the city a significant hub for healthtech and public sector digital services.</p>
+
+      <p>This concentration of professional services, technology, and retail creates intense competition for search visibility. When a business owner in Headingley searches for "accountant near me" or a procurement manager in the financial district searches for "IT support Leeds", the businesses that appear at the top of Google capture the lion's share of enquiries. The rest are invisible.</p>
+
+      <p>Consider the numbers. Google processes over 8.5 billion searches per day globally. In a city of nearly 800,000 people with a metropolitan area exceeding 1.9 million, the volume of local commercial searches is substantial. Terms like "solicitor Leeds", "web design Leeds", and "personal trainer Leeds" each generate hundreds of searches every month. The businesses ranking in positions one to three for these terms receive the majority of clicks. Those below position five receive almost none.</p>
+
+      <p>Beyond traditional search, AI tools are changing the landscape. Google's AI Overviews now appear for a growing percentage of queries, pulling information directly into the search results page. ChatGPT, Perplexity, and Claude are being used by professionals and consumers alike to find service providers, compare options, and make purchasing decisions. If your business is not structured to be cited by these AI systems, you are already losing ground to competitors who are.</p>
+
+      <p>SEO is no longer optional for Leeds businesses that want to grow. It is the primary channel through which new customers find you, evaluate you, and decide whether to get in touch.</p>
+
+      <h2>Local SEO for Leeds</h2>
+
+      <p>Local SEO is the practice of optimising your online presence to attract customers from geographically relevant searches. For Leeds businesses, this means appearing in the Google Map Pack, ranking for "near me" searches, and dominating the local results for your specific services and areas.</p>
+
+      <h3>Google Business Profile Optimisation</h3>
+
+      <p>Your Google Business Profile is the single most important asset for local SEO. It determines whether your business appears in the map pack results that dominate local searches. We optimise every element: accurate business categories, complete service descriptions, high-quality photos, regular Google Posts, and a structured approach to generating and responding to reviews. For a restaurant near the Corn Exchange or a physiotherapy clinic in Chapel Allerton, the difference between a fully optimised profile and a neglected one can be dozens of enquiries per month.</p>
+
+      <h3>Local Citations and Directories</h3>
+
+      <p>Consistent name, address, and phone number (NAP) data across the web reinforces your local authority with Google. We audit and correct your listings across Yell, Thomson Local, Bing Places, Apple Maps, industry-specific directories, and Leeds-specific business listings. Inconsistent data, such as an old address or a different phone number on one directory, actively damages your local rankings.</p>
+
+      <h3>Location-Specific Content</h3>
+
+      <p>Generic service pages rank poorly for local searches. We create content that targets specific areas within Leeds and West Yorkshire, addressing the particular needs and search patterns of customers in each location. A plumber serving Roundhay faces different competition and customer expectations than one serving Morley or Pudsey. Our content reflects those differences with genuinely useful, locally relevant information rather than thin location pages stuffed with a postcode.</p>
+
+      <h3>Review Strategy</h3>
+
+      <p>Google Reviews are a direct ranking factor for local SEO and a major influence on click-through rates. We help you build a systematic approach to requesting reviews from satisfied customers, responding professionally to all feedback, and using review insights to improve your services. Businesses near high-footfall areas like Victoria Quarter or the First Direct Arena often benefit from review velocity as a competitive advantage.</p>
+
+      <h2>Technical SEO for Leeds Businesses</h2>
+
+      <p>Technical SEO is the foundation that everything else depends on. If Google cannot crawl your site efficiently, understand your content structure, or render your pages quickly, no amount of content or link building will deliver sustainable results.</p>
+
+      <h3>Site Speed and Core Web Vitals</h3>
+
+      <p>Google uses Core Web Vitals as a ranking signal. These metrics measure loading performance, interactivity, and visual stability. Many Leeds business websites, particularly those built on WordPress with heavy themes and excessive plugins, fail these benchmarks. We audit your site's performance, identify bottlenecks such as unoptimised images, render-blocking scripts, and slow server response times, then implement fixes that bring your scores into the green. Faster sites rank better and convert more visitors into customers.</p>
+
+      <h3>Crawlability and Indexation</h3>
+
+      <p>Search engines need to discover and index your pages before they can rank them. We ensure your site architecture is logical, your internal linking distributes authority effectively, your XML sitemaps are accurate, and your robots.txt file is not accidentally blocking important pages. For larger sites with hundreds or thousands of pages, crawl budget management becomes critical. We use server log analysis to understand exactly how Googlebot interacts with your site and optimise accordingly.</p>
+
+      <h3>Structured Data and Schema Markup</h3>
+
+      <p>Schema markup helps search engines understand the meaning behind your content, not just the words on the page. We implement JSON-LD structured data for your business information, services, reviews, FAQs, events, and products. This structured data powers rich results in Google, including star ratings, FAQ dropdowns, and knowledge panel information. It also makes your content more extractable by AI search tools. For professional services firms in Leeds, proper schema can be the difference between a plain blue link and a rich result that dominates the search page. Learn more on our <a href="/technical-seo-leeds/">technical SEO</a> page.</p>
+
+      <h3>Mobile Optimisation</h3>
+
+      <p>Google uses mobile-first indexing, meaning it primarily uses the mobile version of your site for ranking decisions. Over 60% of local searches happen on mobile devices. We ensure your site provides a seamless mobile experience with readable text, accessible navigation, properly sized tap targets, and fast loading on mobile networks. A visitor searching for "coffee shop near Trinity Leeds" on their phone will bounce from a site that takes four seconds to load and displays text too small to read.</p>
+
+      <h2>AI Search Optimisation for Leeds</h2>
+
+      <p>The search landscape is fragmenting. Google still dominates, but a growing percentage of commercial and informational queries now flow through AI-powered tools. Google AI Overviews synthesise answers directly in search results. ChatGPT is used by millions to research products, services, and local businesses. Perplexity provides cited answers from across the web. Claude, built by Anthropic, is increasingly used for professional research and decision-making.</p>
+
+      <p>For Leeds businesses, this creates both a threat and an opportunity. The threat is that AI Overviews and AI chat tools can answer queries without the user ever visiting your website. The opportunity is that businesses structured to be cited by these AI systems gain visibility that competitors miss entirely.</p>
+
+      <p>Our <a href="/ai-search-optimisation-leeds/">AI search optimisation service</a> ensures your content is structured for extraction by AI systems. This means clear, declarative opening statements that AI can quote directly. It means comprehensive FAQ sections that match the conversational queries people put to AI tools. It means proper entity markup so AI systems understand who you are, what you do, and where you operate. And it means building the kind of topical authority that makes AI systems confident enough to cite you as a source.</p>
+
+      <p>This is not a future concern. AI Overviews already appear for a significant percentage of UK search queries, and that percentage is growing every month. Leeds businesses that prepare now will capture visibility that latecomers will struggle to earn.</p>
+
+      <h2>Industries We Serve in Leeds</h2>
+
+      <p>We work across the major sectors that drive the Leeds economy. Each industry has distinct search behaviour, competition patterns, and regulatory considerations that shape the SEO strategy. Visit our <a href="/industries/">industries page</a> for detailed information on how we approach each sector.</p>
+
+      <h3>Financial Services</h3>
+
+      <p>Leeds is the UK's largest financial centre outside London, home to major banks, building societies, fintech startups, and independent financial advisers. SEO for financial services requires E-E-A-T compliance (Experience, Expertise, Authoritativeness, Trustworthiness), careful attention to FCA advertising rules, and content that demonstrates genuine expertise. We help financial services firms rank for high-intent commercial terms while maintaining regulatory compliance.</p>
+
+      <h3>Legal Services</h3>
+
+      <p>The Leeds legal market includes international firms, national practices, and specialist boutiques. Competition for terms like "employment solicitor Leeds" or "commercial property lawyer Leeds" is intense. We build SEO strategies that target the full client journey from initial research through to enquiry, with content that demonstrates the specific expertise and case experience that potential clients are evaluating.</p>
+
+      <h3>Digital and Technology</h3>
+
+      <p>From Leeds Dock to the growing tech clusters around South Bank and the city centre, Leeds has a thriving digital and technology sector. Tech companies face the challenge of ranking for both branded and generic terms in a market where larger national and international competitors dominate many search results. We help tech businesses carve out visibility through thought leadership content, technical content marketing, and strategic link building.</p>
+
+      <h3>Healthcare and Wellbeing</h3>
+
+      <p>Healthcare SEO is a YMYL (Your Money or Your Life) category where Google applies heightened scrutiny to content quality and author credentials. We help clinics, dental practices, physiotherapists, and wellbeing businesses across Leeds build search visibility with content that meets Google's quality standards. With NHS Digital based in Leeds, the city's healthcare sector is particularly competitive and quality-conscious.</p>
+
+      <h3>Retail and E-commerce</h3>
+
+      <p>Leeds has a strong retail presence from the high-end brands at Victoria Quarter to independent shops at the Corn Exchange and the major retail destination at Trinity Leeds. For retailers with both physical and online presences, we integrate local SEO with e-commerce optimisation, ensuring your products appear in both local and national search results. Product schema, merchant centre optimisation, and category page structure are all critical components.</p>
+
+      <h2>Areas We Cover</h2>
+
+      <p>We serve businesses across Leeds and the wider West Yorkshire region. Our understanding of the local market means we know the specific search patterns, competition, and opportunities in each area. Visit our <a href="/areas/">areas page</a> for detailed information about SEO in your part of Leeds.</p>
+
+      <h3>Leeds City Centre</h3>
+
+      <p>The commercial heart of Leeds, spanning from the financial district around Park Row and Wellington Place to the retail core around Briggate, Trinity Leeds, and Victoria Quarter. City centre businesses face the highest competition for local search terms but also access the largest pool of potential customers.</p>
+
+      <h3>Headingley and Hyde Park</h3>
+
+      <p>Home to a large student population and a vibrant independent business scene. SEO for Headingley businesses often involves targeting both student and residential demographics with distinct content and keyword strategies.</p>
+
+      <h3>Roundhay</h3>
+
+      <p>One of Leeds' most affluent suburbs, anchored by Roundhay Park, one of the largest city parks in Europe. Businesses in Roundhay serve a demographic with higher disposable income and specific expectations for quality and service. Local SEO here targets a defined geographic area with strong purchase intent.</p>
+
+      <h3>Horsforth, Chapel Allerton, and Surrounding Areas</h3>
+
+      <p>Sought-after residential areas with growing commercial scenes. Horsforth's proximity to Leeds Bradford Airport creates specific search opportunities. Chapel Allerton's independent retail and dining scene benefits from targeted local content. We also cover Morley, Pudsey, Garforth, Wetherby, and Otley.</p>
+
+      <h3>Wider West Yorkshire</h3>
+
+      <p>Beyond Leeds itself, we serve businesses across Bradford, Wakefield, Huddersfield, Harrogate, and York. Each of these towns and cities has its own search landscape, local competition, and growth opportunities. Our regional knowledge means we can build strategies that target multiple locations effectively without cannibalising your own rankings.</p>
+
+      <h2>Why Choose SEO Leeds</h2>
+
+      <h3>London-Quality Expertise at Northern Prices</h3>
+
+      <p>Top London SEO agencies charge between £5,000 and £20,000 per month. They deliver excellent work, but those prices are out of reach for most Leeds businesses. We provide the same level of technical skill, strategic thinking, and data-driven execution at prices that reflect the Northern market. You get enterprise-grade SEO methodology without the London overhead.</p>
+
+      <h3>Data-Driven, Not Opinion-Driven</h3>
+
+      <p>Every recommendation we make is backed by data from Google Search Console, Google Analytics, Ahrefs, server logs, and competitive analysis. We do not guess what might work. We analyse what is working for your competitors, identify the gaps and opportunities, and build a strategy grounded in evidence. Regular reporting shows exactly what has changed, what has improved, and what we are working on next.</p>
+
+      <h3>Transparent and Accountable</h3>
+
+      <p>SEO has a reputation problem. Too many agencies take a monthly fee, deliver a vague report, and provide no real accountability for results. We operate differently. You get clear deliverables, regular communication, and honest assessments of what is and is not working. If a strategy is not delivering, we say so and adjust. We work as a partner invested in your growth, not a vendor collecting a retainer.</p>
+
+      <h3>Full-Spectrum SEO</h3>
+
+      <p>We do not just do one aspect of SEO. We cover technical optimisation, on-page content, local SEO, link building, schema markup, AI search preparation, and analytics. This integrated approach means nothing falls through the cracks. Many businesses come to us after working with agencies that excelled at content but ignored technical issues, or fixed technical problems but never created content worth ranking.</p>
+
+      <h3>Genuine Leeds Knowledge</h3>
+
+      <p>We understand Leeds. We know the difference between the search behaviour of a professional in the financial district and a family in Roundhay. We know which local directories matter, which Leeds publications are worth pursuing for digital PR, and how the city's economic landscape is evolving. This local knowledge informs every aspect of our strategy.</p>
+
+      <h2>Our SEO Process</h2>
+
+      <h3>Step 1: SEO Audit</h3>
+
+      <p>Every engagement starts with a comprehensive <a href="/seo-audit-leeds/">SEO audit</a>. We analyse your website's technical health, content quality, backlink profile, local SEO presence, and competitive landscape. This audit identifies the specific issues holding your site back and the opportunities available in your market. We deliver a prioritised action plan, not a generic checklist. You can also request a <a href="/free-seo-audit-leeds/">free SEO audit</a> to get started with no commitment.</p>
+
+      <h3>Step 2: Strategy and Prioritisation</h3>
+
+      <p>Based on the audit findings, we build a tailored SEO strategy. This includes keyword targeting, content planning, technical fixes, local SEO improvements, and a realistic timeline for results. We prioritise actions by expected impact, focusing first on the changes that will move the needle fastest for your business.</p>
+
+      <h3>Step 3: Implementation</h3>
+
+      <p>We execute the strategy systematically. Technical fixes are implemented first to ensure a solid foundation. Content is created to target priority keywords and fill gaps in your topical coverage. Local SEO improvements are rolled out to strengthen your map pack presence. Every action is documented and trackable.</p>
+
+      <h3>Step 4: Monitoring and Refinement</h3>
+
+      <p>SEO is not a one-off project. We continuously monitor your rankings, traffic, and conversions. We track competitor movements, algorithm updates, and changes in search behaviour. Monthly reporting shows progress against agreed KPIs, and we adjust the strategy based on what the data tells us. This iterative approach is how sustainable search visibility is built.</p>
+
+      <h2>What Our Clients Gain</h2>
+
+      <p>Businesses we work with typically see increased organic traffic within 3 to 6 months, improved local pack visibility within weeks of Google Business Profile optimisation, and measurable growth in enquiries and revenue from organic search. We focus on commercial outcomes, not vanity metrics. Rankings matter, but only when they translate to phone calls, form submissions, and sales.</p>
+
+      <p>For a detailed look at how we have helped Leeds businesses grow, visit our <a href="/case-studies/">case studies</a> page. For transparent information about costs, see our <a href="/seo-pricing-leeds/">SEO pricing</a> page.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How much does SEO cost in Leeds?</h3>
+        <p>SEO services in Leeds typically range from £500 to £3,000 per month depending on the scope, competition in your industry, and whether you need local, national, or e-commerce SEO. A standalone SEO audit starts from £300. We offer flexible packages designed for businesses of all sizes. Visit our <a href="/seo-pricing-leeds/">pricing page</a> for detailed information.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long does SEO take to work for a Leeds business?</h3>
+        <p>Most Leeds businesses see measurable improvements within 3 to 6 months. Local SEO changes like Google Business Profile optimisation can show results within weeks. Competitive terms in sectors like legal or financial services may take 6 to 12 months to reach page one. We set realistic expectations from day one and report on progress monthly.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need local SEO or national SEO?</h3>
+        <p>If your customers are primarily in Leeds and West Yorkshire, local SEO is the priority. This focuses on Google Business Profile, local citations, and geo-targeted content. If you sell products or services nationwide, you need a national SEO strategy with broader keyword targeting. Many businesses benefit from a blend of both, and we tailor the mix to your specific situation.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is AI search optimisation?</h3>
+        <p>AI search optimisation ensures your business appears in AI-generated answers from tools like ChatGPT, Google AI Overviews, Perplexity, and Claude. It involves structuring content so AI systems can extract and cite your information directly. This is increasingly important as more users turn to AI tools for research and purchasing decisions. Read more on our <a href="/ai-search-optimisation-leeds/">AI search optimisation page</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you help with Google penalties?</h3>
+        <p>Yes. We diagnose manual actions and algorithmic penalties through detailed technical audits, identify toxic backlinks, fix on-page issues, and file reconsideration requests where needed. Recovery timelines vary but typically take 2 to 6 months depending on the severity of the issue and the type of penalty.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you work with small businesses in Leeds?</h3>
+        <p>Absolutely. Many of our clients are small and medium-sized businesses across Leeds and West Yorkshire. We offer flexible pricing and scalable packages designed for businesses that need results without enterprise-level budgets. SEO should be accessible to every business that wants to grow through search.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What areas around Leeds do you cover?</h3>
+        <p>We cover all of Leeds including Headingley, Roundhay, Horsforth, Chapel Allerton, Morley, and Pudsey, plus the wider West Yorkshire region including Bradford, Wakefield, Huddersfield, Harrogate, and York. See our full <a href="/areas/">areas page</a> for details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I get started with SEO for my Leeds business?</h3>
+        <p>Start with a <a href="/free-seo-audit-leeds/">free SEO audit</a>. We analyse your website, competitors, and local search landscape, then provide a clear action plan with priorities and expected timelines. No obligation, no jargon. <a href="/contact/">Get in touch</a> to book yours.</p>
+      </div>
+
+      <div class="cta-box">
+        <h2>Get Your Free SEO Audit</h2>
+        <p>Find out exactly where your Leeds business stands in search. We will analyse your website, review your competitors, and deliver a clear, prioritised action plan. No jargon, no obligation.</p>
+        <p><a href="/free-seo-audit-leeds/">Request your free SEO audit</a> or <a href="/contact/">contact us</a> to discuss your requirements.</p>
+      </div>
+    </div>
+  </section>
+</Base>

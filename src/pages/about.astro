@@ -1,0 +1,238 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'About SEO Leeds | Sunny Patel';
+const description = 'Meet Sunny Patel, the SEO consultant behind SEO Leeds. Data-driven search marketing for Yorkshire businesses.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sunny Patel",
+    "url": "https://sunnypatel.co.uk",
+    "sameAs": ["https://sunnypatel.co.uk"],
+    "jobTitle": "SEO Consultant",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SEO Leeds",
+    "url": "https://seo-leeds.uk",
+    "email": "2012.infinite@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Sunny Patel",
+      "sameAs": "https://sunnypatel.co.uk"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://seo-leeds.uk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://seo-leeds.uk/about/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "About SEO Leeds | Sunny Patel",
+    "url": "https://seo-leeds.uk/about/",
+    "description": "Meet Sunny Patel, the SEO consultant behind SEO Leeds. Data-driven search marketing for Yorkshire businesses.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who runs SEO Leeds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO Leeds is run by Sunny Patel, an experienced SEO consultant specialising in technical SEO, local search, and AI search optimisation for businesses across Leeds and West Yorkshire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What SEO services does Sunny Patel offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sunny offers technical SEO audits, local SEO and Google Business Profile optimisation, content strategy, AI search optimisation, schema markup implementation, and ongoing SEO management for businesses of all sizes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you only work with Leeds businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While our focus is Leeds and West Yorkshire, we work with businesses across the UK. Our local expertise is strongest in Leeds, Bradford, Wakefield, Huddersfield, Harrogate, and the wider Yorkshire region."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure SEO success?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We measure success through organic traffic growth, keyword ranking improvements, local pack visibility, conversion rates, and ultimately revenue generated from organic search. Monthly reports track all KPIs against agreed targets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see examples of your SEO work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Visit our case studies page for detailed examples of how we have helped businesses across Leeds and Yorkshire improve their search visibility and grow their revenue through SEO."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact SEO Leeds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us through our contact page or email 2012.infinite@gmail.com. We offer a free initial SEO audit and consultation to discuss your requirements."
+        }
+      }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <section class="px-4 py-12">
+    <div class="prose">
+      <h1>About Sunny Patel — SEO Consultant in Leeds</h1>
+
+      <div class="quick-answer">
+        <p>SEO Leeds is run by Sunny Patel, an SEO consultant helping Yorkshire businesses improve their search visibility through technical SEO, local search optimisation, and AI search strategy. We combine data-driven methodology with genuine knowledge of the Leeds market to deliver measurable results.</p>
+      </div>
+
+      <p>SEO Leeds is run by Sunny Patel, an SEO consultant with deep expertise in technical search optimisation, local SEO, and the emerging field of AI search. Based in Leeds, West Yorkshire, we work with businesses ranging from independent retailers in the Victoria Quarter to professional services firms in the financial district and tech startups at Leeds Dock. Every engagement is built on the same principle: use data to identify what will move the needle, execute it properly, and measure the outcome against revenue.</p>
+
+      <p>The SEO industry is crowded with agencies that deliver reports full of jargon and metrics that look impressive but never translate into business growth. SEO Leeds exists because Yorkshire businesses deserve better. They deserve a consultant who understands their market, speaks plainly about what is working and what is not, and ties every action to a commercial outcome. That is what we do.</p>
+
+      <h2>Professional Background</h2>
+
+      <p>Sunny Patel brings a technical-first approach to search marketing. Where many SEO practitioners focus primarily on content or link building, we start with the technical foundation: site architecture, crawlability, structured data, page speed, and the increasingly important question of how AI systems parse and cite web content. This technical depth means we catch issues that generalist agencies miss, from misconfigured canonicals that split ranking signals to schema markup errors that prevent rich results from appearing.</p>
+
+      <p>Beyond technical SEO, we build content strategies grounded in real search data. We analyse what people in Leeds and West Yorkshire actually search for, understand the intent behind those queries, and create content that answers them more comprehensively than anything else ranking. This is not about churning out blog posts or stuffing keywords into service pages. It is about building topical authority through content that genuinely helps the person reading it.</p>
+
+      <p>Our work spans the full spectrum of search marketing. Technical audits that identify and fix the issues holding sites back. Local SEO that puts businesses in the Google Map Pack for their target areas. Content strategy that builds organic traffic month over month. Schema markup that powers rich results and feeds AI search tools with structured information. And increasingly, AI search optimisation that ensures businesses appear in the answers generated by ChatGPT, Perplexity, Google AI Overviews, and Claude.</p>
+
+      <p>You can learn more about Sunny's wider work and background at <a href="https://sunnypatel.co.uk" rel="noopener">sunnypatel.co.uk</a>.</p>
+
+      <h2>Why Leeds</h2>
+
+      <p>Leeds is the economic engine of West Yorkshire and one of the most dynamic cities in the Northern Powerhouse. It is the largest legal and financial centre outside London, a growing hub for digital and creative industries following Channel 4's move to South Bank, and home to a diverse mix of businesses from independent shops at the Corn Exchange to multinational corporations along Wellington Place.</p>
+
+      <p>This diversity makes Leeds an exceptional market for SEO. The city's businesses span every sector and size, from sole traders to FTSE 100 companies. The competitive landscape varies dramatically from one industry to the next, and the local search environment has its own distinct patterns. A dental practice in Roundhay faces completely different search challenges to a SaaS company in the city centre or a tradesperson covering Horsforth to Harrogate.</p>
+
+      <p>Understanding these differences is what separates effective local SEO from generic services delivered by agencies with no connection to the market. We know Leeds. We understand the geography, the economic drivers, the local media landscape, and the specific search behaviour of Yorkshire consumers and business buyers. This knowledge shapes every strategy we build.</p>
+
+      <p>The Northern Powerhouse initiative continues to drive investment and growth across West Yorkshire. Leeds is attracting new businesses, new residents, and new competition. For established businesses, this means the search landscape is getting more competitive every year. For new businesses, it means there are real opportunities to establish search visibility early and capture market share before competitors consolidate their positions. Either way, doing nothing is the most expensive option.</p>
+
+      <h2>Our Approach</h2>
+
+      <h3>Transparent and Honest</h3>
+
+      <p>We tell you what is working, what is not, and what we plan to do about it. There are no black boxes, no mysterious processes, and no reports designed to obscure the lack of real progress. If something is not delivering the results we expected, we say so and adjust the strategy. You always know where your money is going and what it is producing.</p>
+
+      <h3>ROI-Focused</h3>
+
+      <p>Rankings are a means to an end, not the end itself. We measure success by the commercial outcomes SEO delivers: enquiries, leads, sales, and revenue. Every action in our strategy ties back to a business objective. We do not chase vanity metrics or celebrate ranking improvements for keywords that do not generate business. If a page is ranking first for a term that brings no revenue, we redirect our efforts to terms that will.</p>
+
+      <h3>No Black Hat, No Shortcuts</h3>
+
+      <p>We do not buy links, stuff keywords, cloak content, or use any other manipulative technique that risks a Google penalty. These shortcuts might produce short-term results, but they inevitably lead to long-term damage that can take months or years to recover from. Our strategies are built to last through algorithm updates, not collapse under them.</p>
+
+      <h3>Regular Reporting</h3>
+
+      <p>You receive clear, structured monthly reports covering keyword rankings, organic traffic, local pack performance, conversions, and the specific actions taken during the reporting period. These reports are designed to be readable by anyone, not just SEO specialists. We walk you through the data, explain what it means for your business, and outline the priorities for the coming month.</p>
+
+      <h2>Services Overview</h2>
+
+      <p>We offer a comprehensive range of SEO services tailored to the needs of Leeds and West Yorkshire businesses. Each service can be delivered as a standalone project or as part of an ongoing SEO retainer.</p>
+
+      <p>Our core services include technical SEO audits and implementation, local SEO and Google Business Profile management, content strategy and creation, AI search optimisation for visibility in ChatGPT and Google AI Overviews, schema markup and structured data, link building and digital PR, and ongoing SEO management with monthly reporting.</p>
+
+      <p>We also provide specialist services for specific sectors including financial services SEO, legal SEO, healthcare SEO, and e-commerce SEO, each adapted for the regulatory and competitive requirements of that industry.</p>
+
+      <p>For a detailed breakdown of every service we offer, visit our <a href="/services/">services page</a>. For transparent pricing information, see our <a href="/seo-pricing-leeds/">pricing page</a>.</p>
+
+      <h2>Working With Me</h2>
+
+      <h3>Remote-First</h3>
+
+      <p>We work remotely with clients across Leeds, West Yorkshire, and beyond. This means lower overheads (which we pass on through competitive pricing), faster turnaround on deliverables, and the flexibility to communicate on your schedule rather than ours. Video calls, screen shares, and collaborative documents replace the need for in-person meetings, though we are happy to meet face-to-face in Leeds when it adds value.</p>
+
+      <h3>Flexible Engagement</h3>
+
+      <p>Not every business needs a full-time SEO retainer. We offer flexible engagement models including one-off audits, project-based work, and monthly retainers. Start with a free audit to understand where you stand, then choose the level of support that matches your budget and ambition. You can scale up or down as your needs change.</p>
+
+      <h3>Responsive Communication</h3>
+
+      <p>You will not wait days for a reply. We respond to emails and messages promptly, provide progress updates proactively, and make ourselves available when you need guidance on SEO-related decisions. Clear, timely communication is fundamental to a productive working relationship, and we treat it as a core part of our service, not an afterthought.</p>
+
+      <h3>No Long-Term Contracts</h3>
+
+      <p>We do not lock clients into 12-month contracts. Our retainer clients stay because the work delivers results, not because they are contractually obligated. This keeps us accountable and ensures that every month we need to earn your continued business through tangible progress.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Who runs SEO Leeds?</h3>
+        <p>SEO Leeds is run by Sunny Patel, an experienced SEO consultant specialising in technical SEO, local search, and AI search optimisation for businesses across Leeds and West Yorkshire.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What SEO services does Sunny Patel offer?</h3>
+        <p>Sunny offers technical SEO audits, local SEO and Google Business Profile optimisation, content strategy, AI search optimisation, schema markup implementation, and ongoing SEO management for businesses of all sizes. See the full list on our <a href="/services/">services page</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you only work with Leeds businesses?</h3>
+        <p>While our focus is Leeds and West Yorkshire, we work with businesses across the UK. Our local expertise is strongest in Leeds, Bradford, Wakefield, Huddersfield, Harrogate, and the wider Yorkshire region, but our technical and content SEO skills apply everywhere.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do you measure SEO success?</h3>
+        <p>We measure success through organic traffic growth, keyword ranking improvements, local pack visibility, conversion rates, and ultimately revenue generated from organic search. Monthly reports track all KPIs against agreed targets so you always know what your investment is producing.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I see examples of your SEO work?</h3>
+        <p>Yes. Visit our <a href="/case-studies/">case studies page</a> for detailed examples of how we have helped businesses across Leeds and Yorkshire improve their search visibility and grow their revenue through SEO.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I contact SEO Leeds?</h3>
+        <p>You can reach us through our <a href="/contact/">contact page</a> or email 2012.infinite@gmail.com. We offer a free initial SEO audit and consultation to discuss your requirements with no obligation.</p>
+      </div>
+
+      <div class="cta-box">
+        <h2>Ready to Grow Your Search Visibility?</h2>
+        <p>Whether you need a one-off audit, a specific SEO project, or ongoing search marketing support, we are here to help your Leeds business get found by the customers who matter.</p>
+        <p><a href="/contact/">Get in touch</a> for a free consultation, or request a <a href="/free-seo-audit-leeds/">free SEO audit</a> to see where you stand.</p>
+      </div>
+    </div>
+  </section>
+</Base>

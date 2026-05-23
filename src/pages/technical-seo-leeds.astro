@@ -1,0 +1,228 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = "Technical SEO Leeds | Site Audits";
+const description = "Technical SEO services for Leeds businesses. Site speed, crawlability, Core Web Vitals, structured data, and mobile optimisation for Yorkshire companies.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-leeds.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Technical SEO Leeds", "item": "https://seo-leeds.uk/technical-seo-leeds/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": "https://seo-leeds.uk/technical-seo-leeds/",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Technical SEO Leeds",
+    "description": "Comprehensive technical SEO services including site audits, Core Web Vitals optimisation, crawlability fixes, structured data implementation, and mobile optimisation for Leeds and West Yorkshire businesses.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk/"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Leeds",
+      "containedInPlace": { "@type": "AdministrativeArea", "name": "West Yorkshire" }
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "areaServed": { "@type": "City", "name": "Leeds" }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a technical SEO audit cost in Leeds?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A comprehensive technical SEO audit for a Leeds business typically starts from around £500 for small sites (under 100 pages) and scales based on site complexity, platform, and the number of technical issues. Enterprise sites with thousands of pages and custom platforms cost more due to the depth of crawl analysis required." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between technical SEO and on-page SEO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO deals with how search engines access, crawl, and index your site: server response codes, site speed, mobile rendering, XML sitemaps, and structured data. On-page SEO focuses on content quality, keyword targeting, meta tags, and internal linking. Both are essential, but technical SEO is the foundation that on-page work builds upon." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I run a technical SEO audit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At minimum, quarterly. However, after any major site change (platform migration, redesign, new CMS, large content additions) you should run an immediate audit. We recommend monthly crawl monitoring for e-commerce sites and any site publishing more than 20 pages per month." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you fix technical issues or just report them?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We do both. Our audits include a prioritised action plan, and we implement fixes directly where we have CMS or server access. For sites managed by in-house developers, we provide detailed technical specifications they can follow, and review their implementations before sign-off." }
+      },
+      {
+        "@type": "Question",
+        "name": "What tools do you use for technical SEO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We use Screaming Frog for deep crawl analysis, Google Search Console for indexation and performance data, PageSpeed Insights and Chrome DevTools for Core Web Vitals, Ahrefs for backlink and technical auditing, and custom scripts for large-scale structured data validation. The specific toolset depends on the site platform and scale." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can technical SEO fix a Google penalty?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on the penalty type. Manual actions related to spam, cloaking, or unnatural links require specific remediation and reconsideration requests. Algorithmic drops caused by Core Web Vitals failures, crawl errors, thin content at scale, or mobile usability issues are directly addressable through technical SEO. We diagnose the cause before recommending the fix." }
+      }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <section class="px-4 py-12">
+    <div class="prose">
+      <h1>Technical SEO Services in Leeds</h1>
+
+      <p>Technical SEO in Leeds focuses on the behind-the-scenes elements that determine whether search engines can crawl, index, and rank your website. Your content might be excellent and your backlink profile strong, but if Google cannot efficiently access your pages, renders them incorrectly, or finds structural problems that undermine trust, your rankings will suffer. Technical SEO is the foundation that everything else builds upon.</p>
+
+      <div class="quick-answer">
+        <p><strong>Quick answer:</strong> Technical SEO covers site speed, crawlability, indexation, mobile optimisation, structured data, security, and site architecture. For Leeds businesses, getting these fundamentals right is often the fastest path to ranking improvements because many competitors neglect them entirely. A comprehensive technical audit identifies the specific issues holding your site back and prioritises fixes by impact.</p>
+      </div>
+
+      <p>We provide technical SEO services for businesses across Leeds and West Yorkshire, from e-commerce retailers at Trinity Leeds expanding online to digital companies at Leeds Dock whose sites need to perform as well as their products. Every engagement starts with a thorough audit and ends with measurable improvements in how search engines interact with your site.</p>
+
+      <h2>What Is Technical SEO</h2>
+
+      <p>Technical SEO is the practice of optimising your website's infrastructure so search engines can crawl it efficiently, index it accurately, and rank it appropriately. It covers server configuration, site speed, mobile rendering, URL structure, internal linking architecture, structured data markup, security protocols, and crawl budget management.</p>
+
+      <p>Think of technical SEO as the plumbing and wiring of a building. Visitors don't see it, but everything visible depends on it working correctly. A slow server response, a misconfigured robots.txt file, or broken canonical tags can silently prevent hundreds of pages from appearing in search results. Unlike content or link building, technical SEO issues often have binary outcomes: fix the problem and pages immediately become eligible for ranking, or leave it broken and no amount of content will help.</p>
+
+      <p>For Leeds businesses, technical SEO is particularly relevant because the local market is competitive enough that marginal advantages matter. When you and three competitors all target "solicitor Leeds" with similar content, the site that loads fastest, renders cleanly on mobile, and serves proper structured data to Google gains the edge.</p>
+
+      <h2>Site Speed and Core Web Vitals</h2>
+
+      <p>Google uses three Core Web Vitals metrics as ranking factors: Largest Contentful Paint (LCP), measuring how fast your main content loads; Interaction to Next Paint (INP), measuring responsiveness when users interact with the page; and Cumulative Layout Shift (CLS), measuring visual stability during loading. Failing any of these metrics disadvantages your site against competitors who pass them.</p>
+
+      <p>Leeds Dock's digital companies, from Sky Betting and Gaming to the growing cluster of SaaS startups, understand that site performance directly affects user experience and conversion rates. The same principle applies to search rankings. Google's page experience signals mean that a solicitor's website loading in 5 seconds loses ground to a competitor loading in 1.5 seconds, all else being equal.</p>
+
+      <p>Our speed optimisation process addresses the most common issues we find on Leeds business websites: unoptimised images (often the single biggest problem), render-blocking JavaScript and CSS, missing browser caching headers, uncompressed server responses, excessive third-party scripts from analytics and chat widgets, and poor hosting infrastructure. We measure before and after using both lab data (Lighthouse, WebPageTest) and field data from Chrome User Experience Report to prove the improvement is real, not just theoretical.</p>
+
+      <h2>Crawlability and Indexation</h2>
+
+      <p>If Google cannot crawl your pages, they cannot rank. Crawlability issues are surprisingly common, especially on larger sites and those running on CMS platforms that generate complex URL structures. We regularly find Leeds business websites where significant portions of content are accidentally blocked by robots.txt rules, trapped behind JavaScript rendering issues, or orphaned from the site's link structure.</p>
+
+      <p>Indexation problems are equally damaging. Duplicate content caused by URL parameters, trailing slashes, or www/non-www variations splits ranking signals across multiple URLs. Thin content pages that add no value dilute your site's overall quality in Google's assessment. Incorrect canonical tags point Google at the wrong version of a page, and noindex directives accidentally applied to important pages remove them from search entirely.</p>
+
+      <p>Our crawl analysis uses Screaming Frog to simulate Googlebot's path through your site, identifying every blocked resource, redirect chain, orphan page, and indexation directive. We cross-reference this with Google Search Console data to confirm which pages Google has actually indexed versus which it has chosen to ignore, and why. The output is a prioritised fix list that addresses the highest-impact issues first.</p>
+
+      <h2>Mobile Optimisation</h2>
+
+      <p>Google uses mobile-first indexing, meaning the mobile version of your site is what Google crawls and ranks. A site that looks and works perfectly on desktop but renders poorly on mobile is being judged by its worst presentation. For Leeds businesses, where over 60% of local searches happen on mobile devices, this is a significant ranking factor.</p>
+
+      <p>Mobile optimisation goes beyond responsive design. We check tap target sizes (buttons and links that are too small or too close together), font sizes that require pinching to read, content that overflows the viewport, interstitials that block content on mobile, and forms that are difficult to complete on a small screen. Each of these issues degrades both user experience and Google's assessment of your mobile quality.</p>
+
+      <p>We test across real devices and Google's Mobile-Friendly Test, ensuring your site meets the standard across the range of devices your Leeds customers actually use. For e-commerce sites, mobile checkout optimisation is particularly critical as abandoned cart rates spike when the purchasing process is friction-heavy on mobile.</p>
+
+      <h2>Structured Data and Schema Markup</h2>
+
+      <p>Structured data tells search engines exactly what your content means, not just what it says. Implementing schema markup correctly enables rich results in Google: star ratings for reviews, FAQ dropdowns, event listings, product prices, and business information displayed directly in search results. These enhanced listings increase click-through rates significantly.</p>
+
+      <p>For Leeds businesses, the most impactful schema types are LocalBusiness (for Google Maps and local pack appearance), Service and Offer (for service-based businesses), Product (for e-commerce), FAQPage (for featured snippet eligibility), and Article (for content-driven sites). We also implement BreadcrumbList schema to improve site hierarchy display and Organisation schema to strengthen brand entity signals.</p>
+
+      <p>We write schema markup as JSON-LD, which is Google's preferred format, and validate it against Google's Rich Results Test and Schema.org specifications before deployment. Incorrect schema, such as marking up content that doesn't appear on the visible page or using deprecated types, can result in manual actions from Google. Our implementations are compliant and designed to be maintainable as your content changes.</p>
+
+      <h2>Site Architecture and Internal Linking</h2>
+
+      <p>Site architecture determines how link equity flows through your website and how easily users and search engines can find your content. A flat architecture where every page is reachable within three clicks from the homepage distributes ranking power efficiently. A deep, siloed structure with orphaned pages wastes crawl budget and buries content that should be ranking.</p>
+
+      <p>Internal linking is the primary mechanism for controlling this distribution. We audit your internal link graph to identify pages with too few internal links (starved of ranking signals), pages with excessive links (diluting signal to everything), and opportunities to link from high-authority pages to commercially important ones. For Leeds businesses with large service catalogues or product ranges, proper internal linking architecture can be the difference between page 1 and page 5.</p>
+
+      <p>We also review URL structure, breadcrumb implementation, and navigation hierarchy. Clean, descriptive URLs that reflect your site's topic hierarchy help both users and search engines understand content relationships. A URL like /services/technical-seo/ communicates more than /page-id-47382/.</p>
+
+      <h2>HTTPS and Security</h2>
+
+      <p>HTTPS is a confirmed Google ranking signal, and sites still serving pages over HTTP are at a disadvantage. Beyond rankings, browsers now display prominent "Not Secure" warnings for HTTP sites, which destroys user trust immediately. For Leeds businesses handling contact forms, payment processing, or client data, HTTPS is both an SEO requirement and a legal obligation under UK GDPR.</p>
+
+      <p>Our security audit checks SSL certificate validity and configuration, mixed content warnings (HTTP resources loaded on HTTPS pages), proper HTTP to HTTPS redirect chains, HSTS header implementation, and security headers like Content-Security-Policy and X-Frame-Options. We also check for common WordPress security issues, as many Leeds business websites run on WordPress with outdated plugins that introduce vulnerabilities.</p>
+
+      <h2>Technical SEO for Leeds E-commerce</h2>
+
+      <p>E-commerce sites face amplified technical SEO challenges. Trinity Leeds retailers moving online, Victoria Quarter boutiques building direct-to-consumer channels, and Corn Exchange independents launching Shopify stores all encounter the same technical issues at different scales: faceted navigation generating thousands of duplicate URLs, product variants creating canonical confusion, out-of-stock pages returning the wrong HTTP status codes, and site search generating indexable but valueless pages.</p>
+
+      <p>We address e-commerce technical SEO systematically. Faceted navigation gets proper canonical and noindex handling so size/colour/sort filters don't create an indexation mess. Product schema markup is implemented correctly with price, availability, review data, and GTIN identifiers. XML sitemaps are segmented by product category for targeted crawl management. Pagination uses proper rel-canonical patterns rather than the deprecated rel-next/prev. And site speed is optimised for the image-heavy, script-heavy reality of e-commerce platforms.</p>
+
+      <p>For Shopify, WooCommerce, and Magento sites, we know each platform's specific technical limitations and workarounds. Shopify's rigid URL structure, WooCommerce's tendency toward plugin bloat, and Magento's complex caching requirements all need platform-specific solutions. See our <a href="/services/">services overview</a> for platform-specific packages.</p>
+
+      <h2>How We Approach Technical SEO</h2>
+
+      <p>Our process follows four phases: audit, prioritise, implement, and monitor.</p>
+
+      <h3>Phase 1: Comprehensive Audit</h3>
+      <p>We crawl your entire site using Screaming Frog, cross-reference with Google Search Console and Bing Webmaster Tools data, run Core Web Vitals analysis on key page templates, validate all structured data, and review server configuration. The result is a complete inventory of every technical issue on your site, categorised by type and severity.</p>
+
+      <h3>Phase 2: Prioritisation</h3>
+      <p>Not all technical issues are equal. A misconfigured canonical tag on your homepage matters more than a missing alt attribute on a blog image. We score every issue by estimated ranking impact, fix difficulty, and business value of the affected pages. This produces a prioritised roadmap that maximises ROI from your SEO investment.</p>
+
+      <h3>Phase 3: Implementation</h3>
+      <p>We implement fixes directly where possible, working within your CMS, hosting environment, or CDN configuration. For changes requiring developer involvement, we provide detailed technical specifications with before/after examples that your team can follow without ambiguity. Every fix is tested in staging before deployment to production.</p>
+
+      <h3>Phase 4: Ongoing Monitoring</h3>
+      <p>Technical SEO is not a one-time fix. CMS updates, new content, design changes, and third-party script additions can introduce new issues at any time. We set up automated monitoring for crawl errors, Core Web Vitals regressions, indexation changes, and structured data validation failures. Monthly reports track progress and flag new issues before they impact rankings.</p>
+
+      <h2>Leeds Businesses That Need Technical SEO</h2>
+
+      <p>Wellington Place hosts some of Leeds' most significant corporate tenants, including the Bank of England's Northern operations and what was NHS Digital's headquarters. These organisations and the businesses supporting them run complex, content-heavy websites where technical SEO issues compound at scale. A single misconfigured redirect rule can affect thousands of pages. A slow database query behind a property search or job listing can push server response times past the thresholds Google penalises.</p>
+
+      <p>Leeds Dock's digital companies face different challenges. Sky Betting and Gaming, TPP, and the growing cluster of tech startups build products that run on the web. Their websites need to reflect that technical competence. A software company whose own site fails Core Web Vitals sends entirely the wrong signal to potential clients and recruits. We work with tech companies at Leeds Dock and across the city to ensure their web presence matches their technical reputation.</p>
+
+      <p>Whether you're a professional services firm in the city centre, a manufacturer in the Aire Valley, or an e-commerce business operating from anywhere in West Yorkshire, technical SEO determines whether your site's potential translates into actual search visibility. Start with a <a href="/free-seo-audit-leeds/">free SEO audit</a> to identify your specific technical priorities.</p>
+
+      <div class="cta-box">
+        <h2 style="color: white; margin-top: 0;">Get a Technical SEO Audit for Your Leeds Website</h2>
+        <p>Find out exactly what's holding your site back. Our comprehensive technical audit covers speed, crawlability, mobile performance, structured data, and security, with a prioritised fix plan.</p>
+        <a href="/contact/">Request Your Free Technical SEO Audit</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How much does a technical SEO audit cost in Leeds?</h3>
+        <p>A comprehensive technical SEO audit typically starts from around £500 for small sites under 100 pages and scales based on site complexity, platform, and the number of technical issues. Enterprise sites with thousands of pages and custom platforms require deeper crawl analysis and cost accordingly. We provide a fixed quote after an initial assessment of your site's scale and technology stack.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between technical SEO and on-page SEO?</h3>
+        <p>Technical SEO deals with how search engines access, crawl, and index your site: server response codes, site speed, mobile rendering, XML sitemaps, and structured data. On-page SEO focuses on content quality, keyword targeting, meta tags, and internal linking. Both are essential, but technical SEO is the foundation that on-page work builds upon. Without solid technical foundations, on-page optimisation cannot reach its full potential.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How often should I run a technical SEO audit?</h3>
+        <p>At minimum, quarterly. After any major site change such as a platform migration, redesign, new CMS deployment, or large-scale content addition, you should run an immediate audit. We recommend monthly crawl monitoring for e-commerce sites and any site publishing more than 20 pages per month, as these change frequently enough to introduce new issues regularly.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you fix technical issues or just report them?</h3>
+        <p>We do both. Our audits include a prioritised action plan ranked by impact, and we implement fixes directly where we have CMS or server access. For sites managed by in-house development teams, we provide detailed technical specifications with code examples they can follow precisely, and we review their implementations before final sign-off.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What tools do you use for technical SEO?</h3>
+        <p>We use Screaming Frog for deep crawl analysis, Google Search Console for indexation and performance data, PageSpeed Insights and Chrome DevTools for Core Web Vitals measurement, Ahrefs for backlink and technical auditing at scale, and custom scripts for large-scale structured data validation. The specific toolset varies depending on the site platform, size, and the nature of the issues being investigated.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can technical SEO fix a Google penalty?</h3>
+        <p>It depends on the penalty type. Manual actions related to spam, cloaking, or unnatural links require specific remediation and reconsideration requests submitted through Google Search Console. Algorithmic ranking drops caused by Core Web Vitals failures, crawl errors, thin content at scale, or mobile usability issues are directly addressable through technical SEO improvements. We diagnose the root cause before recommending the appropriate fix.</p>
+      </div>
+
+      <p>Explore our related services: <a href="/seo-audit-leeds/">SEO audits</a>, <a href="/ai-search-optimisation-leeds/">AI search optimisation</a>, <a href="/seo-pricing-leeds/">SEO pricing</a>, and <a href="/case-studies/">case studies</a> from Leeds businesses we've helped.</p>
+    </div>
+  </section>
+</Base>

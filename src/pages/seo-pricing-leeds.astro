@@ -1,0 +1,341 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = "SEO Pricing Leeds | Transparent Costs";
+const description = "Transparent SEO pricing for Leeds businesses. Three tiers from £500/month. London-quality expertise at Northern prices. No hidden fees.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SEO Services Leeds",
+    "description": "Professional SEO services for Leeds businesses. Three pricing tiers from £500/month covering technical SEO, content strategy, link building, and local optimisation.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Leeds",
+      "containedInPlace": { "@type": "AdministrativeArea", "name": "West Yorkshire" }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SEO Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Starter SEO Package",
+          "description": "Technical audit, on-page optimisation, monthly reporting, Google Business Profile optimisation for small businesses.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "GBP",
+            "price": "500",
+            "unitText": "per month"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth SEO Package",
+          "description": "Everything in Starter plus content strategy, link building, competitor monitoring, and quarterly strategy calls.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "GBP",
+            "price": "1000",
+            "unitText": "per month"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise SEO Package",
+          "description": "Full-service SEO with dedicated strategist, weekly reporting, AI search optimisation, and conversion rate optimisation.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "GBP",
+            "price": "2000",
+            "unitText": "per month"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-leeds.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "SEO Pricing Leeds", "item": "https://seo-leeds.uk/seo-pricing-leeds/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SEO Pricing Leeds | Transparent Costs",
+    "description": "Transparent SEO pricing for Leeds businesses. Three tiers from £500/month. London-quality expertise at Northern prices. No hidden fees.",
+    "url": "https://seo-leeds.uk/seo-pricing-leeds/",
+    "isPartOf": { "@type": "WebSite", "url": "https://seo-leeds.uk/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is SEO pricing in Leeds cheaper than London?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Leeds SEO agencies operate with significantly lower overheads than London firms. Office costs, salaries, and operational expenses are 30-50% lower in Leeds compared to central London. This does not mean lower quality — many Leeds SEO professionals have worked at London agencies and bring the same expertise at more competitive rates. You get London-calibre strategy without the London price tag." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there long-term contracts?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We require a minimum three-month commitment because SEO results take time to materialise. After the initial three months, our agreements roll month-to-month with 30 days notice to cancel. We do not lock clients into 12-month contracts because we believe our results should earn your continued business, not a contract clause." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is not included in the monthly price?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All analytical work, strategy, reporting, and optimisation is included. The only potential additional costs are third-party tools if you want your own subscriptions (we use ours), paid media budget if you choose to run Google Ads alongside SEO, and any web development work beyond minor on-page changes that requires a separate developer." }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly will I see results from SEO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most Leeds businesses see measurable improvements within 3-6 months. Technical fixes and local SEO optimisations often produce results within weeks. Content-driven and link-building strategies take longer to compound. We set realistic expectations during the discovery call and provide monthly progress reports so you can track improvements against your baseline." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I upgrade or downgrade my package?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can move between tiers at any monthly renewal point with 14 days notice. Many clients start with the Starter package and upgrade to Growth once they see initial results and want to accelerate. We recommend the tier that matches your current needs and budget rather than overselling." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you guarantee rankings?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No reputable SEO provider guarantees specific rankings because Google's algorithm considers hundreds of factors, many outside any agency's control. What we guarantee is transparent reporting, consistent effort, and a data-driven approach. We set measurable KPIs during onboarding and report against them monthly so you always know whether the investment is delivering returns." }
+      }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <section class="px-4 py-12">
+    <div class="prose">
+
+      <h1>SEO Pricing in Leeds</h1>
+
+      <p>SEO pricing in Leeds is transparent and competitive, offering London-quality search marketing expertise at Northern prices. The cost difference is not about quality. Leeds-based consultants and agencies operate with lower overheads, and those savings pass directly to clients. A business in Headingley or Wellington Place gets the same calibre of technical analysis, content strategy, and link building that a Shoreditch agency charges twice as much to deliver.</p>
+
+      <div class="quick-answer">
+        <p><strong>Quick answer:</strong> SEO packages in Leeds start at £500/month for small businesses, £1,000/month for growing companies, and £2,000+/month for enterprise. One-off audits from £500. No long-term contracts beyond an initial three-month commitment. <a href="/free-seo-audit-leeds/">Get a free audit</a> to see where you stand before committing.</p>
+      </div>
+
+      <h2>Why Leeds SEO Pricing Is Different</h2>
+
+      <p>London SEO agencies charge £2,000-£5,000 per month as standard. That pricing reflects Soho office leases, central London salaries, and the overhead of large account management teams. It does not necessarily reflect better work.</p>
+
+      <p>Leeds has become one of the UK's strongest digital marketing hubs. The city's tech ecosystem around Leeds Dock and the wider Digital Health Hub attracts experienced SEO professionals who choose Northern quality of life over London commutes. The talent pool is deep, the experience is genuine, and the pricing reflects realistic operational costs rather than inflated metropolitan overheads.</p>
+
+      <p>For a Leeds business, this creates a clear advantage. You work with consultants who understand the local market, know the competitive landscape across West Yorkshire, and charge rates that make SEO accessible to businesses at every stage of growth. A Roundhay independent retailer and a Trinity Leeds anchor tenant both get pricing that reflects the work involved, not the postcode of the agency.</p>
+
+      <h2>Three Pricing Tiers</h2>
+
+      <h3>Starter: £500 per Month</h3>
+
+      <p>The Starter package is designed for small businesses that need professional SEO foundations without the cost of a full-service retainer. This is the right starting point for local businesses, independent shops, cafes, tradespeople, and professional services firms with a single location.</p>
+
+      <p>What is included:</p>
+      <ul>
+        <li><strong>Initial technical audit:</strong> Comprehensive crawl of your website identifying technical issues, broken links, speed problems, and indexation errors.</li>
+        <li><strong>On-page optimisation:</strong> Title tags, meta descriptions, heading structure, and internal linking improvements for your most important pages.</li>
+        <li><strong>Google Business Profile optimisation:</strong> Category selection, description, attributes, photo guidance, and review strategy to improve your local pack visibility.</li>
+        <li><strong>Monthly reporting:</strong> Clear report showing ranking changes, traffic trends, and work completed. No jargon, no vanity metrics.</li>
+        <li><strong>Monthly strategy call (30 min):</strong> Review progress, discuss priorities, and plan the next month's focus areas.</li>
+      </ul>
+
+      <p>Ideal for: Headingley cafes, Roundhay shops, sole traders, small professional services firms, local tradespeople. Businesses that need to establish a search presence and win local customers.</p>
+
+      <h3>Growth: £1,000 per Month</h3>
+
+      <p>The Growth package adds content strategy and link building to the Starter foundations. This is for businesses that have a functioning website and want to accelerate organic traffic growth to compete more aggressively in their market.</p>
+
+      <p>Everything in Starter, plus:</p>
+      <ul>
+        <li><strong>Content strategy:</strong> Monthly content plan based on keyword research, competitor gap analysis, and search intent mapping. We identify the topics that will drive qualified traffic and outline the content needed to rank for them.</li>
+        <li><strong>Content production (2 pieces/month):</strong> Two professionally written, SEO-optimised articles or landing pages per month, published directly to your site.</li>
+        <li><strong>Link building:</strong> Strategic outreach to earn editorial backlinks from relevant, authoritative websites. Focus on quality over quantity, with transparent reporting on every link acquired.</li>
+        <li><strong>Competitor monitoring:</strong> Monthly analysis of your competitors' SEO activity, new content, new backlinks, and ranking movements. Early warning of competitive threats and opportunities.</li>
+        <li><strong>Quarterly strategy session (60 min):</strong> Deep-dive review of the overall SEO strategy, market trends, and forward planning in addition to monthly calls.</li>
+      </ul>
+
+      <p>Ideal for: Wellington Place professional services firms, Leeds Dock tech companies, multi-location businesses, growing e-commerce brands. Businesses that need to outpace competitors and scale organic traffic as a primary acquisition channel.</p>
+
+      <h3>Enterprise: £2,000+ per Month</h3>
+
+      <p>The Enterprise package is full-service SEO for businesses where organic search is a critical revenue driver. This is a dedicated partnership with a named strategist who becomes an extension of your marketing team.</p>
+
+      <p>Everything in Growth, plus:</p>
+      <ul>
+        <li><strong>Dedicated strategist:</strong> A single point of contact who learns your business, industry, and competitive landscape in depth. Not a rotating cast of junior analysts.</li>
+        <li><strong>Content production (4+ pieces/month):</strong> Increased content output with a mix of long-form guides, landing pages, case studies, and thought leadership content.</li>
+        <li><strong>AI search optimisation:</strong> Optimisation for AI-powered search features including Google AI Overviews, Bing Copilot, and conversational search platforms. This is the emerging frontier of SEO and increasingly critical for visibility.</li>
+        <li><strong>Conversion rate optimisation (CRO):</strong> Landing page testing, call-to-action optimisation, and user journey analysis to increase the percentage of organic visitors who become leads or customers.</li>
+        <li><strong>Weekly reporting:</strong> Detailed weekly updates on rankings, traffic, conversions, and work in progress. Full transparency on where time and effort are being invested.</li>
+        <li><strong>Priority support:</strong> Same-day response to queries and rapid turnaround on urgent requests.</li>
+      </ul>
+
+      <p>Ideal for: Financial services firms, major legal practices, large e-commerce operations, SaaS companies, multi-location brands across Yorkshire. Businesses where a 10% increase in organic traffic translates to significant revenue.</p>
+
+      <h2>What Every Package Includes</h2>
+
+      <p>Regardless of tier, every client receives the same commitment to transparency and professional standards.</p>
+
+      <ul>
+        <li><strong>No long-term lock-in:</strong> Three-month initial commitment, then month-to-month with 30 days notice. If our work is not delivering value, you should not be contractually trapped.</li>
+        <li><strong>Transparent reporting:</strong> Every report shows exactly what was done, what changed, and what is planned next. No black-box tactics, no obfuscation.</li>
+        <li><strong>Ethical methods only:</strong> White-hat SEO exclusively. No link schemes, no cloaking, no private blog networks. Tactics that risk Google penalties are never worth the short-term gain.</li>
+        <li><strong>Direct consultant access:</strong> You communicate directly with the person doing the work, not through an account manager who relays messages.</li>
+        <li><strong>Ownership of all work:</strong> Every piece of content, every technical fix, every report belongs to you. If you leave, you keep everything.</li>
+      </ul>
+
+      <h2>One-Off Services</h2>
+
+      <p>Not every business needs a monthly retainer. We offer standalone services for specific needs.</p>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--color-border);">
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">Service</th>
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">Price</th>
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">Turnaround</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;"><a href="/seo-audit-leeds/">Comprehensive SEO Audit</a></td>
+            <td style="padding: 0.75rem 1rem;">£750</td>
+            <td style="padding: 0.75rem 1rem;">5-10 working days</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;"><a href="/technical-seo-leeds/">Technical SEO Audit</a></td>
+            <td style="padding: 0.75rem 1rem;">£500</td>
+            <td style="padding: 0.75rem 1rem;">5 working days</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;">Content Strategy Document</td>
+            <td style="padding: 0.75rem 1rem;">£400</td>
+            <td style="padding: 0.75rem 1rem;">5 working days</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;">Local SEO Setup</td>
+            <td style="padding: 0.75rem 1rem;">£300</td>
+            <td style="padding: 0.75rem 1rem;">3 working days</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem 1rem;"><a href="/free-seo-audit-leeds/">Free SEO Health Check</a></td>
+            <td style="padding: 0.75rem 1rem;">£0</td>
+            <td style="padding: 0.75rem 1rem;">48 hours</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Leeds vs London SEO Pricing</h2>
+
+      <p>The following comparison reflects typical market rates based on publicly available agency pricing and industry surveys. The quality gap is closing rapidly as Leeds attracts more senior digital talent.</p>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--color-border);">
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">Service Level</th>
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">London (typical)</th>
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">Leeds (SEO Leeds)</th>
+            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 700;">Saving</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;">Small business SEO</td>
+            <td style="padding: 0.75rem 1rem;">£1,500-£2,500/mo</td>
+            <td style="padding: 0.75rem 1rem;">£500/mo</td>
+            <td style="padding: 0.75rem 1rem;">60-80%</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;">Mid-market SEO</td>
+            <td style="padding: 0.75rem 1rem;">£2,500-£4,000/mo</td>
+            <td style="padding: 0.75rem 1rem;">£1,000/mo</td>
+            <td style="padding: 0.75rem 1rem;">60-75%</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--color-border);">
+            <td style="padding: 0.75rem 1rem;">Enterprise SEO</td>
+            <td style="padding: 0.75rem 1rem;">£4,000-£10,000/mo</td>
+            <td style="padding: 0.75rem 1rem;">£2,000+/mo</td>
+            <td style="padding: 0.75rem 1rem;">50-80%</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem 1rem;">One-off audit</td>
+            <td style="padding: 0.75rem 1rem;">£1,500-£3,000</td>
+            <td style="padding: 0.75rem 1rem;">£750</td>
+            <td style="padding: 0.75rem 1rem;">50-75%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The savings are real, but they come from lower operational costs, not lower effort or expertise. Every client receives the same analytical rigour, strategic depth, and reporting quality that London agencies charge a premium for. The difference is that a Leeds consultancy does not need to cover a £50,000 annual office lease in Farringdon.</p>
+
+      <h2>Understanding SEO ROI</h2>
+
+      <p>SEO is an investment, not an expense. Understanding typical return timelines helps set realistic expectations and evaluate whether the investment makes commercial sense for your business.</p>
+
+      <h3>Month 1-3: Foundation Phase</h3>
+      <p>The first three months focus on technical fixes, on-page optimisation, and local SEO setup. During this phase, you should see improvements in crawlability, indexation, and Google Business Profile visibility. Some quick wins produce ranking improvements within weeks, particularly for local and long-tail keywords.</p>
+
+      <h3>Month 4-6: Growth Phase</h3>
+      <p>Content and link building begin compounding. New pages start ranking for target keywords. Existing pages climb as technical improvements and internal linking take effect. Most businesses see measurable increases in organic traffic during this period, with some keywords reaching page one positions.</p>
+
+      <h3>Month 7-12: Acceleration Phase</h3>
+      <p>Sustained effort produces compound returns. Domain authority grows. Content assets mature and attract natural links. The gap between your site and competitors widens. For a typical Leeds business investing £1,000 per month, the target is for organic traffic to deliver leads or sales worth multiples of the SEO investment within 12 months.</p>
+
+      <h3>Typical ROI Benchmarks</h3>
+      <p>A Leeds solicitor paying £1,000 per month for SEO who acquires three new clients per month from organic search at an average case value of £2,000 generates £6,000 in monthly revenue from a £1,000 investment: a 6:1 return. An e-commerce brand generating an additional £5,000 in monthly sales from improved organic rankings against a £500 SEO spend achieves a 10:1 return. These are realistic benchmarks, not hypothetical maximums.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Why is SEO pricing in Leeds cheaper than London?</h3>
+        <p>Leeds SEO agencies operate with significantly lower overheads than London firms. Office costs, salaries, and operational expenses are 30-50% lower in Leeds compared to central London. This does not mean lower quality. Many Leeds SEO professionals have worked at London agencies and bring the same expertise at more competitive rates. You get London-calibre strategy without the London price tag.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Are there long-term contracts?</h3>
+        <p>We require a minimum three-month commitment because SEO results take time to materialise. After the initial three months, our agreements roll month-to-month with 30 days notice to cancel. We do not lock clients into 12-month contracts because we believe our results should earn your continued business, not a contract clause.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is not included in the monthly price?</h3>
+        <p>All analytical work, strategy, reporting, and optimisation is included. The only potential additional costs are third-party tools if you want your own subscriptions (we use ours), paid media budget if you choose to run Google Ads alongside SEO, and any web development work beyond minor on-page changes that requires a separate developer.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How quickly will I see results from SEO?</h3>
+        <p>Most Leeds businesses see measurable improvements within 3-6 months. Technical fixes and local SEO optimisations often produce results within weeks. Content-driven and link-building strategies take longer to compound. We set realistic expectations during the discovery call and provide monthly progress reports so you can track improvements against your baseline.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I upgrade or downgrade my package?</h3>
+        <p>Yes. You can move between tiers at any monthly renewal point with 14 days notice. Many clients start with the Starter package and upgrade to Growth once they see initial results and want to accelerate. We recommend the tier that matches your current needs and budget rather than overselling.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you guarantee rankings?</h3>
+        <p>No reputable SEO provider guarantees specific rankings because Google's algorithm considers hundreds of factors, many outside any agency's control. What we guarantee is transparent reporting, consistent effort, and a data-driven approach. We set measurable KPIs during onboarding and report against them monthly so you always know whether the investment is delivering returns.</p>
+      </div>
+
+      <div class="cta-box">
+        <h2 style="color: white; margin-top: 0;">Find Your Right Package</h2>
+        <p>Not sure which tier fits your business? Start with a free SEO health check and we'll recommend the package that matches your goals and budget.</p>
+        <a href="/free-seo-audit-leeds/">Get Your Free Audit</a>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">Or <a href="/contact/" style="color: white; text-decoration: underline;">book a call</a> to discuss your needs directly.</p>
+      </div>
+
+      <p>View our <a href="/seo-audit-leeds/">detailed audit service</a>, explore all <a href="/services/">SEO services</a>, or read our <a href="/case-studies/">case studies</a> to see the results we deliver for Leeds businesses.</p>
+
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,149 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: object[];
+}
+
+const { title, description, canonical, schema = [] } = Astro.props;
+const currentPath = Astro.url.pathname;
+const site = 'https://seo-leeds.uk';
+const canonicalUrl = canonical || `${site}${currentPath}`;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services/', label: 'Services' },
+  { href: '/areas/', label: 'Areas' },
+  { href: '/industries/', label: 'Industries' },
+  { href: '/ai-search-optimisation-leeds/', label: 'AI Search' },
+  { href: '/seo-pricing-leeds/', label: 'Pricing' },
+  { href: '/case-studies/', label: 'Case Studies' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  {schema.map((s) => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+</head>
+<body class="bg-white text-text min-h-screen flex flex-col">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="sticky top-0 z-50 bg-brand text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-tight hover:text-accent transition-colors">
+        SEO Leeds
+      </a>
+      <nav class="hidden md:flex items-center gap-5 text-sm font-medium" aria-label="Main navigation">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'hover:text-accent transition-colors',
+              currentPath === link.href && 'text-accent',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+      <a href="/contact/" class="hidden md:inline-flex bg-accent text-brand-dark font-bold px-4 py-2 rounded-lg text-sm hover:bg-accent-light transition-colors">
+        Free SEO Audit
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Open menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden bg-brand-dark px-4 pb-4" aria-label="Mobile navigation">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="block py-2 text-sm hover:text-accent transition-colors border-b border-brand-light/20"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="/contact/" class="block mt-3 bg-accent text-brand-dark font-bold px-4 py-2 rounded-lg text-sm text-center">
+        Free SEO Audit
+      </a>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="bg-brand-dark text-white/80 mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h2 class="text-white font-bold text-lg mb-3">SEO Leeds</h2>
+        <p class="text-sm leading-relaxed">Local SEO consultancy for Leeds and West Yorkshire businesses. London-quality expertise at Northern prices.</p>
+        <p class="text-sm mt-3">Covering Leeds, Bradford, Wakefield, Huddersfield, Harrogate, York, and the wider Northern Powerhouse.</p>
+      </div>
+      <div>
+        <h2 class="text-white font-bold text-lg mb-3">Services</h2>
+        <ul class="text-sm space-y-2">
+          <li><a href="/services/" class="hover:text-accent transition-colors">All Services</a></li>
+          <li><a href="/technical-seo-leeds/" class="hover:text-accent transition-colors">Technical SEO</a></li>
+          <li><a href="/seo-audit-leeds/" class="hover:text-accent transition-colors">SEO Audit</a></li>
+          <li><a href="/ai-search-optimisation-leeds/" class="hover:text-accent transition-colors">AI Search Optimisation</a></li>
+          <li><a href="/seo-pricing-leeds/" class="hover:text-accent transition-colors">Pricing</a></li>
+          <li><a href="/free-seo-audit-leeds/" class="hover:text-accent transition-colors">Free SEO Audit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-white font-bold text-lg mb-3">Quick Links</h2>
+        <ul class="text-sm space-y-2">
+          <li><a href="/about/" class="hover:text-accent transition-colors">About Sunny Patel</a></li>
+          <li><a href="/case-studies/" class="hover:text-accent transition-colors">Case Studies</a></li>
+          <li><a href="/areas/" class="hover:text-accent transition-colors">Areas We Cover</a></li>
+          <li><a href="/industries/" class="hover:text-accent transition-colors">Industries</a></li>
+          <li><a href="/contact/" class="hover:text-accent transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-white/50 gap-2">
+        <p>&copy; {new Date().getFullYear()} SEO Leeds — Sunny Patel. All rights reserved.</p>
+        <p>Last updated: {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu?.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

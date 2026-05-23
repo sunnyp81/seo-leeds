@@ -1,0 +1,188 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = "SEO Leeds | Areas We Cover";
+const description = "SEO services covering all Leeds suburbs and West Yorkshire. From Headingley to Horsforth, Roundhay to Morley, and across the Northern Powerhouse.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://seo-leeds.uk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Areas",
+        "item": "https://seo-leeds.uk/areas/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SEO Leeds — Areas We Cover",
+    "description": "SEO services covering all Leeds suburbs and West Yorkshire. From Headingley to Horsforth, Roundhay to Morley, and across the Northern Powerhouse.",
+    "url": "https://seo-leeds.uk/areas/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you only work with businesses based in Leeds city centre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We work with businesses across all Leeds postcodes (LS1-LS29), wider West Yorkshire including Bradford, Wakefield, Huddersfield, and Halifax, and the broader Northern Powerhouse region including Harrogate, York, and Sheffield."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you do local SEO for specific Leeds suburbs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We build location-specific landing pages and Google Business Profile strategies targeting individual suburbs like Headingley, Roundhay, Horsforth, Morley, and Chapel Allerton. Each area has distinct search behaviour and competition levels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with businesses outside West Yorkshire?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While our core expertise is Leeds and West Yorkshire, we work with businesses across the Northern Powerhouse corridor including Harrogate, York, Hull, Sheffield, and Manchester. National and international SEO campaigns are also available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does local SEO differ between Leeds suburbs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Search behaviour varies significantly by area. Headingley has high student-related search volume, Roundhay skews toward families and premium services, while areas like Garforth and Cross Gates have stronger commuter and trade-related search patterns. We tailor strategy to each area's demographics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need separate pages for each area I serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on competition and search volume. For high-value services like legal, property, or healthcare, dedicated area pages significantly improve local rankings. We analyse search data to determine which areas justify standalone pages versus being grouped."
+        }
+      }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <section class="px-4 py-12">
+    <div class="prose">
+      <h1>SEO Services Across Leeds and West Yorkshire</h1>
+
+      <p>SEO Leeds covers every corner of Leeds and the wider West Yorkshire region. From established businesses in the financial district to growing companies in suburban high streets, we deliver search engine optimisation that reflects how people in each area actually search. Our local knowledge — the postcodes, the landmarks, the commercial dynamics of each neighbourhood — is what separates effective local SEO from generic campaigns that treat Leeds as a single dot on a map.</p>
+
+      <div class="quick-answer">
+        <p><strong>Quick answer:</strong> We provide SEO services across all Leeds postcodes (LS1-LS29), wider West Yorkshire (Bradford, Wakefield, Huddersfield, Halifax), and the Northern Powerhouse corridor including Harrogate, York, and Sheffield. Every campaign is tailored to local search patterns. <a href="/contact/">Contact us</a> to discuss your area.</p>
+      </div>
+
+      <p>Leeds is the UK's third-largest city by economic output, and its search landscape reflects that scale. Over 780,000 people live across dozens of distinct suburbs, each with its own commercial character and search behaviour. A dental practice in Roundhay faces completely different competition to one in Morley. A tradesperson in Horsforth targets different keywords to one covering Cross Gates. We build strategies that account for these differences rather than applying a blanket approach.</p>
+
+      <h2>Leeds City Centre</h2>
+
+      <p>The city centre is the commercial heart of Leeds and the most competitive area for search visibility. The financial district around Park Row and Park Square houses major legal and accountancy firms. Trinity Leeds and the Victoria Quarter drive retail and hospitality searches. The Corn Exchange, Kirkgate Market, and the independent quarter around Call Lane generate high-volume food and leisure searches.</p>
+
+      <p>For city centre businesses, search competition is intense across every sector. Professional services firms compete for high-value terms like "solicitor Leeds" and "accountant Leeds city centre." Restaurants and bars fight for visibility in map pack results driven by foot traffic and proximity. Our city centre SEO strategies prioritise Google Business Profile optimisation, review velocity, and hyper-local content that distinguishes your business from the dozens of competitors within walking distance.</p>
+
+      <h2>North Leeds</h2>
+
+      <p>North Leeds includes some of the city's most affluent and densely searched suburbs. Headingley has a dual identity — a large student population during term time and established residential streets, creating search patterns that shift seasonally. Roundhay, home to one of Europe's largest city parks, draws family-oriented searches and premium service queries. Chapel Allerton has become a hub for independent retail and dining with strong "best in Chapel Allerton" search demand.</p>
+
+      <p>Moortown and Alwoodley serve established residential communities with demand for professional services, healthcare, and education. Meanwood, increasingly popular with young professionals, generates growing search volume for local amenities and services. For businesses in North Leeds, we build content strategies that match the demographic profile of each suburb and target the specific long-tail queries that drive high-intent local traffic.</p>
+
+      <h2>West Leeds</h2>
+
+      <p>West Leeds spans from the affluent commuter villages of Horsforth, Bramhope, and Guiseley to the more urban Kirkstall and Armley. Horsforth, with its strong village identity and excellent transport links via the Harrogate line and Leeds Bradford Airport proximity, generates significant search volume for local services and professional businesses. Pudsey, straddling Leeds and Bradford, has a distinct commercial centre with its own search ecosystem.</p>
+
+      <p>Kirkstall is notable for Kirkstall Abbey and the retail parks along Kirkstall Road that draw searches from across West Leeds. Armley, undergoing regeneration, is seeing new business formation that creates fresh search demand. For businesses in these areas, we leverage the strong community identities that drive "near me" and suburb-specific searches, building location pages and local citations that capture traffic competitors overlook.</p>
+
+      <h2>South Leeds</h2>
+
+      <p>South Leeds includes Beeston, Morley, and Rothwell — areas with strong local identities and commercial centres that generate search behaviour distinct from the city centre. Morley has its own town centre with independent retailers, professional services firms, and a weekly market. Rothwell serves as a gateway to the M1 corridor with growing business parks attracting logistics, trade, and service companies.</p>
+
+      <p>Beeston, close to Elland Road and the university campuses, has a mixed demographic that creates diverse search patterns across student services, local trades, and community amenities. The White Rose Shopping Centre in Beeston is a major commercial anchor that drives retail and service searches. For South Leeds businesses, local SEO often yields faster results than in the more competitive city centre, because fewer businesses are actively optimising for these suburb-specific terms.</p>
+
+      <h2>East Leeds</h2>
+
+      <p>East Leeds is one of the city's fastest-growing corridors. Cross Gates and Garforth are established suburban centres with strong local search demand for services, trades, and retail. Thorpe Park, the major business park along the M1, houses national companies and creates B2B search demand for professional services, recruitment, and technology suppliers.</p>
+
+      <p>The East Leeds Extension, one of the largest urban development projects in the UK, will add thousands of new homes and businesses over the coming years, expanding search demand across the area. For businesses positioned in East Leeds now, building search visibility ahead of this growth is a strategic advantage. We help businesses in Cross Gates, Garforth, Colton, and Thorpe Park capture local search traffic before competition intensifies.</p>
+
+      <h2>Leeds Business Hubs</h2>
+
+      <p>Leeds has several concentrated business districts that generate specific B2B and professional service search patterns. Wellington Place, west of the city centre, houses major employers including HMRC and NHS Digital, creating demand for nearby professional services, food, and amenities. Sovereign Square and Leeds Dock, along the waterfront, are home to technology, media, and creative businesses driving searches for digital services, co-working, and specialist suppliers.</p>
+
+      <p>Park Square remains the traditional home of Leeds legal and financial services, with search behaviour dominated by high-value professional queries. South Bank, the major regeneration zone south of the river, is transforming into a mixed-use district with Channel 4's national headquarters as its anchor tenant. As South Bank develops, search patterns are shifting from industrial and property queries toward creative, media, and lifestyle searches. Our strategies for businesses in these hubs target the specific professional and commercial queries each location generates.</p>
+
+      <h2>Wider West Yorkshire</h2>
+
+      <p>Beyond Leeds itself, we serve businesses across the West Yorkshire conurbation. Bradford, the UK's youngest city by average age, has a dynamic business community with strong search demand across textiles, food manufacturing, legal, and digital sectors. Wakefield, with its growing creative quarter around the Hepworth Gallery, generates search traffic for professional and creative services. Huddersfield serves as a university town and manufacturing centre with distinct B2B search patterns. Halifax, home to major financial institutions, drives search demand in financial services and heritage tourism.</p>
+
+      <p>For businesses serving multiple West Yorkshire locations, we build hub-and-spoke content architectures that establish authority across the region while targeting location-specific long-tail queries. This approach avoids the duplicate content issues that plague businesses trying to rank in multiple nearby cities with thin, near-identical location pages.</p>
+
+      <h2>Northern Powerhouse Connections</h2>
+
+      <p>Leeds sits at the centre of the Northern Powerhouse — the economic corridor spanning from Manchester to Hull. We work with businesses targeting searches across this wider region. Harrogate and York, both within 30 minutes of Leeds, have premium search markets for professional services, tourism, and hospitality. Hull and Sheffield extend the corridor east and south. Manchester, connected by the Trans-Pennine route, shares significant business overlap with Leeds.</p>
+
+      <p>For businesses headquartered in Leeds but serving the broader Northern Powerhouse, we build SEO strategies that establish regional authority without diluting local relevance. This means a carefully structured site architecture with Leeds as the primary hub, supported by dedicated content targeting each secondary market based on actual search demand and competitive analysis.</p>
+
+      <div class="cta-box">
+        <h2 style="color: white; margin-top: 0;">Serve customers in a specific area?</h2>
+        <p>Tell us where your customers are and we will show you the search opportunities you are missing.</p>
+        <a href="/contact/">Get Your Area Analysis</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Do you only work with businesses based in Leeds city centre?</h3>
+        <p>No. We work with businesses across all Leeds postcodes (LS1-LS29), wider West Yorkshire including Bradford, Wakefield, Huddersfield, and Halifax, and the broader Northern Powerhouse region including Harrogate, York, and Sheffield.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you do local SEO for specific Leeds suburbs?</h3>
+        <p>Yes. We build location-specific landing pages and Google Business Profile strategies targeting individual suburbs like Headingley, Roundhay, Horsforth, Morley, and Chapel Allerton. Each area has distinct search behaviour and competition levels.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you work with businesses outside West Yorkshire?</h3>
+        <p>Yes. While our core expertise is Leeds and West Yorkshire, we work with businesses across the Northern Powerhouse corridor including Harrogate, York, Hull, Sheffield, and Manchester. National and international SEO campaigns are also available.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does local SEO differ between Leeds suburbs?</h3>
+        <p>Search behaviour varies significantly by area. Headingley has high student-related search volume, Roundhay skews toward families and premium services, while areas like Garforth and Cross Gates have stronger commuter and trade-related search patterns. We tailor strategy to each area's demographics.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need separate pages for each area I serve?</h3>
+        <p>It depends on competition and search volume. For high-value services like legal, property, or healthcare, dedicated area pages significantly improve local rankings. We analyse search data to determine which areas justify standalone pages versus being grouped.</p>
+      </div>
+
+      <div class="cta-box">
+        <h2 style="color: white; margin-top: 0;">Get Started with Local SEO</h2>
+        <p>Find out how your business performs in local search across Leeds and West Yorkshire. Free initial audit included.</p>
+        <a href="/free-seo-audit-leeds/">Request Free Audit</a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,793 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Search Optimisation Leeds | AEO';
+const description = 'AI search optimisation for Leeds businesses. Get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews. AEO and GEO strategies.';
+
+const faqItems = [
+  {
+    question: 'What is AEO (Answer Engine Optimisation)?',
+    answer: 'AEO is the practice of structuring your website content so that AI-powered answer engines — ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot — select and cite your business as a source when users ask questions. It focuses on clear, factual, well-structured answers rather than traditional keyword density or backlink volume.'
+  },
+  {
+    question: 'How do I get my Leeds business cited by ChatGPT?',
+    answer: 'ChatGPT cites sources that are authoritative, well-structured, and accessible to its web crawler (GPTBot). You need to allow GPTBot in your robots.txt, implement structured data (especially Organization and LocalBusiness schema), write content in a factual encyclopaedic style, and build entity recognition through consistent NAP citations and knowledge graph signals.'
+  },
+  {
+    question: 'What is llms.txt and do I need one?',
+    answer: 'llms.txt is a proposed standard (llmstxt.org) that provides a machine-readable summary of your website specifically for large language models. It sits at your domain root (e.g. example.com/llms.txt) and gives AI crawlers a concise overview of who you are, what you do, and which pages matter most. It is not yet universally adopted, but early implementation signals forward-thinking technical authority.'
+  },
+  {
+    question: 'Does AI search replace Google?',
+    answer: 'No. AI search is an additional discovery channel, not a replacement. Google still processes over 8.5 billion searches per day. However, AI search is growing rapidly — ChatGPT Search reached 100 million weekly users by early 2026, and Google AI Overviews now appear on roughly 30% of informational queries. Businesses that ignore AI search risk losing visibility as user behaviour shifts.'
+  },
+  {
+    question: 'How long does AI search optimisation take to show results?',
+    answer: 'Initial improvements in AI citation visibility typically appear within 4 to 8 weeks after implementing structured data, content restructuring, and crawler access changes. Full entity recognition and consistent citation across multiple AI platforms usually takes 3 to 6 months. This timeline depends on your existing domain authority, content quality, and competitive landscape in Leeds.'
+  },
+  {
+    question: 'Which industries benefit most from AI search optimisation in Leeds?',
+    answer: 'Professional services see the strongest early returns — legal firms, financial advisers, healthcare providers, and technology consultancies. These industries face high-intent informational queries where AI search engines prefer citing authoritative local sources. Leeds industries like fintech (Wellington Place), digital media (Channel 4 HQ), and legal services (Park Square) are particularly well-positioned.'
+  },
+  {
+    question: 'Is AI search optimisation expensive?',
+    answer: 'AI search optimisation builds on existing SEO foundations, so businesses with solid technical SEO and content already in place will see lower costs. A focused AI search audit and implementation for a Leeds SME typically ranges from £500 to £2,000 as a one-off project, with ongoing monitoring and optimisation from £300 per month. The ROI is significant because AI citations drive high-trust, high-conversion traffic.'
+  },
+  {
+    question: 'Can I do AI search optimisation myself?',
+    answer: 'You can implement the basics yourself: allow AI crawlers in robots.txt, add an llms.txt file, and restructure your key pages with clear definitional paragraphs and FAQ sections. However, advanced entity building, structured data implementation, citation monitoring across multiple AI platforms, and strategic content restructuring typically require specialist expertise to execute effectively.'
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Search Optimisation Leeds",
+    "description": "AI search optimisation service for Leeds businesses. Get cited by ChatGPT, Perplexity, Claude, Microsoft Copilot, and Google AI Overviews through AEO, GEO, and LLM SEO strategies.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk",
+      "telephone": "",
+      "email": "2012.infinite@gmail.com",
+      "areaServed": {
+        "@type": "City",
+        "name": "Leeds",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "West Yorkshire"
+        }
+      }
+    },
+    "serviceType": "AI Search Optimisation",
+    "offers": {
+      "@type": "Offer",
+      "description": "AI search visibility audit and optimisation for Leeds businesses",
+      "areaServed": {
+        "@type": "City",
+        "name": "Leeds"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://seo-leeds.uk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Search Optimisation Leeds",
+        "item": "https://seo-leeds.uk/ai-search-optimisation-leeds/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AI Search Optimisation Leeds | AEO",
+    "description": "AI search optimisation for Leeds businesses. Get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews. AEO and GEO strategies.",
+    "url": "https://seo-leeds.uk/ai-search-optimisation-leeds/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Search Optimisation",
+      "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+    },
+    "datePublished": "2026-05-23",
+    "dateModified": "2026-05-23"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <section class="px-4 py-12">
+    <div class="prose">
+
+      <h1 class="text-3xl md:text-4xl font-extrabold text-brand mb-6 leading-tight">AI Search Optimisation in Leeds</h1>
+
+      <p>AI search optimisation in Leeds is the practice of making your business visible not just in traditional Google results, but in AI-generated answers from ChatGPT, Perplexity, Claude, Microsoft Copilot, and Google AI Overviews. As these platforms reshape how people find and choose local services, Leeds businesses that fail to optimise for AI search risk becoming invisible to a growing segment of their potential customers. This guide covers everything you need to know about AEO (Answer Engine Optimisation), GEO (Generative Engine Optimisation), and the specific strategies that get Leeds businesses cited by AI.</p>
+
+      <div class="quick-answer">
+        <p><strong>Quick answer:</strong> AI search optimisation ensures your business appears when someone asks ChatGPT "Who is the best SEO consultant in Leeds?" or when Google's AI Overview summarises local service options. It combines structured data, entity building, content restructuring, and AI crawler access to make your website a citable source across all major AI platforms.</p>
+      </div>
+
+      <!-- Section 1: What is AI Search Optimisation? -->
+      <h2 id="what-is-ai-search-optimisation">What Is AI Search Optimisation?</h2>
+
+      <p>AI search optimisation is the discipline of making your website content discoverable, understandable, and citable by AI-powered search and answer systems. It encompasses three distinct but overlapping practices: AEO (Answer Engine Optimisation), GEO (Generative Engine Optimisation), and LLM SEO (Large Language Model Search Engine Optimisation).</p>
+
+      <p><strong>AEO</strong> focuses on making your content the direct answer to user questions. When someone asks Perplexity "What does a technical SEO audit include?" or ChatGPT "How much does SEO cost in Leeds?", AEO ensures your content is structured, factual, and concise enough to be selected as the answer. This requires a fundamentally different writing style to traditional SEO content — less persuasive marketing copy, more encyclopaedic clarity.</p>
+
+      <p><strong>GEO</strong> targets the generative outputs of AI systems. When Google's AI Overview synthesises information from multiple sources to answer a query, GEO strategies increase the probability that your content is included in that synthesis. This involves embedding statistics, unique data points, authoritative citations, and quotable statements that generative models find valuable enough to reference.</p>
+
+      <p><strong>LLM SEO</strong> is the broadest category, covering all optimisation work that improves your visibility within large language model outputs. This includes technical measures like managing AI crawler access through robots.txt and llms.txt, as well as strategic content work like entity building and knowledge graph optimisation.</p>
+
+      <p>The critical difference between AI search optimisation and traditional SEO is the selection mechanism. Google's traditional algorithm ranks pages in a list — position one gets roughly 27% of clicks, position ten gets roughly 2%. AI search engines do not present lists. They select one or a few sources to cite, present a synthesised answer, and may or may not link back to the original. This winner-takes-all dynamic means that being "good enough to rank on page one" is no longer sufficient. Your content must be good enough to be the source an AI chooses to cite.</p>
+
+      <p>For Leeds businesses, this shift creates both risk and opportunity. The risk is clear: if your competitors invest in AI search optimisation and you do not, they will capture the growing volume of queries that flow through AI channels. The opportunity is equally clear: AI search optimisation is still a nascent discipline, and early movers in the Leeds market can establish dominance before the competitive landscape hardens.</p>
+
+      <!-- Section 2: The AI Search Landscape in 2026 -->
+      <h2 id="ai-search-landscape-2026">The AI Search Landscape in 2026</h2>
+
+      <p>The AI search market in 2026 is no longer experimental. It is a multi-platform ecosystem with real user volumes, real commercial intent, and real consequences for businesses that ignore it.</p>
+
+      <p><strong>ChatGPT Search</strong> crossed 100 million weekly active users in early 2026 and continues to grow. OpenAI's integration of real-time web search with conversational AI means users increasingly ask ChatGPT questions they previously typed into Google. The platform's SearchGPT feature pulls live web data, cites sources with clickable links, and has become a genuine traffic driver for well-optimised websites. For Leeds businesses, ChatGPT Search is particularly relevant for high-intent service queries: "best accountant in Leeds", "emergency plumber Leeds LS1", "SEO agency near Leeds Dock".</p>
+
+      <p><strong>Perplexity</strong> has established itself as the research-oriented AI search engine, processing over 250 million queries per month by Q1 2026. Its citation-heavy format — every claim linked to a source — makes it the most transparent AI search platform and the most rewarding for businesses with authoritative, well-structured content. Perplexity's Pro Search feature performs multi-step research, making it the tool of choice for B2B buyers evaluating service providers. A Leeds fintech company researching "enterprise SEO consultants West Yorkshire" is increasingly likely to start that search in Perplexity rather than Google.</p>
+
+      <p><strong>Google AI Overviews</strong> (formerly Search Generative Experience) now appear on approximately 30% of informational queries in the UK. These AI-generated summaries sit above traditional organic results, effectively capturing the attention — and often the click — that previously went to position one. For Leeds businesses, AI Overviews are particularly impactful on "what is" and "how to" queries related to professional services. If your content is not structured for AI Overview inclusion, you are losing visibility even if you rank well organically.</p>
+
+      <p><strong>Microsoft Copilot</strong>, integrated into Bing, Edge, Windows, and the Microsoft 365 suite, has become the default AI assistant for millions of enterprise users. When a procurement manager at a Leeds financial services firm asks Copilot to "find SEO agencies in Leeds with case studies in financial services", Copilot searches the web, synthesises results, and presents recommendations. Businesses with strong Bing presence, good structured data, and clear service descriptions are the ones that get recommended.</p>
+
+      <p><strong>Claude</strong> (Anthropic) and <strong>Apple Intelligence</strong> round out the major platforms. Claude is increasingly used by professionals for research and analysis, while Apple Intelligence's integration into Safari and Siri creates another AI-mediated search channel for the significant iPhone user base. Each platform has its own crawling and citation behaviours, but the fundamental requirement is the same: your content must be authoritative, well-structured, and accessible to AI systems.</p>
+
+      <p>The aggregate impact of these platforms represents a structural shift in search behaviour. Research from Gartner suggests that by the end of 2026, 25% of all search queries will be handled by AI-first platforms rather than traditional search engines. For Leeds businesses — particularly those in professional services, technology, and financial services — this is not a future concern. It is a present reality.</p>
+
+      <!-- Section 3: How AI Search Engines Find and Cite Sources -->
+      <h2 id="how-ai-search-engines-cite-sources">How AI Search Engines Find and Cite Sources</h2>
+
+      <p>Understanding how AI search engines select sources to cite is essential for any AI search optimisation strategy. The process differs fundamentally from how Google ranks web pages.</p>
+
+      <h3>Crawling and Indexing</h3>
+
+      <p>AI search platforms maintain their own web crawlers. GPTBot (OpenAI), ClaudeBot (Anthropic), PerplexityBot, and Bingbot (which feeds Microsoft Copilot) each crawl the web independently. Unlike Googlebot, which has crawled the web continuously for over 25 years and maintains a vast index, these AI crawlers are newer and often more selective. They prioritise websites that explicitly allow their access, have clean technical structures, and publish content that is useful for training and retrieval purposes.</p>
+
+      <p>The first step in AI search optimisation is ensuring these crawlers can access your site. Many websites inadvertently block AI crawlers through overly restrictive robots.txt rules or through Cloudflare bot protection settings that treat AI crawlers as threats. A Leeds law firm that blocks GPTBot is invisible to ChatGPT Search, regardless of how good their content is.</p>
+
+      <h3>Citation Selection</h3>
+
+      <p>When a user asks an AI search engine a question, the platform performs retrieval-augmented generation (RAG). It searches the web (or its index) for relevant sources, retrieves the most relevant passages, and then generates an answer that synthesises information from those sources. The key question for businesses is: what makes a source "relevant" enough to be retrieved and cited?</p>
+
+      <p>Research into AI citation patterns reveals several consistent signals:</p>
+
+      <ul>
+        <li><strong>Entity recognition:</strong> AI systems preferentially cite sources that are recognised entities — businesses with consistent information across the web, structured data that confirms their identity, and mentions on authoritative third-party platforms.</li>
+        <li><strong>Factual density:</strong> Content that leads with verifiable facts, statistics, and specific claims is cited more often than content that leads with marketing language or subjective statements.</li>
+        <li><strong>Structural clarity:</strong> Pages with clear headings, defined sections, and logical information hierarchy are easier for AI systems to parse and extract relevant passages from.</li>
+        <li><strong>Source authority:</strong> Domain authority still matters, but in a different way. AI systems appear to weight topical authority more heavily than general domain authority. A Leeds accountancy firm's page on R&D tax credits carries more weight than a generic business directory listing the same information.</li>
+        <li><strong>Freshness:</strong> AI systems favour recently updated content, particularly for queries where timeliness matters. A page last updated in 2023 is less likely to be cited than one updated in 2026.</li>
+        <li><strong>Structured data:</strong> Schema markup — particularly Organization, LocalBusiness, FAQPage, and HowTo — gives AI systems machine-readable signals about what your content covers and who created it.</li>
+      </ul>
+
+      <p>The practical implication for Leeds businesses is that AI citation is not random and it is not purely algorithmic in the way Google rankings are. It is a function of how well your content is structured for machine comprehension, how clearly your business identity is established across the web, and how useful your content is as a source of factual information.</p>
+
+      <!-- Diagram 1: Traditional Search vs AI Search -->
+      <h3>Traditional Search vs AI Search: How They Work</h3>
+
+      <div style="max-width: 700px; margin: 2rem auto;">
+        <svg viewBox="0 0 700 420" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram comparing traditional search flow and AI search flow">
+          <title>Traditional Search vs AI Search Flow</title>
+          <!-- Background -->
+          <rect width="700" height="420" fill="#f8f9fa" rx="12" />
+
+          <!-- Title -->
+          <text x="350" y="35" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e3a5f">Traditional Search vs AI Search</text>
+
+          <!-- Left column: Traditional Search -->
+          <text x="175" y="70" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1e3a5f">Traditional Search</text>
+
+          <rect x="75" y="85" width="200" height="40" rx="8" fill="#1e3a5f" />
+          <text x="175" y="110" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">User types query</text>
+
+          <line x1="175" y1="125" x2="175" y2="145" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="75" y="145" width="200" height="40" rx="8" fill="#2a5a8f" />
+          <text x="175" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">Search engine indexes pages</text>
+
+          <line x1="175" y1="185" x2="175" y2="205" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="75" y="205" width="200" height="40" rx="8" fill="#2a5a8f" />
+          <text x="175" y="230" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">Algorithm ranks results</text>
+
+          <line x1="175" y1="245" x2="175" y2="265" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="75" y="265" width="200" height="40" rx="8" fill="#2a5a8f" />
+          <text x="175" y="290" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">10 blue links displayed</text>
+
+          <line x1="175" y1="305" x2="175" y2="325" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="75" y="325" width="200" height="40" rx="8" fill="#e8a820" />
+          <text x="175" y="350" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f2440">User clicks a link</text>
+
+          <!-- Right column: AI Search -->
+          <text x="525" y="70" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1e3a5f">AI Search</text>
+
+          <rect x="425" y="85" width="200" height="40" rx="8" fill="#1e3a5f" />
+          <text x="525" y="110" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">User asks a question</text>
+
+          <line x1="525" y1="125" x2="525" y2="145" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="425" y="145" width="200" height="40" rx="8" fill="#2a5a8f" />
+          <text x="525" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">AI retrieves relevant sources</text>
+
+          <line x1="525" y1="185" x2="525" y2="205" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="425" y="205" width="200" height="40" rx="8" fill="#2a5a8f" />
+          <text x="525" y="230" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">LLM synthesises answer</text>
+
+          <line x1="525" y1="245" x2="525" y2="265" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="425" y="265" width="200" height="40" rx="8" fill="#2a5a8f" />
+          <text x="525" y="290" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white">One answer with citations</text>
+
+          <line x1="525" y1="305" x2="525" y2="325" stroke="#1e3a5f" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+          <rect x="425" y="325" width="200" height="40" rx="8" fill="#e8a820" />
+          <text x="525" y="350" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f2440">User trusts the answer</text>
+
+          <!-- Divider -->
+          <line x1="350" y1="60" x2="350" y2="390" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="6,4" />
+
+          <!-- Key insight -->
+          <rect x="150" y="385" width="400" height="28" rx="6" fill="#1e3a5f" />
+          <text x="350" y="404" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e8a820" font-weight="600">AI search = winner takes all. You are either cited or invisible.</text>
+
+          <!-- Arrow marker -->
+          <defs>
+            <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e3a5f" />
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Section 4: AEO: Answer Engine Optimisation -->
+      <h2 id="aeo-answer-engine-optimisation">AEO: Answer Engine Optimisation</h2>
+
+      <p>Answer Engine Optimisation is the practice of structuring your content so that AI-powered answer engines select it as the source for direct answers. AEO is the most immediately actionable branch of AI search optimisation, and it produces measurable results faster than broader GEO or entity-building strategies.</p>
+
+      <p>The core principle of AEO is simple: write content that directly answers the question a user is asking, in the first sentence of the relevant section, using clear and unambiguous language. AI answer engines do not want to parse five paragraphs of context before finding the answer. They want the answer first, followed by supporting detail.</p>
+
+      <h3>The Definitional Paragraph Pattern</h3>
+
+      <p>The most effective AEO technique is the definitional paragraph. This is a single paragraph, typically 40 to 60 words, that defines a concept or answers a question in a way that AI systems can extract directly. The structure follows the pattern: "[Subject] is [definition/answer]. [One supporting sentence]. [One sentence on relevance or scope]."</p>
+
+      <p>For example, a Leeds SEO consultancy optimising for the query "What is technical SEO?" would write: "Technical SEO is the practice of optimising a website's infrastructure, code, and server configuration to help search engines crawl, index, and render pages efficiently. It covers site speed, mobile responsiveness, schema markup, XML sitemaps, and crawl budget management. Technical SEO forms the foundation that content and link-building strategies are built upon."</p>
+
+      <p>That paragraph is designed to be extracted verbatim by an AI system and presented as a direct answer. It leads with the definition, provides scope, and concludes with context. There is no marketing language, no subjective claims, and no filler.</p>
+
+      <h3>FAQ Structure for AEO</h3>
+
+      <p>FAQ sections are AEO goldmines. Each question-and-answer pair is a self-contained unit that AI systems can match directly to user queries. The key is ensuring that each answer is genuinely useful — not a one-line deflection that redirects the user to "contact us for more information."</p>
+
+      <p>Effective AEO FAQ answers are 50 to 100 words, lead with the direct answer, include one specific data point or example, and stand alone without requiring the reader to consume the rest of the page. When paired with FAQPage schema markup, these answers are machine-readable and significantly more likely to be selected by AI answer engines.</p>
+
+      <h3>Concise Answer Blocks</h3>
+
+      <p>Beyond FAQs, AEO-optimised pages use concise answer blocks throughout their content. Every H2 section should open with a paragraph that directly answers the implicit question of the heading. If the heading is "How Much Does SEO Cost in Leeds?", the first sentence should be: "SEO services in Leeds typically cost between £500 and £3,000 per month, depending on the scope of work, competitive landscape, and business size." Not a preamble about the importance of SEO, not a caveat about "it depends" — the answer, immediately.</p>
+
+      <p>This approach requires a mindset shift for many businesses. Traditional web copywriting front-loads benefits, builds emotional engagement, and delays the substantive answer. AEO inverts this: answer first, context second, persuasion third. The AI system gets what it needs in the first paragraph. The human reader who clicks through gets the full depth of the page.</p>
+
+      <p>For Leeds businesses, AEO is particularly valuable for service-based queries. When a user asks ChatGPT "Who does the best <a href="/technical-seo-leeds/">technical SEO in Leeds</a>?", the AI will look for pages that clearly state what the service includes, who provides it, what it costs, and what results clients have achieved. Pages that answer these questions concisely, with supporting evidence, are the ones that get cited.</p>
+
+      <!-- Section 5: GEO: Generative Engine Optimisation -->
+      <h2 id="geo-generative-engine-optimisation">GEO: Generative Engine Optimisation</h2>
+
+      <p>Generative Engine Optimisation is the practice of making your content valuable enough to be included in AI-generated responses. While AEO focuses on being the direct answer, GEO focuses on being one of the sources that an AI system synthesises when constructing a comprehensive response.</p>
+
+      <p>Research published by the Georgia Institute of Technology in 2024 identified several content characteristics that increase citation probability in generative AI outputs:</p>
+
+      <ul>
+        <li><strong>Statistics and quantitative data:</strong> Content that includes specific numbers — "Leeds has over 24,000 registered businesses" or "average SEO ROI in professional services is 748% over 3 years" — is cited 40% more frequently than content without numerical data.</li>
+        <li><strong>Unique data and original research:</strong> If your business publishes original survey data, case study results, or industry benchmarks that are not available elsewhere, AI systems treat this as high-value source material. A Leeds SEO agency that publishes annual "State of Digital Marketing in West Yorkshire" data creates a citable asset.</li>
+        <li><strong>Authoritative language:</strong> Content written in an authoritative, factual tone — similar to academic or encyclopaedic writing — is cited more often than content written in a casual or promotional tone. This does not mean dry or boring. It means precise, evidence-based, and confident.</li>
+        <li><strong>Quotable statements:</strong> Short, self-contained statements that express a clear position or insight are frequently extracted by AI systems. "The single biggest mistake Leeds businesses make in AI search optimisation is blocking AI crawlers while investing in content." That sentence is quotable, attributable, and useful to an AI constructing a response.</li>
+        <li><strong>Source citations within your content:</strong> Pages that cite their own sources — linking to research papers, official statistics, or authoritative third-party content — are perceived as more trustworthy by AI systems. The act of citing sources signals that your content is well-researched.</li>
+      </ul>
+
+      <h3>GEO Content Patterns</h3>
+
+      <p>Effective GEO content follows predictable patterns. Each section of a page should contain at least one statistic, one unique insight, and one clearly quotable statement. The content should be structured so that any individual paragraph could be extracted and presented as part of an AI-generated answer without losing its meaning.</p>
+
+      <p>This is the key difference between GEO and traditional content marketing. Traditional content assumes the reader will consume the entire page in sequence. GEO-optimised content assumes that any individual paragraph might be extracted, decontextualised, and presented alongside paragraphs from other sources. Each paragraph must therefore be self-contained, factual, and valuable in isolation.</p>
+
+      <p>For Leeds businesses, GEO optimisation means treating your service pages, blog posts, and case studies as reference material rather than sales collateral. When a generative AI constructs an answer about "SEO pricing in Leeds" or "best digital marketing strategies for Yorkshire businesses", your content needs to be the kind of source that a researcher would cite — not the kind of page a salesperson would send.</p>
+
+      <!-- Section 6: llms.txt and AI Crawler Access -->
+      <h2 id="llms-txt-ai-crawler-access">llms.txt and AI Crawler Access</h2>
+
+      <p>AI crawler access is the technical foundation of AI search optimisation. If AI systems cannot crawl your website, they cannot cite your content. This sounds obvious, but a surprising number of Leeds businesses inadvertently block AI crawlers through misconfigured robots.txt files, aggressive bot protection, or hosting configurations that reject unfamiliar user agents.</p>
+
+      <h3>robots.txt for AI Crawlers</h3>
+
+      <p>Your robots.txt file controls which crawlers can access your website. The major AI crawlers you need to allow are:</p>
+
+      <ul>
+        <li><strong>GPTBot</strong> — OpenAI's crawler, used by ChatGPT Search</li>
+        <li><strong>ChatGPT-User</strong> — OpenAI's browsing agent for real-time queries</li>
+        <li><strong>ClaudeBot</strong> — Anthropic's crawler for Claude</li>
+        <li><strong>PerplexityBot</strong> — Perplexity's web crawler</li>
+        <li><strong>Bingbot</strong> — Microsoft's crawler, which feeds Copilot</li>
+        <li><strong>Googlebot</strong> — Google's crawler, which feeds AI Overviews</li>
+        <li><strong>Applebot</strong> — Apple's crawler for Apple Intelligence and Siri</li>
+      </ul>
+
+      <p>A permissive robots.txt that allows all these crawlers is the simplest approach. If you have specific pages you do not want included in AI training (such as gated content or client portals), you can use targeted disallow rules for specific user agents while keeping your public content accessible.</p>
+
+      <h3>The llms.txt Standard</h3>
+
+      <p>llms.txt is a proposed standard (documented at llmstxt.org) that provides a machine-readable summary of your website specifically for large language models. Unlike robots.txt, which tells crawlers what they can and cannot access, llms.txt tells AI systems what your website is about, what your key pages are, and how your content should be understood.</p>
+
+      <p>A typical llms.txt file for a Leeds business might include: the business name and description, a list of primary service pages with brief descriptions, contact information, geographic coverage, and any specific instructions for how AI systems should reference the business. It is the equivalent of a press pack for AI — a concise, structured introduction that helps AI systems understand and accurately represent your business.</p>
+
+      <p>The standard is still emerging, but early adoption signals technical sophistication and forward-thinking digital strategy. For Leeds businesses competing in sectors where AI search visibility is becoming commercially important — legal, financial, technology, healthcare — implementing llms.txt now is a low-cost, low-risk investment with potentially significant returns.</p>
+
+      <h3>How AI Crawlers Process Your Website</h3>
+
+      <div style="max-width: 700px; margin: 2rem auto;">
+        <svg viewBox="0 0 700 320" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing how AI crawlers process a website from crawl to user citation">
+          <title>The AI Citation Funnel</title>
+          <rect width="700" height="320" fill="#f8f9fa" rx="12" />
+
+          <text x="350" y="35" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e3a5f">The AI Citation Funnel</text>
+
+          <!-- Step 1: Website -->
+          <rect x="20" y="65" width="95" height="55" rx="8" fill="#1e3a5f" />
+          <text x="67" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">Your</text>
+          <text x="67" y="103" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">Website</text>
+
+          <!-- Arrow 1 -->
+          <line x1="115" y1="92" x2="140" y2="92" stroke="#e8a820" stroke-width="2" marker-end="url(#arrowGold)" />
+
+          <!-- Step 2: robots.txt -->
+          <rect x="140" y="65" width="95" height="55" rx="8" fill="#2a5a8f" />
+          <text x="187" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">robots.txt</text>
+          <text x="187" y="103" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#e8a820">+ llms.txt</text>
+
+          <!-- Arrow 2 -->
+          <line x1="235" y1="92" x2="260" y2="92" stroke="#e8a820" stroke-width="2" marker-end="url(#arrowGold)" />
+
+          <!-- Step 3: AI Crawler -->
+          <rect x="260" y="65" width="95" height="55" rx="8" fill="#2a5a8f" />
+          <text x="307" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">AI Crawler</text>
+          <text x="307" y="103" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="white">GPTBot etc.</text>
+
+          <!-- Arrow 3 -->
+          <line x1="355" y1="92" x2="380" y2="92" stroke="#e8a820" stroke-width="2" marker-end="url(#arrowGold)" />
+
+          <!-- Step 4: LLM Index -->
+          <rect x="380" y="65" width="95" height="55" rx="8" fill="#2a5a8f" />
+          <text x="427" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">LLM</text>
+          <text x="427" y="103" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">Index</text>
+
+          <!-- Arrow 4 -->
+          <line x1="475" y1="92" x2="500" y2="92" stroke="#e8a820" stroke-width="2" marker-end="url(#arrowGold)" />
+
+          <!-- Step 5: User Query -->
+          <rect x="500" y="65" width="95" height="55" rx="8" fill="#2a5a8f" />
+          <text x="547" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">User</text>
+          <text x="547" y="103" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white" font-weight="600">Query</text>
+
+          <!-- Arrow 5 -->
+          <line x1="595" y1="92" x2="610" y2="92" stroke="#e8a820" stroke-width="2" marker-end="url(#arrowGold)" />
+
+          <!-- Step 6: Citation -->
+          <rect x="610" y="65" width="70" height="55" rx="8" fill="#e8a820" />
+          <text x="645" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0f2440" font-weight="700">Your</text>
+          <text x="645" y="103" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0f2440" font-weight="700">Citation</text>
+
+          <!-- Annotations below -->
+          <text x="67" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Structured data</text>
+          <text x="67" y="163" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Clear headings</text>
+          <text x="67" y="176" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Factual content</text>
+
+          <text x="187" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Allow GPTBot</text>
+          <text x="187" y="163" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Allow ClaudeBot</text>
+          <text x="187" y="176" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Allow PerplexityBot</text>
+
+          <text x="307" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Reads your pages</text>
+          <text x="307" y="163" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Extracts content</text>
+          <text x="307" y="176" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Parses schema</text>
+
+          <text x="427" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Stores passages</text>
+          <text x="427" y="163" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Builds entities</text>
+          <text x="427" y="176" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Ranks authority</text>
+
+          <text x="547" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Retrieval step</text>
+          <text x="547" y="163" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Matches intent</text>
+          <text x="547" y="176" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Selects sources</text>
+
+          <text x="645" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">Named in</text>
+          <text x="645" y="163" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">AI answer</text>
+          <text x="645" y="176" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4a4a6a">with link</text>
+
+          <!-- Bottom note -->
+          <rect x="100" y="210" width="500" height="90" rx="8" fill="#1e3a5f" />
+          <text x="350" y="235" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#e8a820" font-weight="600">Where most Leeds businesses fail:</text>
+          <text x="350" y="255" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white">1. Blocking AI crawlers in robots.txt or via Cloudflare</text>
+          <text x="350" y="272" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white">2. No structured data for AI to parse</text>
+          <text x="350" y="289" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="white">3. Content written for humans only, not machines + humans</text>
+
+          <defs>
+            <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#e8a820" />
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Section 7: Structured Data for AI Search -->
+      <h2 id="structured-data-ai-search">Structured Data for AI Search</h2>
+
+      <p>Structured data is the bridge between human-readable content and machine-comprehensible information. Schema markup — implemented as JSON-LD — provides AI systems with explicit, unambiguous signals about what your page covers, who created it, and how it relates to broader knowledge structures.</p>
+
+      <p>For AI search optimisation, the most important schema types are:</p>
+
+      <h3>Organization and LocalBusiness</h3>
+
+      <p>Organization schema establishes your business as a recognised entity. It tells AI systems your business name, location, contact details, social profiles, and the services you provide. LocalBusiness schema extends this with geographic specificity — your address, service area, opening hours, and local identifiers. For a Leeds business, LocalBusiness schema that specifies "areaServed: Leeds, West Yorkshire" directly signals to AI systems that your content is relevant to Leeds-specific queries.</p>
+
+      <p>The critical detail is the <code>sameAs</code> property. By linking your Organization schema to your Google Business Profile, LinkedIn company page, Companies House listing, and any other authoritative profiles, you help AI systems confirm that your business is a real, verified entity rather than a content-only website. This confirmation significantly increases your citation probability.</p>
+
+      <h3>FAQPage Schema</h3>
+
+      <p>FAQPage schema makes your question-and-answer pairs machine-readable. When combined with well-written AEO-optimised answers, FAQPage schema creates a direct pipeline between your content and AI answer engines. Google's own documentation confirms that FAQPage schema can trigger rich results, and AI systems use the same structured data when selecting sources for AI Overviews.</p>
+
+      <h3>Service and Offer Schema</h3>
+
+      <p>Service schema describes what you do — the service name, description, provider, area served, and pricing. For Leeds businesses offering professional services, Service schema is how you tell AI systems "We provide <a href="/services/">SEO services</a> in Leeds, serving businesses across West Yorkshire." Without this schema, AI systems must infer your services from unstructured page content, which is less reliable and less likely to result in accurate citations.</p>
+
+      <h3>HowTo and Article Schema</h3>
+
+      <p>HowTo schema structures instructional content into discrete steps, making it ideal for AI systems that need to present process-based answers. Article schema signals that your content is editorial or informational, with clear authorship, publication dates, and topical focus. Both schema types help AI systems categorise your content and match it to relevant queries.</p>
+
+      <p>The compound effect of comprehensive schema markup is significant. A Leeds business with Organization + LocalBusiness + Service + FAQPage schema across its key pages gives AI systems a complete, machine-readable picture of who they are, what they do, where they operate, and what questions they can answer. This layered schema strategy is one of the highest-ROI investments in AI search optimisation.</p>
+
+      <!-- Section 8: Entity SEO and Knowledge Graphs -->
+      <h2 id="entity-seo-knowledge-graphs">Entity SEO and Knowledge Graphs</h2>
+
+      <p>Entity SEO is the practice of establishing your business as a recognised entity within the knowledge structures that AI systems use to understand the world. When Google, ChatGPT, or Perplexity "knows" that your business exists, what it does, and where it operates, your content is significantly more likely to be cited in relevant queries.</p>
+
+      <h3>What Is an Entity in SEO?</h3>
+
+      <p>An entity is a uniquely identifiable thing — a person, a business, a place, a concept. Google's Knowledge Graph contains billions of entities and the relationships between them. When Google understands that "SEO Leeds" is a professional service provider based in Leeds, West Yorkshire, operated by Sunny Patel, offering SEO services — it has entity-level understanding. This understanding propagates to AI systems, which use knowledge graph data to ground their responses in factual reality.</p>
+
+      <h3>Building Entity Recognition</h3>
+
+      <p>Entity recognition is built through consistency and corroboration. The key elements are:</p>
+
+      <ul>
+        <li><strong>Consistent NAP (Name, Address, Phone):</strong> Your business name, address, and phone number must be identical across every platform where your business appears — Google Business Profile, Bing Places, Yell.com, Thomson Local, industry directories, social media profiles, and your own website. AI systems cross-reference these signals to confirm entity identity.</li>
+        <li><strong>Google Business Profile:</strong> A fully optimised GBP listing is the single most important entity signal for local AI search. It confirms your business exists, operates at a specific location, and serves specific categories. Reviews on your GBP listing provide social proof that AI systems factor into authority assessments.</li>
+        <li><strong>Wikidata and Wikipedia:</strong> For businesses with sufficient notability, a Wikidata entry creates a structured entity record that knowledge graphs directly ingest. While most SMEs will not qualify for a Wikipedia article, a Wikidata entry for your business (or your founder) is achievable and valuable.</li>
+        <li><strong>sameAs links in schema:</strong> The <code>sameAs</code> property in your Organization schema should link to every authoritative profile your business maintains. This creates a web of corroborating references that AI systems use to validate and strengthen your entity profile.</li>
+        <li><strong>Third-party mentions:</strong> Being mentioned (and linked to) by authoritative third-party sources — industry publications, local news outlets, professional directories, chamber of commerce listings — creates corroborating entity signals that AI systems weight heavily.</li>
+      </ul>
+
+      <h3>Entity SEO for Leeds Businesses</h3>
+
+      <p>Leeds has a strong local business ecosystem with multiple entity-building opportunities. The <a href="/industries/">West Yorkshire Combined Authority</a>, Leeds Chamber of Commerce, Leeds Digital Festival, the University of Leeds business partnerships, and sector-specific organisations like Leeds Financial Services Initiative all provide authoritative platforms for building entity recognition.</p>
+
+      <p>A Leeds business that is mentioned in Leeds Business Week, listed in the Leeds Chamber directory, has a complete Google Business Profile, maintains consistent NAP across 20+ directories, and has sameAs links in its schema to all these profiles will have significantly stronger entity recognition than a competitor that has none of these signals. In AI search, where citation selection is influenced by entity confidence, this difference translates directly into visibility.</p>
+
+      <!-- Section 9: Local AI Search for Leeds Businesses -->
+      <h2 id="local-ai-search-leeds">Local AI Search for Leeds Businesses</h2>
+
+      <p>Local AI search behaviour differs from traditional local SEO in important ways. When a user types "best SEO consultant in Leeds" into Google, they see a map pack, local business listings, and organic results — a structured interface designed for local discovery. When the same user asks ChatGPT the same question, they get a conversational response that names specific businesses, describes their services, and may or may not include links.</p>
+
+      <p>The implications for Leeds businesses are significant. In traditional local SEO, ranking in the map pack depends on proximity, GBP completeness, and review volume. In AI search, getting mentioned depends on entity recognition, content authority, and citation presence across the web. A Leeds business with a perfect GBP listing but thin website content and no third-party mentions may rank well in Google Maps but be invisible to ChatGPT.</p>
+
+      <h3>How AI Handles "Best X in Leeds" Queries</h3>
+
+      <p>When users ask AI systems for local recommendations, the AI typically:</p>
+
+      <ol>
+        <li>Searches the web for relevant pages (listicles, directories, review sites, business websites)</li>
+        <li>Identifies businesses mentioned across multiple sources</li>
+        <li>Cross-references with structured data and knowledge graph entries</li>
+        <li>Synthesises a response that names 3 to 7 businesses with brief descriptions</li>
+        <li>Cites the sources it used to compile the list</li>
+      </ol>
+
+      <p>This means that to appear in AI-generated local recommendations for Leeds, your business needs to be mentioned across multiple authoritative sources — not just your own website. Local PR, directory listings, industry roundups, guest contributions to Leeds-based publications, and client testimonials on third-party platforms all contribute to the citation footprint that AI systems use to compile local recommendations.</p>
+
+      <h3>Leeds-Specific Local Signals</h3>
+
+      <p>Leeds has distinct business districts, each with their own identity and associations. AI systems are increasingly capable of understanding these geographic nuances:</p>
+
+      <ul>
+        <li><strong>Wellington Place</strong> — financial services, legal, professional services hub</li>
+        <li><strong>Leeds Dock</strong> — tech companies, creative agencies, the Royal Armouries</li>
+        <li><strong>Park Square</strong> — legal practices, barristers' chambers</li>
+        <li><strong>Channel 4 HQ (Majestic)</strong> — media, broadcasting, creative industries</li>
+        <li><strong>South Bank</strong> — regeneration area, mixed-use development, growing tech presence</li>
+        <li><strong>Trinity Leeds / Victoria Quarter</strong> — retail, hospitality, consumer-facing businesses</li>
+        <li><strong>University of Leeds / Leeds Beckett</strong> — education, research, student services</li>
+        <li><strong>Thorpe Park Business Park</strong> — corporate offices, enterprise-scale operations</li>
+      </ul>
+
+      <p>Mentioning these specific locations in your content — not as keyword stuffing, but as genuine geographic context — helps AI systems understand your relevance to Leeds-specific queries. A <a href="/technical-seo-leeds/">technical SEO provider</a> that describes working with "fintech startups at Leeds Dock and legal practices at Park Square" creates richer local entity signals than one that simply mentions "Leeds" generically.</p>
+
+      <!-- Section 10: Content Strategy for AI Citation -->
+      <h2 id="content-strategy-ai-citation">Content Strategy for AI Citation</h2>
+
+      <p>The content strategy that earns AI citations is fundamentally different from the content strategy that earns Google rankings. Traditional SEO content is optimised for engagement metrics — time on page, scroll depth, click-through rate. AI citation content is optimised for extractability — the ability of an AI system to pull a useful, accurate, attributable passage from your page and include it in a generated response.</p>
+
+      <h3>Write Like a Wikipedia Editor</h3>
+
+      <p>The most effective AI citation content follows the style conventions of encyclopaedic writing. Lead with facts. Use the inverted pyramid structure — most important information first, supporting details second, background context third. Avoid first-person promotional language in key passages. Write definitions that could be quoted verbatim in a factual context.</p>
+
+      <p>This does not mean your entire website should read like an encyclopedia. Your homepage, about page, and service pages can and should have personality, brand voice, and persuasive elements. But the key informational passages — the definitions, the process descriptions, the data points, the answers to common questions — should be written in a neutral, authoritative, factual style that AI systems can extract and present without editorial concern.</p>
+
+      <h3>Definitions First, Opinions Second</h3>
+
+      <p>Every page on your website that targets informational queries should lead with a clear definition or direct answer. If your page is about "<a href="/seo-audit-leeds/">SEO audits in Leeds</a>", the first paragraph should define what an SEO audit is. If your page is about "<a href="/seo-pricing-leeds/">SEO pricing</a>", the first paragraph should state what SEO costs. Opinion, analysis, and persuasion come after the factual foundation is established.</p>
+
+      <p>This approach serves both AI and human readers. AI systems get the extractable answer they need. Human readers get immediate value and are more likely to trust (and engage with) content that demonstrates expertise from the first sentence rather than content that hedges and delays.</p>
+
+      <h3>Structured Formats That AI Prefers</h3>
+
+      <p>AI systems consistently favour certain content formats:</p>
+
+      <ul>
+        <li><strong>Definition paragraphs:</strong> "[X] is [definition]" — 40 to 60 words, single paragraph</li>
+        <li><strong>Numbered step lists:</strong> "Step 1: ..., Step 2: ..." — process descriptions</li>
+        <li><strong>Comparison tables:</strong> Side-by-side feature or pricing comparisons</li>
+        <li><strong>FAQ pairs:</strong> Question + direct answer, 50 to 100 words each</li>
+        <li><strong>Data statements:</strong> "[Metric] is [number] according to [source]"</li>
+        <li><strong>Expert quotes:</strong> Attributed statements from named individuals</li>
+      </ul>
+
+      <p>Building your content around these formats does not guarantee citation, but it significantly increases the probability that AI systems will find your content useful, extractable, and citable.</p>
+
+      <!-- Section 11: AI Search Optimisation Process -->
+      <h2 id="ai-search-optimisation-process">Our AI Search Optimisation Process</h2>
+
+      <p>AI search optimisation at <a href="/">SEO Leeds</a> follows a structured six-step process designed to systematically increase your visibility across all major AI search platforms.</p>
+
+      <h3>Step 1: Audit AI Visibility</h3>
+
+      <p>We begin by testing your current AI visibility. We run your target queries — "best [your service] in Leeds", "what is [your service]", "[your brand name]" — across ChatGPT, Perplexity, Claude, Microsoft Copilot, and Google AI Overviews. We document whether your business is cited, which competitors are cited, and what content those citations point to. This establishes your baseline and identifies the specific gaps between your current state and your competitors' AI visibility.</p>
+
+      <h3>Step 2: Structured Data Implementation</h3>
+
+      <p>We implement comprehensive schema markup across your website — Organization, LocalBusiness, Service, FAQPage, BreadcrumbList, and any industry-specific schema types relevant to your business. We ensure your sameAs links connect to all authoritative profiles, your NAP is consistent with your Google Business Profile, and your schema validates without errors. This gives AI systems a machine-readable map of your business identity and services.</p>
+
+      <h3>Step 3: Content Restructuring</h3>
+
+      <p>We restructure your key pages for AI extractability. This means adding definitional paragraphs at the top of each section, converting marketing copy into factual statements where appropriate, adding statistics and data points, creating FAQ sections with AEO-optimised answers, and ensuring every H2 section opens with a direct answer to the heading's implicit question. We preserve your brand voice while making the content structurally optimised for AI citation.</p>
+
+      <h3>Step 4: llms.txt and Crawler Access</h3>
+
+      <p>We create and deploy an llms.txt file tailored to your business, audit your robots.txt to ensure all major AI crawlers have access, check your hosting and CDN configuration for bot-blocking rules that might affect AI crawlers, and verify that your sitemap is accessible and up to date. This technical foundation ensures AI systems can discover and process your content.</p>
+
+      <h3>Step 5: Entity Building</h3>
+
+      <p>We strengthen your entity profile through consistent NAP management across directories, Google Business Profile optimisation, sameAs schema linking, and strategic outreach to earn mentions on authoritative third-party platforms. For Leeds businesses, this includes local directories, chamber of commerce listings, industry-specific publications, and regional business media.</p>
+
+      <h3>Step 6: Monitoring and Iteration</h3>
+
+      <p>We run regular AI visibility checks across all major platforms, tracking your citation frequency, the queries that trigger citations, and your share of voice relative to competitors. We use this data to iteratively refine your content, update your structured data, and identify new opportunities for AI citation. AI search is evolving rapidly, and ongoing monitoring ensures your strategy adapts to platform changes.</p>
+
+      <!-- Section 12: Measuring AI Search Performance -->
+      <h2 id="measuring-ai-search-performance">Measuring AI Search Performance</h2>
+
+      <p>Measuring AI search performance is more challenging than measuring traditional SEO performance. Google Search Console shows you clicks, impressions, and rankings for organic search. There is no equivalent centralised dashboard for AI search. However, several measurement approaches provide actionable data.</p>
+
+      <h3>Brand Mention Monitoring</h3>
+
+      <p>Tools like Brand24, Mention, and custom API integrations can track when your brand is mentioned across AI-generated content, social media discussions, and online publications. For Leeds businesses, monitoring mentions of your brand name in combination with location terms ("Leeds", "West Yorkshire", "LS1") provides insight into your local AI visibility.</p>
+
+      <h3>Manual AI Query Testing</h3>
+
+      <p>The most direct measurement method is regularly running your target queries across ChatGPT, Perplexity, Claude, and Copilot, and documenting whether your business is cited. We recommend testing 10 to 20 queries weekly, covering brand queries, service queries, comparison queries, and local recommendation queries. Over time, this creates a trend line that shows whether your AI visibility is improving.</p>
+
+      <h3>Referral Traffic Analysis</h3>
+
+      <p>Some AI platforms — notably Perplexity and ChatGPT Search — generate click-through traffic that appears in your analytics. In Google Analytics 4, you can identify this traffic through referral source analysis. Traffic from chat.openai.com, perplexity.ai, and bing.com (which includes Copilot-driven traffic) indicates that your content is being surfaced through AI channels.</p>
+
+      <h3>Share of Voice in AI Results</h3>
+
+      <p>Share of voice measures how often your business is cited relative to your competitors across a set of target queries. If you track 20 queries monthly and your business is cited in 8 of them, your share of voice is 40%. This metric is directionally useful for assessing competitive position and measuring the impact of optimisation work over time.</p>
+
+      <p>The measurement landscape for AI search is maturing rapidly. As AI platforms develop their own analytics and as third-party tools build AI-specific tracking capabilities, measurement will become more precise. For now, the combination of manual testing, brand monitoring, referral analytics, and share of voice provides a workable framework for Leeds businesses investing in AI search optimisation.</p>
+
+      <!-- Section 13: Why Leeds Businesses Need AI Search Now -->
+      <h2 id="why-leeds-businesses-need-ai-search">Why Leeds Businesses Need AI Search Now</h2>
+
+      <p>The commercial case for AI search optimisation in Leeds is driven by three factors: first-mover advantage, the city's economic profile, and the competitive dynamics of AI citation.</p>
+
+      <h3>First-Mover Advantage</h3>
+
+      <p>AI search optimisation is a nascent discipline. Most Leeds businesses — even those with strong traditional SEO — have not yet optimised for AI search. This creates a window of opportunity. Businesses that invest now will establish AI visibility before their competitors, building entity recognition and citation history that becomes increasingly difficult to displace. In traditional SEO, overtaking an established competitor requires sustained effort over months or years. In AI search, the same dynamic is beginning to emerge — but the competitive field is still open.</p>
+
+      <h3>Leeds as a Professional Services Hub</h3>
+
+      <p>Leeds is the largest financial and professional services centre outside London, with over 30 national and international banks, more than 100 law firms, and a growing technology sector. These are precisely the industries where AI search matters most, because their potential clients are early adopters of AI tools and increasingly use ChatGPT, Perplexity, and Copilot for research and decision-making.</p>
+
+      <p>Financial services firms at Wellington Place, legal practices at Park Square, technology companies at Leeds Dock, media organisations near Channel 4's national headquarters at Majestic — all of these businesses serve clients who are already using AI search as part of their supplier evaluation process. A procurement manager at a Leeds bank who asks Copilot to "compare <a href="/seo-pricing-leeds/">SEO agencies in Leeds</a>" will get a response that cites specific businesses. If your business is not one of them, your competitor is.</p>
+
+      <h3>The Compounding Effect of Early Investment</h3>
+
+      <p>AI citation builds on itself. When your business is cited by ChatGPT, that citation becomes part of the web content that other AI systems analyse. When Perplexity cites you and users share that citation on LinkedIn or in reports, it creates additional third-party mentions that strengthen your entity profile. The earlier you start, the more citation history you accumulate, and the harder it becomes for later entrants to displace you.</p>
+
+      <p>The University of Leeds, Leeds Trinity University, and Leeds Beckett University collectively produce thousands of graduates annually who enter the local workforce as AI-native professionals. They default to AI tools for research, recommendations, and decision-making. As this demographic becomes the dominant buyer and decision-maker in Leeds businesses, AI search visibility will transition from "nice to have" to "essential". The time to invest is before that transition completes.</p>
+
+      <!-- Diagram 3: AEO vs GEO vs Traditional SEO -->
+      <h2 id="aeo-vs-geo-vs-seo-comparison">AEO vs GEO vs Traditional SEO: A Comparison</h2>
+
+      <div style="max-width: 700px; margin: 2rem auto;">
+        <svg viewBox="0 0 700 520" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparison table of Traditional SEO, AEO, and GEO approaches">
+          <title>AEO vs GEO vs Traditional SEO Comparison</title>
+          <rect width="700" height="520" fill="#f8f9fa" rx="12" />
+
+          <text x="350" y="35" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e3a5f">Traditional SEO vs AEO vs GEO</text>
+
+          <!-- Column headers -->
+          <rect x="20" y="55" width="160" height="40" rx="6" fill="#1e3a5f" />
+          <text x="100" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white" font-weight="700">Attribute</text>
+
+          <rect x="190" y="55" width="160" height="40" rx="6" fill="#2a5a8f" />
+          <text x="270" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white" font-weight="700">Traditional SEO</text>
+
+          <rect x="360" y="55" width="160" height="40" rx="6" fill="#2a5a8f" />
+          <text x="440" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white" font-weight="700">AEO</text>
+
+          <rect x="530" y="55" width="150" height="40" rx="6" fill="#e8a820" />
+          <text x="605" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0f2440" font-weight="700">GEO</text>
+
+          <!-- Row 1: Goal -->
+          <rect x="20" y="105" width="160" height="50" rx="4" fill="#e2e8f0" />
+          <text x="100" y="134" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1e3a5f" font-weight="600">Goal</text>
+
+          <rect x="190" y="105" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="270" y="128" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Rank in search</text>
+          <text x="270" y="143" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">results list</text>
+
+          <rect x="360" y="105" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="440" y="128" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Be the direct</text>
+          <text x="440" y="143" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">answer</text>
+
+          <rect x="530" y="105" width="150" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="605" y="128" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Be cited in</text>
+          <text x="605" y="143" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">AI-generated answers</text>
+
+          <!-- Row 2: Target Platform -->
+          <rect x="20" y="165" width="160" height="50" rx="4" fill="#e2e8f0" />
+          <text x="100" y="194" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1e3a5f" font-weight="600">Target Platform</text>
+
+          <rect x="190" y="165" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="270" y="194" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Google, Bing</text>
+
+          <rect x="360" y="165" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="440" y="188" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">ChatGPT, Perplexity,</text>
+          <text x="440" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">AI Overviews</text>
+
+          <rect x="530" y="165" width="150" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="605" y="188" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">All generative</text>
+          <text x="605" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">AI systems</text>
+
+          <!-- Row 3: Content Style -->
+          <rect x="20" y="225" width="160" height="50" rx="4" fill="#e2e8f0" />
+          <text x="100" y="254" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1e3a5f" font-weight="600">Content Style</text>
+
+          <rect x="190" y="225" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="270" y="248" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Keyword-optimised,</text>
+          <text x="270" y="263" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">engaging, long-form</text>
+
+          <rect x="360" y="225" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="440" y="248" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Concise, factual,</text>
+          <text x="440" y="263" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">definitional</text>
+
+          <rect x="530" y="225" width="150" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="605" y="248" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Data-rich, quotable,</text>
+          <text x="605" y="263" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">authoritative</text>
+
+          <!-- Row 4: Key Signals -->
+          <rect x="20" y="285" width="160" height="50" rx="4" fill="#e2e8f0" />
+          <text x="100" y="314" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1e3a5f" font-weight="600">Key Signals</text>
+
+          <rect x="190" y="285" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="270" y="308" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Backlinks, keywords,</text>
+          <text x="270" y="323" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Core Web Vitals</text>
+
+          <rect x="360" y="285" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="440" y="308" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Schema, FAQ structure,</text>
+          <text x="440" y="323" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">crawler access</text>
+
+          <rect x="530" y="285" width="150" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="605" y="308" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Entity authority,</text>
+          <text x="605" y="323" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">unique data, citations</text>
+
+          <!-- Row 5: Measurement -->
+          <rect x="20" y="345" width="160" height="50" rx="4" fill="#e2e8f0" />
+          <text x="100" y="374" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1e3a5f" font-weight="600">Measurement</text>
+
+          <rect x="190" y="345" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="270" y="368" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Rankings, CTR,</text>
+          <text x="270" y="383" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">organic traffic</text>
+
+          <rect x="360" y="345" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="440" y="368" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Featured snippets,</text>
+          <text x="440" y="383" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">AI Overview inclusion</text>
+
+          <rect x="530" y="345" width="150" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="605" y="368" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Share of voice in</text>
+          <text x="605" y="383" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">AI outputs</text>
+
+          <!-- Row 6: Competition -->
+          <rect x="20" y="405" width="160" height="50" rx="4" fill="#e2e8f0" />
+          <text x="100" y="434" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1e3a5f" font-weight="600">Competition Level</text>
+
+          <rect x="190" y="405" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="270" y="434" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">High — mature field</text>
+
+          <rect x="360" y="405" width="160" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="440" y="434" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Low — early adopters win</text>
+
+          <rect x="530" y="405" width="150" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1" />
+          <text x="605" y="434" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4a4a6a">Very low — wide open</text>
+
+          <!-- Bottom insight -->
+          <rect x="100" y="472" width="500" height="35" rx="6" fill="#1e3a5f" />
+          <text x="350" y="494" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e8a820" font-weight="600">Best strategy: layer all three. Traditional SEO + AEO + GEO = maximum visibility.</text>
+        </svg>
+      </div>
+
+      <!-- Section 14: FAQ -->
+      <h2 id="faq">Frequently Asked Questions About AI Search Optimisation</h2>
+
+      {faqItems.map((item) => (
+        <div class="faq-item">
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </div>
+      ))}
+
+      <!-- CTA Box -->
+      <div class="cta-box">
+        <h2 style="color: white; margin-top: 0;">Get Your Free AI Search Visibility Audit</h2>
+        <p style="color: rgba(255,255,255,0.9); max-width: 540px; margin-inline: auto;">We will test your business across ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews. You will see exactly where you stand — and what your competitors are doing that you are not.</p>
+        <a href="/contact/">Book Your Free Audit</a>
+      </div>
+
+      <p>AI search optimisation is not a future concern for Leeds businesses — it is a present requirement. The businesses that invest now in structured data, entity building, content restructuring, and AI crawler access will be the ones that AI systems cite when potential customers ask for recommendations. The window for first-mover advantage is still open, but it is closing.</p>
+
+      <p>If you are a Leeds business looking to get ahead of this shift, <a href="/contact/">contact SEO Leeds</a> for a free AI search visibility audit. We will show you exactly where you stand across every major AI platform and provide a clear roadmap for improvement. You can also explore our <a href="/services/">full range of SEO services</a>, learn about our <a href="/seo-audit-leeds/">comprehensive SEO audit process</a>, or see our <a href="/case-studies/">case studies</a> to understand the results we deliver for Leeds businesses.</p>
+
+    </div>
+  </section>
+</Base>

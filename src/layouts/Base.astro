@@ -45,7 +45,7 @@ const navLinks = [
   <meta name="twitter:description" content={description} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   {schema.map((s) => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
@@ -53,10 +53,10 @@ const navLinks = [
 <body class="bg-surface text-text min-h-screen flex flex-col">
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <header class="sticky top-0 z-50 bg-brand text-white shadow-lg">
+  <header class="sticky top-0 z-50 bg-brand text-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="text-xl font-extrabold tracking-tight hover:text-accent transition-colors" style="font-family: var(--font-heading)">
-        Aire SEO
+      <a href="/" class="text-xl font-bold tracking-tight hover:text-accent transition-colors" style="font-family: var(--font-heading)">
+        SEO Leeds
       </a>
       <nav class="hidden md:flex items-center gap-5 text-sm font-medium" aria-label="Main navigation">
         {navLinks.map((link) => (
@@ -71,8 +71,8 @@ const navLinks = [
           </a>
         ))}
       </nav>
-      <a href="/free-seo-audit-leeds/" class="hidden md:inline-flex bg-accent text-brand font-extrabold px-4 py-2 text-sm uppercase tracking-wide hover:bg-accent-light transition-colors">
-        Get the Audit
+      <a href="/free-seo-audit-leeds/" class="hidden md:inline-flex bg-accent text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-accent-light transition-colors">
+        Request an Audit
       </a>
       <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Open menu" aria-expanded="false">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,13 +84,13 @@ const navLinks = [
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="block py-2 text-sm hover:text-accent transition-colors border-b border-white/10"
+          class="block py-2 text-sm hover:text-accent transition-colors border-b border-brand-light/20"
         >
           {link.label}
         </a>
       ))}
-      <a href="/free-seo-audit-leeds/" class="block mt-3 bg-accent text-brand font-extrabold px-4 py-2 text-sm text-center uppercase tracking-wide">
-        Get the Audit
+      <a href="/free-seo-audit-leeds/" class="block mt-3 bg-accent text-white font-semibold px-4 py-2 rounded-md text-sm text-center">
+        Request an Audit
       </a>
     </nav>
   </header>
@@ -99,11 +99,11 @@ const navLinks = [
     <slot />
   </main>
 
-  <footer class="bg-brand text-white/80 mt-16">
+  <footer class="bg-brand-dark text-white/80 mt-16">
     <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
-        <h2 class="text-white font-extrabold text-lg mb-3" style="font-family: var(--font-heading)">Aire SEO</h2>
-        <p class="text-sm leading-relaxed">Search marketing for Leeds and West Yorkshire. No fluff. Just results.</p>
+        <h2 class="text-white font-bold text-lg mb-3" style="font-family: var(--font-heading)">SEO Leeds</h2>
+        <p class="text-sm leading-relaxed">Data-driven search marketing for Leeds and West Yorkshire businesses. Measurable results, transparent reporting.</p>
         <p class="text-sm mt-3">Covering Leeds, Bradford, Wakefield, Huddersfield, Harrogate, York, and the wider Northern Powerhouse.</p>
       </div>
       <div>
@@ -120,7 +120,7 @@ const navLinks = [
       <div>
         <h2 class="text-white font-bold text-lg mb-3">Quick Links</h2>
         <ul class="text-sm space-y-2">
-          <li><a href="/about/" class="hover:text-accent transition-colors">About Aire SEO</a></li>
+          <li><a href="/about/" class="hover:text-accent transition-colors">About SEO Leeds</a></li>
           <li><a href="/case-studies/" class="hover:text-accent transition-colors">Case Studies</a></li>
           <li><a href="/areas/" class="hover:text-accent transition-colors">Areas We Cover</a></li>
           <li><a href="/industries/" class="hover:text-accent transition-colors">Industries</a></li>
@@ -130,7 +130,7 @@ const navLinks = [
     </div>
     <div class="border-t border-white/10 py-4">
       <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-white/50 gap-2">
-        <p>&copy; {new Date().getFullYear()} Aire SEO. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} SEO Leeds. All rights reserved.</p>
         <p>Last updated: {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</p>
       </div>
     </div>

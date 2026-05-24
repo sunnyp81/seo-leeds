@@ -1,10 +1,10 @@
-# Aire SEO
+# SEO Leeds
 
-> Aire SEO is a Leeds-based search marketing agency serving businesses across Leeds and West Yorkshire with technical SEO, AI search optimisation, and data-driven growth strategies.
+> SEO Leeds is a data-driven search marketing consultancy serving businesses across Leeds and West Yorkshire with technical SEO, AI search optimisation, and measurable growth strategies.
 
 ## Pages
 
-- [Home](https://seo-leeds.uk/): SEO agency in Leeds delivering search marketing for Yorkshire businesses
+- [Home](https://seo-leeds.uk/): SEO consultancy in Leeds delivering search marketing for Yorkshire businesses
 - [Services](https://seo-leeds.uk/services/): Full range of SEO services including technical SEO, content, local SEO, and AI search optimisation
 - [Areas](https://seo-leeds.uk/areas/): SEO coverage across Leeds suburbs, West Yorkshire towns, and the Northern Powerhouse region
 - [Industries](https://seo-leeds.uk/industries/): Industry-specific SEO for financial services, legal, digital, healthcare, and retail in Leeds
@@ -14,5 +14,5 @@
 - [SEO Pricing Leeds](https://seo-leeds.uk/seo-pricing-leeds/): Transparent SEO pricing with tiered packages, Leeds vs London cost comparison
 - [AI Search Optimisation Leeds](https://seo-leeds.uk/ai-search-optimisation-leeds/): AI search optimisation covering ChatGPT, Perplexity, Claude, Copilot, AI Overviews, and LLM SEO
 - [Case Studies](https://seo-leeds.uk/case-studies/): SEO case studies from Leeds businesses including law firms and local restaurants
-- [About](https://seo-leeds.uk/about/): About Aire SEO, search marketing agency serving Leeds and West Yorkshire
+- [About](https://seo-leeds.uk/about/): About SEO Leeds, search marketing consultancy serving Leeds and West Yorkshire
 - [Contact](https://seo-leeds.uk/contact/): Get in touch for SEO services in Leeds

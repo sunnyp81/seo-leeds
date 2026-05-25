@@ -1,0 +1,408 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = "SEO ROI Calculator | SEO Leeds";
+const description = "Calculate the return on investment from SEO for your Leeds business. See projected traffic, leads, and revenue based on your current metrics and SEO budget.";
+
+const faqData = [
+  {
+    question: "How accurate is this SEO ROI calculator?",
+    answer: "This calculator provides conservative estimates based on industry averages. Most well-executed SEO campaigns achieve 2-4x traffic growth within 12 months, though results vary by industry, competition level, and starting position. The 3x multiplier used here sits in the middle of that range. Actual results for Leeds businesses often exceed these projections because local SEO tends to deliver faster wins than national campaigns."
+  },
+  {
+    question: "Why does SEO ROI compound over time?",
+    answer: "Unlike paid advertising where traffic stops when spending stops, SEO builds permanent digital assets. Each optimised page, earned backlink, and technical improvement adds to your site's authority. A page ranking on page one today continues generating traffic for months or years with minimal maintenance cost. This compounding effect means your effective cost per lead decreases every month while output increases."
+  },
+  {
+    question: "What ROI should I expect from SEO in Leeds?",
+    answer: "Leeds businesses typically see positive ROI from SEO within 6-9 months. Local service businesses (solicitors, accountants, tradespeople) often see returns faster because local search has less competition than national terms. E-commerce and SaaS businesses may take longer but achieve higher absolute returns. A well-run SEO campaign should deliver 5-10x return on investment within the first 18 months."
+  },
+  {
+    question: "How does SEO ROI compare to Google Ads?",
+    answer: "Google Ads delivers immediate traffic but at a recurring cost per click that increases as competition grows. SEO requires upfront investment but delivers traffic at near-zero marginal cost once rankings are established. Over a 24-month period, SEO typically delivers 3-5x more leads per pound spent than Google Ads. The optimal strategy for most Leeds businesses combines both: Ads for immediate leads while SEO builds long-term organic traffic."
+  },
+  {
+    question: "What factors affect SEO ROI the most?",
+    answer: "Three factors dominate: customer lifetime value, conversion rate, and competition level. A Leeds solicitor with a £5,000 average case value needs far fewer leads to justify SEO spend than a cafe with a £15 average order. Improving your website's conversion rate from 1% to 3% triples your return without any additional SEO spend. We focus on both traffic growth and conversion optimisation to maximise your actual revenue, not just vanity metrics."
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": "https://seo-leeds.uk/seo-roi-calculator/",
+    "isPartOf": { "@type": "WebSite", "url": "https://seo-leeds.uk/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-leeds.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "SEO ROI Calculator", "item": "https://seo-leeds.uk/seo-roi-calculator/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="section-heading reveal">SEO ROI Calculator</h1>
+      <p class="hero-sub reveal reveal-delay-1">See exactly what SEO could return for your Leeds business. Adjust the sliders to model your investment, and watch projected revenue update in real time.</p>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="section-dark" style="padding: 3rem 1rem 4rem;">
+    <div class="container">
+      <div class="calc-grid">
+
+        <!-- Inputs -->
+        <div class="calc-inputs reveal">
+          <h2 class="section-heading" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Your Numbers</h2>
+
+          <div class="input-group">
+            <label for="investment">Monthly SEO Investment</label>
+            <div class="slider-row">
+              <input type="range" id="investment" min="300" max="5000" step="50" value="1000" class="range-slider" />
+              <div class="value-display">£<span id="investment-val">1,000</span></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="clv">Average Customer Lifetime Value</label>
+            <div class="slider-row">
+              <input type="range" id="clv" min="100" max="50000" step="100" value="2000" class="range-slider" />
+              <div class="value-display">£<span id="clv-val">2,000</span></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="sessions">Current Monthly Organic Sessions</label>
+            <div class="slider-row">
+              <input type="range" id="sessions" min="0" max="50000" step="100" value="500" class="range-slider" />
+              <div class="value-display"><span id="sessions-val">500</span></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="cvr">Conversion Rate</label>
+            <div class="slider-row">
+              <input type="range" id="cvr" min="0.5" max="10" step="0.1" value="2" class="range-slider" />
+              <div class="value-display"><span id="cvr-val">2.0</span>%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output -->
+        <div class="calc-output reveal reveal-delay-2">
+          <h2 class="section-heading" style="font-size: 1.5rem; margin-bottom: 1.5rem;">12-Month Projection</h2>
+
+          <div class="result-card">
+            <span class="result-label">Projected Monthly Sessions</span>
+            <span class="stat-big" id="out-sessions">1,500</span>
+            <span class="result-note">3x growth from current baseline</span>
+          </div>
+
+          <div class="result-card">
+            <span class="result-label">Projected Monthly Leads</span>
+            <span class="stat-big" id="out-leads">30</span>
+          </div>
+
+          <div class="result-card">
+            <span class="result-label">Projected Monthly Revenue</span>
+            <span class="stat-big accent" id="out-revenue">£60,000</span>
+          </div>
+
+          <div class="result-card">
+            <span class="result-label">Annual Revenue Projection</span>
+            <span class="stat-big accent" id="out-annual">£720,000</span>
+          </div>
+
+          <div class="result-card highlight">
+            <span class="result-label">Return on Investment</span>
+            <span class="stat-big" id="out-roi">5,900%</span>
+            <span class="result-note">For every £1 invested in SEO</span>
+          </div>
+
+          <a href="/free-seo-audit-leeds/" class="btn-glow" style="width: 100%; text-align: center; margin-top: 1rem;">Get Your Free SEO Audit</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Explanatory content -->
+  <section class="px-4 py-12">
+    <div class="prose">
+
+      <h2>How SEO ROI Works for Leeds Businesses</h2>
+
+      <p>Search engine optimisation is one of the highest-returning marketing channels available to Leeds businesses, but its ROI profile is fundamentally different from paid advertising. Understanding that difference is critical to making sound investment decisions.</p>
+
+      <p>With Google Ads, the relationship between spend and return is linear and immediate. You pay per click, and when the budget runs out, the traffic stops. SEO operates on a compounding curve. The first three months build foundations — technical fixes, content creation, and authority signals. Months four through eight see accelerating returns as Google recognises your site's improved relevance. By month twelve, most Leeds businesses experience 2-4x their starting organic traffic, with the cost per lead dropping every month as the same fixed investment generates increasingly more visitors.</p>
+
+      <p>The calculator above models this conservatively. It assumes 3x traffic growth over 12 months, which sits at the midpoint of what well-executed campaigns deliver. Local Leeds businesses targeting area-specific searches often exceed this because <a href="/services/">local SEO</a> faces less competition than national terms. A plumber in Headingley or a solicitor in the city centre competes against dozens of local firms, not thousands of national ones.</p>
+
+      <h2>Why Customer Lifetime Value Matters More Than Traffic</h2>
+
+      <p>The most important number in the calculator is not traffic — it is your customer lifetime value. A Leeds accountancy practice where each client stays for five years at £200 per month has a CLV of £12,000. That single client justifies months of SEO investment. Compare this to a takeaway with a £15 average order. Both businesses can profit from SEO, but the accountant reaches positive ROI with far fewer conversions.</p>
+
+      <p>This is why we focus on qualified traffic rather than raw volume. Ten visitors who need a conveyancing solicitor in Leeds are worth more than a thousand visitors browsing general legal information. Our <a href="/seo-pricing-leeds/">SEO packages</a> are built around driving the right traffic, not just more traffic.</p>
+
+      <h2>The Compounding Effect of SEO Investment</h2>
+
+      <p>SEO spending creates permanent assets. Every page you optimise, every backlink you earn, every technical improvement you make adds to your site's authority in Google's index. A blog post that ranks on page one today continues generating leads next month, next quarter, and next year — without additional cost. Paid advertising creates no such residual value.</p>
+
+      <p>This compounding effect means that the ROI figures in the calculator actually understate the long-term picture. After 12 months of consistent SEO investment, a Leeds business does not reset to zero if they pause spending. The rankings, the content, and the domain authority persist. Traffic may gradually decline without active maintenance, but the foundation remains.</p>
+
+      <p>For businesses considering their first serious SEO investment, the question is not whether SEO works. The data across every industry and market size confirms that it does. The question is how quickly the return materialises relative to your specific customer value and competitive landscape. That is exactly what this calculator helps you model, and exactly what a <a href="/free-seo-audit-leeds/">free SEO audit</a> quantifies with real data from your website and your market.</p>
+
+      <h2>Leeds-Specific SEO Considerations</h2>
+
+      <p>Leeds is the UK's third-largest city and the economic centre of West Yorkshire. The digital market here has matured significantly, which means most industries have at least moderate SEO competition. However, Leeds remains far less competitive than London or Manchester for most search terms. A business investing £1,000 per month in Leeds SEO faces roughly half the competition it would face targeting equivalent London terms, which translates directly into faster results and higher ROI.</p>
+
+      <p>Local search behaviour in Leeds follows distinct patterns. Users search for services with area qualifiers — "solicitor Leeds city centre", "accountant Headingley", "dentist Roundhay" — and Google's local pack dominates these results. Businesses with optimised Google Business Profiles and strong local signals consistently outperform larger competitors with generic national SEO strategies. Our <a href="/case-studies/">case studies</a> demonstrate this pattern repeatedly across Leeds industries.</p>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-4 py-12" style="background: var(--color-brand); padding-top: 0;">
+    <div class="prose">
+      <h2 class="section-heading">SEO ROI Questions</h2>
+      {faqData.map(faq => (
+        <details class="faq-item">
+          <summary>
+            {faq.question}
+            <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="faq-content">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-4 py-12">
+    <div class="cta-box reveal">
+      <h2 class="section-heading">Ready to See Real ROI from SEO?</h2>
+      <p>The numbers above are projections. A free SEO audit shows you the actual opportunity based on your website, your competitors, and your market in Leeds.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+        <a href="/free-seo-audit-leeds/" class="btn-glow">Get Your Free Audit</a>
+        <a href="/seo-pricing-leeds/" class="btn-ghost">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .calc-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .calc-inputs, .calc-output {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+  }
+
+  .input-group {
+    margin-bottom: 1.75rem;
+  }
+  .input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .value-display {
+    min-width: 100px;
+    text-align: right;
+    font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-glow, #34D399);
+    white-space: nowrap;
+  }
+
+  /* Range slider styling */
+  .range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    outline: none;
+    cursor: pointer;
+  }
+  .range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-accent, #059669);
+    border: 2px solid var(--color-accent-glow, #34D399);
+    box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .range-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 18px rgba(5, 150, 105, 0.6);
+    transform: scale(1.15);
+  }
+  .range-slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-accent, #059669);
+    border: 2px solid var(--color-accent-glow, #34D399);
+    box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
+    cursor: pointer;
+  }
+  .range-slider::-moz-range-track {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* Results */
+  .result-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .result-card:last-of-type {
+    border-bottom: none;
+  }
+  .result-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+  .result-note {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    margin-top: 0.15rem;
+  }
+
+  .calc-output .stat-big {
+    font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .calc-output .stat-big.accent {
+    color: var(--color-accent-glow, #34D399);
+  }
+
+  .result-card.highlight {
+    background: rgba(5, 150, 105, 0.1);
+    border: 1px solid rgba(5, 150, 105, 0.25);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  .result-card.highlight .stat-big {
+    font-size: 2.5rem;
+    color: var(--color-accent-glow, #34D399);
+  }
+</style>
+
+<script>
+  function fmt(n) {
+    return n.toLocaleString('en-GB');
+  }
+  function fmtCur(n) {
+    return '£' + Math.round(n).toLocaleString('en-GB');
+  }
+
+  const inv = document.getElementById('investment');
+  const clv = document.getElementById('clv');
+  const ses = document.getElementById('sessions');
+  const cvr = document.getElementById('cvr');
+
+  const invVal = document.getElementById('investment-val');
+  const clvVal = document.getElementById('clv-val');
+  const sesVal = document.getElementById('sessions-val');
+  const cvrVal = document.getElementById('cvr-val');
+
+  const outSes = document.getElementById('out-sessions');
+  const outLeads = document.getElementById('out-leads');
+  const outRev = document.getElementById('out-revenue');
+  const outAnnual = document.getElementById('out-annual');
+  const outRoi = document.getElementById('out-roi');
+
+  function calc() {
+    const investment = parseFloat(inv.value);
+    const customerValue = parseFloat(clv.value);
+    const currentSessions = parseFloat(ses.value);
+    const convRate = parseFloat(cvr.value) / 100;
+
+    invVal.textContent = fmt(investment);
+    clvVal.textContent = fmt(customerValue);
+    sesVal.textContent = fmt(currentSessions);
+    cvrVal.textContent = parseFloat(cvr.value).toFixed(1);
+
+    const projectedSessions = Math.round(currentSessions * 3);
+    const monthlyLeads = projectedSessions * convRate;
+    const monthlyRevenue = monthlyLeads * customerValue;
+    const annualRevenue = monthlyRevenue * 12;
+    const roi = investment > 0 ? ((monthlyRevenue - investment) / investment) * 100 : 0;
+
+    outSes.textContent = fmt(projectedSessions);
+    outLeads.textContent = fmt(Math.round(monthlyLeads));
+    outRev.textContent = fmtCur(monthlyRevenue);
+    outAnnual.textContent = fmtCur(annualRevenue);
+    outRoi.textContent = fmt(Math.round(roi)) + '%';
+  }
+
+  [inv, clv, ses, cvr].forEach(el => {
+    el.addEventListener('input', calc);
+  });
+
+  calc();
+</script>

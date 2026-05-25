@@ -1,0 +1,519 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = "Google Algorithm Updates Timeline | SEO Leeds";
+const description = "Complete timeline of every major Google algorithm update from Panda (2011) to the March 2025 Core Update. Understand how each change affects Leeds businesses and your search rankings.";
+
+const faqData = [
+  {
+    q: "How do Google algorithm updates affect my Leeds business?",
+    a: "Algorithm updates can cause significant ranking shifts overnight. A Leeds e-commerce site ranking on page one for competitive terms could drop to page three after a core update if its content quality, backlink profile, or technical health no longer meets Google's evolving standards. Conversely, businesses that invest in genuine expertise and user experience often gain visibility when competitors are demoted."
+  },
+  {
+    q: "How quickly should I react to a Google algorithm update?",
+    a: "Do not make changes during the rollout period, which typically lasts 2-4 weeks. Monitor your Google Search Console data for at least 14 days after the rollout completes before drawing conclusions. Premature changes can compound ranking losses. Once the data stabilises, audit the affected pages against Google's published quality guidelines and address the root causes rather than chasing symptoms."
+  },
+  {
+    q: "Can you recover rankings lost after a Google core update?",
+    a: "Yes, but recovery requires addressing the underlying quality signals Google has re-evaluated. This might involve improving content depth and expertise, fixing technical issues, removing or consolidating thin pages, or earning higher-quality backlinks. Recovery typically takes one to three update cycles (3-9 months) depending on the severity and the scope of changes needed."
+  },
+  {
+    q: "What is the difference between a core update and a spam update?",
+    a: "Core updates re-evaluate how Google assesses content quality and relevance across the entire index. They can affect any site in any niche. Spam updates specifically target manipulative tactics: link schemes, cloaking, keyword stuffing, scraped content, and doorway pages. A site hit by a spam update has a policy violation to fix, while a core update demotion means your content simply did not meet the raised quality bar."
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-leeds.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Google Algorithm Updates", "item": "https://seo-leeds.uk/google-algorithm-updates/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": "https://seo-leeds.uk/google-algorithm-updates/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk/",
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Google Algorithm Updates Timeline",
+    "description": description,
+    "url": "https://seo-leeds.uk/google-algorithm-updates/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Leeds",
+      "url": "https://seo-leeds.uk/"
+    },
+    "datePublished": "2025-05-24",
+    "dateModified": "2025-05-24"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  }
+];
+
+const updates = [
+  { date: "March 2025", name: "March 2025 Core Update", type: "Core", summary: "Broad core update with significant ranking volatility across most niches.", detail: "Rolled out over approximately two weeks. Early data showed large position swings in YMYL verticals including health, finance, and legal. Sites that had recovered from the September 2023 HCU saw mixed results, with some gaining further and others losing ground again. Google confirmed this was a standard broad core update with no specific targeting." },
+  { date: "November 2024", name: "November 2024 Core Update", type: "Core", summary: "End-of-year core update affecting content quality assessments globally.", detail: "Completed rollout in mid-December 2024. This update appeared to further refine the signals introduced by the March 2024 core update, with continued emphasis on original, experience-backed content. Sites relying on AI-generated content without editorial oversight saw further demotions." },
+  { date: "August 2024", name: "August 2024 Core Update", type: "Core", summary: "Major core update that provided recovery pathways for sites hit by the HCU.", detail: "Google explicitly stated this update incorporated improvements to their ranking systems that could help sites previously affected by the Helpful Content Update. Many independent publishers and small businesses reported partial or full recovery. The update took approximately three weeks to complete." },
+  { date: "June 2024", name: "June 2024 Spam Update", type: "Spam", summary: "Targeted spam techniques including expired domain abuse and scaled content.", detail: "Focused on three specific abuse types: expired domain abuse (buying old domains to host low-quality content), scaled content abuse (mass-producing pages regardless of quality), and site reputation abuse (third-party content exploiting a host site's ranking signals). Many parasite SEO operations were deindexed." },
+  { date: "March 2024", name: "March 2024 Core Update", type: "Core", summary: "Combined core and spam update with a 45-day rollout and new site reputation abuse policy.", detail: "Google's longest-ever core update rollout at 45 days. Merged algorithmic spam fighting directly into the core ranking systems. Introduced an explicit site reputation abuse policy targeting parasite SEO. Google estimated a 40% reduction in low-quality, unoriginal content in search results. Many affiliate and review sites were severely affected." },
+  { date: "November 2023", name: "November 2023 Core Update", type: "Core", summary: "Core update that completed just before the holiday season.", detail: "Rolled out over 25 days. Continued the trajectory of the September 2023 HCU, with further emphasis on first-hand experience and expertise. E-commerce sites with thin product descriptions were notably affected. Some sites that improved content after September saw partial recovery." },
+  { date: "November 2023", name: "November 2023 Reviews Update", type: "Content", summary: "Final standalone reviews update before being folded into core updates.", detail: "Google announced this would be the last dedicated reviews update, as the reviews system would henceforth be incorporated into regular core updates. Affected product reviews, service reviews, and comparison content. Sites with genuine testing and first-hand experience were rewarded." },
+  { date: "October 2023", name: "October 2023 Core Update", type: "Core", summary: "Rapid-fire core update launched while the previous one was still settling.", detail: "Unusually, this launched just weeks after the September HCU had finished rolling out. This overlap created extreme volatility in SERPs. Some sites saw rankings fluctuate daily throughout November. Google stated the updates were independent systems operating simultaneously." },
+  { date: "October 2023", name: "October 2023 Spam Update", type: "Spam", summary: "Targeted cloaking, hacked content, and auto-generated spam across multiple languages.", detail: "Specifically addressed spam in Turkish, Vietnamese, Indonesian, Hindi, and Chinese results, though English-language sites using similar tactics were also affected. Focused on cloaking techniques and sites using hacked pages to redirect users." },
+  { date: "September 2023", name: "September 2023 Helpful Content Update", type: "Content", summary: "Devastating update that wiped out traffic for thousands of independent publishers.", detail: "The most impactful single update since Panda. Entire categories of content were demoted: recipe sites, product review blogs, how-to publishers, and niche information sites. Traffic losses of 50-90% were widely reported. Google's classifier became site-wide rather than page-level, meaning a percentage of unhelpful content could drag down an entire domain. Recovery proved extremely difficult, with most affected sites still waiting for relief over a year later." },
+  { date: "August 2023", name: "August 2023 Core Update", type: "Core", summary: "Summer core update with moderate volatility across commercial queries.", detail: "A relatively standard core update that completed in about two weeks. Most movement was observed in health, finance, and technology verticals. Local service businesses in competitive markets like Leeds saw some position shuffling." },
+  { date: "April 2023", name: "April 2023 Reviews Update", type: "Content", summary: "Expanded product reviews system to cover services, businesses, and destinations.", detail: "Broadened beyond product reviews to evaluate any content that reviews, recommends, or compares things. This meant service review pages, 'best of' listicles, and local business review content were now subject to the same quality signals. First-hand experience and evidence became critical ranking factors." },
+  { date: "March 2023", name: "March 2023 Core Update", type: "Core", summary: "Broad core update that took 13 days to roll out.", detail: "Completed in under two weeks with relatively contained volatility compared to previous core updates. Sites that had invested in E-E-A-T signals saw incremental gains. The update appeared to particularly reward sites with strong topical authority in their niche." },
+  { date: "February 2023", name: "February 2023 Product Reviews Update", type: "Content", summary: "Fourth product reviews update emphasising original research and first-hand testing.", detail: "Continued to reward review content that demonstrated actual product experience with original photography, measurements, and comparative data. Thin affiliate reviews with recycled manufacturer specs continued to lose ground." },
+  { date: "December 2022", name: "December 2022 Link Spam Update", type: "Link", summary: "SpamBrain AI used to neutralise unnatural links at scale.", detail: "Google's SpamBrain AI system was deployed to identify and nullify link spam, including bought links, link exchanges, and large-scale guest posting schemes. Rather than penalising sites, Google primarily chose to ignore the manipulative links, causing ranking drops for sites that had relied on them for positions." },
+  { date: "December 2022", name: "December 2022 Helpful Content Update", type: "Content", summary: "Second helpful content update, strengthening the classifier.", detail: "Refined and strengthened the classifier first introduced in August 2022. More sites were affected this time as the system's coverage expanded. Content created primarily for search engines rather than humans continued to be targeted." },
+  { date: "October 2022", name: "October 2022 Spam Update", type: "Spam", summary: "Global spam update covering cloaking, hacked, and auto-generated content.", detail: "Addressed a wide range of spam techniques across all languages. Sites using doorway pages, hidden text, and automated content spinning were particularly affected. The update completed in about 48 hours, making it one of the fastest spam updates." },
+  { date: "September 2022", name: "September 2022 Core Update", type: "Core", summary: "Core update that overlapped with the aftermath of the first HCU.", detail: "Coming just weeks after the August 2022 Helpful Content Update, this core update created compounding effects. Sites already hit by the HCU saw further losses in some cases, while others that were initially unaffected by the HCU were now impacted by core quality reassessment." },
+  { date: "August 2022", name: "August 2022 Helpful Content Update", type: "Content", summary: "The first Helpful Content Update introduced a site-wide classifier for content quality.", detail: "Landmark update that introduced an entirely new ranking system. Google's classifier evaluated whether a site primarily existed to help users or to attract search traffic. Sites with a high proportion of search-first content were demoted site-wide. Initially modest in visible impact, this system grew significantly more powerful with subsequent updates." },
+  { date: "May 2022", name: "May 2022 Core Update", type: "Core", summary: "Broad core update with notable impact on health and e-commerce verticals.", detail: "Rolled out over two weeks with significant movement in YMYL categories. Product pages with thin descriptions and health sites lacking professional credentials were particularly affected. Local businesses with strong reviews and genuine local signals generally held steady or improved." },
+  { date: "December 2021", name: "December 2021 Product Reviews Update", type: "Content", summary: "Third iteration of the product reviews system with expanded quality signals.", detail: "Added signals around original research, evidence of hands-on testing, and quantitative measurements. Sites featuring original photography and video of products reviewed performed better than those relying solely on stock or manufacturer images." },
+  { date: "November 2021", name: "November 2021 Core Update", type: "Core", summary: "Year-end core update that took approximately two weeks to complete.", detail: "Moderate-impact core update. Travel, entertainment, and technology verticals saw the most movement. The update appeared to further reward sites demonstrating genuine expertise and first-hand experience in their subject areas." },
+  { date: "July 2021", name: "July 2021 Link Spam Update", type: "Link", summary: "Targeted link spam using improved AI detection across multiple languages.", detail: "Google's AI-based link spam detection (SpamBrain) was expanded to better identify and neutralise links intended to manipulate rankings. Paid links, link networks, and automated link-building campaigns were the primary targets. Affiliate sites heavily reliant on PBNs reported significant ranking drops." },
+  { date: "July 2021", name: "July 2021 Core Update", type: "Core", summary: "Second part of a two-stage core update started in June 2021.", detail: "Completed the changes that began with the June 2021 core update. Google had split this into two parts because some planned improvements were not ready in June. The combined effect was substantial, with many sites seeing the full impact only after the July portion completed." },
+  { date: "June 2021", name: "June 2021 Core Update", type: "Core", summary: "First part of a two-stage core update, paired with the Page Experience rollout.", detail: "Launched alongside the Page Experience update, which introduced Core Web Vitals as a ranking factor. Sites with poor loading times, layout shift, and interactivity delays were affected, though content relevance remained the dominant signal. This was explicitly described as part one of a two-part update." },
+  { date: "April 2021", name: "April 2021 Product Reviews Update", type: "Content", summary: "First product reviews update rewarding in-depth, experience-based review content.", detail: "Targeted affiliate and product review content, rewarding pages that offered genuine hands-on evaluation rather than surface-level summaries of product specifications. Original photography, detailed pros and cons, and comparison with competing products became important ranking signals." },
+  { date: "December 2020", name: "December 2020 Core Update", type: "Core", summary: "Significant year-end core update with widespread impact across verticals.", detail: "One of the more impactful core updates of the year, affecting health, finance, e-commerce, and travel verticals heavily. Coming during the pandemic period, sites providing current, accurate health information were notably boosted." },
+  { date: "May 2020", name: "May 2020 Core Update", type: "Core", summary: "Major core update during the pandemic, significant YMYL volatility.", detail: "Launched during peak COVID-19 lockdowns, this update caused major ranking shifts in health and YMYL categories. Sites providing authoritative health information gained visibility, while those with outdated or unverified medical content were demoted. Travel and hospitality sites saw significant shifts as search intent changed dramatically." },
+  { date: "January 2020", name: "January 2020 Core Update", type: "Core", summary: "First core update of the decade with broad impact.", detail: "Set the tone for the 2020s with continued emphasis on E-A-T (Expertise, Authoritativeness, Trustworthiness). Health, finance, and legal verticals saw the most movement. Sites with strong author credentials and transparent sourcing outperformed those without." },
+  { date: "October 2019", name: "BERT", type: "AI", summary: "Natural language processing breakthrough improving understanding of search queries.", detail: "Bidirectional Encoder Representations from Transformers (BERT) allowed Google to better understand the context of words in search queries, particularly prepositions and natural language patterns. Affected approximately 10% of all search queries. This was not a quality update but a fundamental change in how Google interprets what users are searching for." },
+  { date: "June 2019", name: "June 2019 Core Update", type: "Core", summary: "Broad core update with continued E-A-T emphasis.", detail: "Continued the trajectory of the Medic update, with YMYL sites remaining the most volatile category. Sites that had invested in author credentials, medical review processes, and editorial transparency saw improvements." },
+  { date: "March 2019", name: "March 2019 Core Update", type: "Core", summary: "First officially pre-announced core update via Google SearchLiaison.", detail: "Notable for being the first core update that Google proactively announced on Twitter before rollout. Impact was moderate across verticals, with health and finance sites continuing to see the most movement." },
+  { date: "August 2018", name: "Medic Core Update", type: "Core", summary: "Massive E-A-T-focused update that devastated health and YMYL sites.", detail: "Nicknamed 'Medic' by the SEO community due to its disproportionate impact on health websites. Established E-A-T (Expertise, Authoritativeness, Trustworthiness) as the dominant quality framework. Sites without genuine medical credentials, transparent editorial policies, and verifiable expertise lost substantial traffic. This update fundamentally changed how health, legal, and financial content needed to be produced." },
+  { date: "March 2018", name: "March 2018 Broad Core Update", type: "Core", summary: "Google's first officially confirmed broad core algorithm update.", detail: "Significant because Google explicitly acknowledged it as a broad core update and provided guidance that there was nothing specific to fix. This set the precedent for how Google would communicate about core updates going forward. Impact was widespread but moderate." },
+  { date: "March 2017", name: "Fred", type: "Link", summary: "Unconfirmed update targeting low-quality ad-heavy sites with thin content.", detail: "Never officially confirmed by Google and sarcastically named 'Fred' by Gary Illyes. Primarily affected sites with aggressive monetisation: excessive ads, thin content designed purely to generate ad revenue, and low-quality backlink profiles. Affiliate sites with minimal original content were hit hardest." },
+  { date: "September 2016", name: "Possum", type: "Local", summary: "Major local search update changing how proximity and location affected results.", detail: "Dramatically altered local search results by giving more weight to the searcher's physical location. Businesses just outside city boundaries began appearing in local results for city-name queries. Also diversified local pack results so that businesses at the same address no longer filtered each other out. Critical update for Leeds businesses competing in local search." },
+  { date: "October 2015", name: "RankBrain", type: "AI", summary: "Google's first machine learning ranking system for interpreting queries.", detail: "Introduced machine learning into Google's core ranking algorithm. RankBrain helped Google better understand ambiguous or never-before-seen queries by relating them to similar known queries. Confirmed as one of the top three ranking signals alongside content and links. Marked the beginning of AI's role in search ranking." },
+  { date: "April 2015", name: "Mobilegeddon", type: "Core", summary: "Mobile-friendly sites given ranking boost in mobile search results.", detail: "Officially called the Mobile-Friendly Update, this made mobile usability a confirmed ranking signal for mobile searches. Sites without responsive design or mobile-friendly pages lost visibility in mobile SERPs. Despite the dramatic name, the actual impact was less severe than predicted for most sites, but it accelerated the industry-wide shift to responsive design." },
+  { date: "July 2014", name: "Pigeon", type: "Local", summary: "Integrated local search more closely with traditional web ranking signals.", detail: "Tied local search results more closely to traditional web search signals including domain authority and on-page SEO. Improved distance and location-based ranking. Local directories like Yelp and TripAdvisor saw increased visibility. This update made traditional SEO skills directly relevant to local ranking performance." },
+  { date: "August 2013", name: "Hummingbird", type: "AI", summary: "Complete algorithm overhaul focusing on semantic search and query intent.", detail: "A fundamental rebuild of Google's core algorithm rather than an update to existing systems. Focused on understanding the meaning behind queries rather than matching individual keywords. Enabled Google to handle conversational queries and understand relationships between concepts. Laid the groundwork for the Knowledge Graph expansion and eventually voice search." },
+  { date: "April 2012", name: "Penguin", type: "Link", summary: "Targeted manipulative link building and over-optimised anchor text.", detail: "One of the most impactful updates in SEO history. Targeted sites using manipulative link-building tactics: exact-match anchor text, link networks, paid links, and automated link schemes. Entire industries built on black-hat link building were destroyed overnight. Introduced the concept of link disavowal and fundamentally changed how the SEO industry approached link acquisition." },
+  { date: "February 2012", name: "Venice", type: "Local", summary: "Localised organic results based on the searcher's geographic location.", detail: "Began serving localised organic results to users based on their geographic location, even for queries without explicit location modifiers. A user in Leeds searching for 'plumber' would see Leeds-based results without needing to type 'plumber Leeds'. This update made local SEO relevant for virtually every service-based business." },
+  { date: "February 2011", name: "Panda", type: "Content", summary: "Content quality overhaul penalising thin, duplicated, and low-value content.", detail: "Targeted content farms, thin content, duplicate content, and sites with poor content-to-ad ratios. Affected approximately 12% of all search results at launch. Sites like eHow and Associated Content lost massive visibility. Introduced the concept of site-wide quality scoring, where low-quality pages could drag down the entire domain. Fundamentally shifted SEO from quantity to quality." }
+];
+
+const typeColors: Record<string, {bg: string, text: string}> = {
+  "Core": { bg: "rgba(59, 130, 246, 0.15)", text: "#60A5FA" },
+  "Spam": { bg: "rgba(239, 68, 68, 0.15)", text: "#F87171" },
+  "Content": { bg: "rgba(16, 185, 129, 0.15)", text: "#34D399" },
+  "Link": { bg: "rgba(251, 191, 36, 0.15)", text: "#FBBF24" },
+  "Local": { bg: "rgba(168, 85, 247, 0.15)", text: "#C084FC" },
+  "AI": { bg: "rgba(14, 165, 233, 0.15)", text: "#38BDF8" }
+};
+
+const filterMap: Record<string, string[]> = {
+  "All": [],
+  "Core Updates": ["Core"],
+  "Spam": ["Spam"],
+  "Link": ["Link"],
+  "Content Quality": ["Content"],
+  "Local": ["Local"],
+  "AI / Search": ["AI"]
+};
+
+function getYear(dateStr: string): string {
+  const match = dateStr.match(/\d{4}/);
+  return match ? match[0] : '';
+}
+
+let lastYear = '';
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Hero -->
+  <section class="section-dark pt-20 pb-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-accent-light text-sm font-medium tracking-widest uppercase mb-4 reveal">SEO Intelligence</p>
+      <h1 class="section-heading text-4xl md:text-5xl lg:text-6xl mb-6 reveal reveal-delay-1" style="font-family: var(--font-heading)">Google Algorithm Updates Timeline</h1>
+      <p class="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">Every major Google algorithm update from 2011 to 2025. Understand what changed, why it matters, and how it affects your rankings.</p>
+    </div>
+  </section>
+
+  <!-- Filters + Timeline -->
+  <section class="section-dark pb-20">
+    <div class="max-w-4xl mx-auto px-4">
+
+      <!-- Filter pills -->
+      <div class="flex flex-wrap gap-2 justify-center mb-12 reveal" id="filter-bar">
+        {Object.keys(filterMap).map((label, i) => (
+          <button
+            class:list={["filter-pill", i === 0 && "active"]}
+            data-filter={label}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline-container" id="timeline">
+        {updates.map((u, idx) => {
+          const year = getYear(u.date);
+          const showYear = year !== lastYear;
+          if (showYear) lastYear = year;
+          const colors = typeColors[u.type] || typeColors["Core"];
+          return (
+            <>
+              {showYear && (
+                <div class="timeline-year reveal" data-types="all">
+                  <span class="timeline-year-label">{year}</span>
+                </div>
+              )}
+              <div class="timeline-entry reveal" data-type={u.type}>
+                <div class="timeline-dot" style={`background: ${colors.text};`}></div>
+                <div class="timeline-card glass-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-date">{u.date}</span>
+                    <span class="timeline-badge" style={`background: ${colors.bg}; color: ${colors.text};`}>{u.type}</span>
+                  </div>
+                  <h3 class="timeline-card-title">{u.name}</h3>
+                  <p class="timeline-card-summary">{u.summary}</p>
+                  <details class="timeline-detail">
+                    <summary class="timeline-detail-trigger">
+                      Read more
+                      <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="timeline-detail-content">
+                      <p>{u.detail}</p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content section -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="section-heading text-3xl mb-8 reveal" style="font-family: var(--font-heading)">How Algorithm Updates Affect Leeds Businesses</h2>
+
+      <div class="space-y-5 text-white/70 leading-relaxed reveal reveal-delay-1">
+        <p>Google updates its search algorithm thousands of times each year, but the major confirmed updates listed above are the ones that cause visible ranking shifts. For Leeds businesses competing in local and national search, understanding these updates is not optional. It is the difference between maintaining visibility and losing it overnight.</p>
+
+        <p>Core updates reassess how Google evaluates content quality across every vertical. A Leeds law firm, recruitment agency, or e-commerce retailer can see ranking improvements or declines based on how their site measures up against Google's evolving quality bar. These are not penalties. They are recalibrations of what Google considers the best result for a given query.</p>
+
+        <p>Spam and link updates target manipulative tactics directly. Yorkshire businesses that previously relied on directory link networks, paid guest posts on low-quality sites, or automated link-building tools are particularly vulnerable. The December 2022 Link Spam Update and the June 2024 Spam Update both used SpamBrain, Google's AI-powered spam detection system, to neutralise manipulative links at scale.</p>
+
+        <p>The Helpful Content Updates introduced between 2022 and 2023 fundamentally changed content strategy for every industry. Sites publishing content primarily to rank in search engines, rather than to genuinely help users, were demoted site-wide. For Leeds businesses, this means every page on your site matters. A handful of thin, outdated pages can drag down the performance of your best content.</p>
+
+        <p>Local updates like Possum (2016) and Pigeon (2014) reshaped how Leeds businesses appear in local search results and the map pack. Proximity to the searcher, consistent NAP data, review quality, and traditional SEO signals all feed into local rankings. If your business serves Leeds, Bradford, Wakefield, or the wider West Yorkshire area, local algorithm changes directly impact your lead flow.</p>
+
+        <p>Staying ahead of algorithm updates requires continuous monitoring, a solid <a href="/technical-seo-leeds/">technical SEO foundation</a>, and content that demonstrates genuine expertise. A regular <a href="/seo-audit-leeds/">SEO audit</a> identifies vulnerabilities before the next update exposes them. Reactive SEO after a traffic drop is always more expensive and slower than proactive quality investment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-dark py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="section-heading text-3xl mb-10 reveal" style="font-family: var(--font-heading)">Frequently Asked Questions</h2>
+
+      {faqData.map((f, i) => (
+        <div class:list={["faq-item", "reveal", `reveal-delay-${Math.min(i + 1, 5)}`]}>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+
+      <div class="cta-box reveal">
+        <h2>Protect Your Rankings</h2>
+        <p>Algorithm updates reward sites with strong technical foundations, authoritative content, and clean backlink profiles. Our free audit identifies exactly where your site stands and what to fix before the next update hits.</p>
+        <p><a href="/free-seo-audit-leeds/">Get Your Free SEO Audit</a></p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Filter pills */
+    .filter-pill {
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: var(--font-heading);
+    }
+    .filter-pill:hover {
+      border-color: rgba(5, 150, 105, 0.4);
+      color: rgba(255,255,255,0.8);
+      background: rgba(5, 150, 105, 0.08);
+    }
+    .filter-pill.active {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+      box-shadow: 0 0 16px rgba(5, 150, 105, 0.3);
+    }
+
+    /* Timeline container */
+    .timeline-container {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--color-accent), var(--color-accent-light), var(--color-accent-glow), var(--color-accent-light), var(--color-accent));
+      opacity: 0.4;
+      border-radius: 1px;
+    }
+
+    /* Year marker */
+    .timeline-year {
+      position: relative;
+      margin: 2.5rem 0 1.5rem -2.5rem;
+      padding-left: 2.5rem;
+    }
+    .timeline-year-label {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-accent-light);
+      letter-spacing: 0.05em;
+      background: var(--color-brand-dark);
+      padding-right: 1rem;
+      position: relative;
+    }
+    .timeline-year::after {
+      content: '';
+      position: absolute;
+      left: 2.5rem;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      z-index: 0;
+    }
+    .timeline-year-label {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Timeline entry */
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 1.25rem;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .timeline-entry.hidden-by-filter {
+      display: none;
+    }
+
+    /* Dot on timeline */
+    .timeline-dot {
+      position: absolute;
+      left: -2.15rem;
+      top: 1.5rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px currentColor;
+      z-index: 2;
+    }
+
+    /* Card */
+    .timeline-card {
+      padding: 1.25rem 1.5rem;
+    }
+    .timeline-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-date {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--font-heading);
+      font-weight: 500;
+    }
+    .timeline-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: var(--font-heading);
+    }
+    .timeline-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-card-summary {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Expandable detail */
+    .timeline-detail {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 0.5rem;
+    }
+    .timeline-detail-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--color-accent-light);
+      cursor: pointer;
+      padding: 0.5rem 0 0;
+      font-family: var(--font-heading);
+      font-weight: 500;
+      list-style: none;
+    }
+    .timeline-detail-trigger::-webkit-details-marker {
+      display: none;
+    }
+    .timeline-detail-trigger .chevron {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.25s ease;
+    }
+    .timeline-detail[open] .timeline-detail-trigger .chevron {
+      transform: rotate(180deg);
+    }
+    .timeline-detail-content {
+      padding: 0.75rem 0 0.25rem;
+      animation: slideDown 0.25s ease;
+    }
+    .timeline-detail-content p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .timeline-container {
+        padding-left: 1.75rem;
+      }
+      .timeline-container::before {
+        left: 0.25rem;
+      }
+      .timeline-dot {
+        left: -1.55rem;
+        width: 8px;
+        height: 8px;
+      }
+      .timeline-year {
+        margin-left: -1.75rem;
+        padding-left: 1.75rem;
+      }
+      .timeline-card {
+        padding: 1rem 1.15rem;
+      }
+      .timeline-card-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBar = document.getElementById('filter-bar');
+      const timeline = document.getElementById('timeline');
+      if (!filterBar || !timeline) return;
+
+      const pills = filterBar.querySelectorAll('.filter-pill');
+      const entries = timeline.querySelectorAll('.timeline-entry');
+      const yearMarkers = timeline.querySelectorAll('.timeline-year');
+
+      const filterTypes: Record<string, string[]> = {
+        "All": [],
+        "Core Updates": ["Core"],
+        "Spam": ["Spam"],
+        "Link": ["Link"],
+        "Content Quality": ["Content"],
+        "Local": ["Local"],
+        "AI / Search": ["AI"]
+      };
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          const filter = pill.getAttribute('data-filter') || 'All';
+          const types = filterTypes[filter] || [];
+          const showAll = types.length === 0;
+
+          entries.forEach(entry => {
+            const entryType = entry.getAttribute('data-type') || '';
+            if (showAll || types.includes(entryType)) {
+              entry.classList.remove('hidden-by-filter');
+            } else {
+              entry.classList.add('hidden-by-filter');
+            }
+          });
+
+          // Show/hide year markers based on whether they have visible entries after them
+          yearMarkers.forEach(marker => {
+            let next = marker.nextElementSibling;
+            let hasVisible = false;
+            while (next && !next.classList.contains('timeline-year')) {
+              if (next.classList.contains('timeline-entry') && !next.classList.contains('hidden-by-filter')) {
+                hasVisible = true;
+                break;
+              }
+              next = next.nextElementSibling;
+            }
+            if (hasVisible || showAll) {
+              marker.classList.remove('hidden-by-filter');
+            } else {
+              marker.classList.add('hidden-by-filter');
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+</Base>

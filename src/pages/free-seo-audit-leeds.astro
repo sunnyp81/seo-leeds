@@ -14,7 +14,6 @@ const schema = [
       "@type": "ProfessionalService",
       "name": "SEO Leeds",
       "url": "https://seo-leeds.uk",
-      "sameAs": []
     },
     "areaServed": {
       "@type": "City",
@@ -132,7 +131,11 @@ const schema = [
 
       <h2>Request Your Free SEO Audit</h2>
 
-      <form action="#" method="POST" style="background: var(--color-surface); padding: 2rem; border-radius: 12px; margin: 1.5rem 0;">
+      <form action="https://api.staticforms.xyz/submit" method="POST" style="background: var(--color-surface); padding: 2rem; border-radius: 12px; margin: 1.5rem 0;">
+        <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+        <input type="hidden" name="subject" value="SEO Leeds — Free Audit Request" />
+        <input type="hidden" name="redirectTo" value="https://seo-leeds.uk/free-seo-audit-leeds/?sent=1" />
+        <input type="text" name="honeypot" style="display:none" />
         <div style="margin-bottom: 1.25rem;">
           <label for="name" style="display: block; font-weight: 600; margin-bottom: 0.375rem;">Your Name <span style="color: #c00;">*</span></label>
           <input type="text" id="name" name="name" required style="width: 100%; padding: 0.625rem; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem;" />
@@ -153,7 +156,7 @@ const schema = [
           <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.375rem;">Phone (optional)</label>
           <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.625rem; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem;" />
         </div>
-        <button type="submit" style="background: var(--color-brand); color: white; font-weight: 700; padding: 0.75rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">Request a Proposal</button>
+        <button type="submit" class="btn-glow" style="border: none; cursor: pointer;"><span class="relative z-10">Request Your Free Audit</span><span class="shimmer"></span></button>
         <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-muted);">We'll email your personalised audit within 48 hours. No spam, no obligation.</p>
       </form>
 

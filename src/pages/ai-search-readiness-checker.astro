@@ -1,0 +1,472 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Search Readiness Checker | SEO Leeds';
+const description = 'Free interactive AI search readiness checker. Score your website across structured data, content structure, technical foundations, and entity signals. Find out if AI search engines can cite your business.';
+
+const faqItems = [
+  {
+    question: 'What does AI search readiness mean?',
+    answer: 'AI search readiness measures how well your website is structured for citation by AI-powered search platforms — ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot. A ready website has clean structured data, factual content AI can quote directly, technical foundations that allow AI crawlers access, and strong entity signals that confirm your business identity across the web.'
+  },
+  {
+    question: 'How is the readiness score calculated?',
+    answer: 'The score is a percentage based on 22 checkpoints across four categories: Structured Data (6 items), Content Structure (6 items), Technical Foundations (5 items), and Entity & Authority Signals (5 items). Each checked item contributes equally to the total. A score above 67% indicates your site is broadly ready for AI search visibility.'
+  },
+  {
+    question: 'What score should I aim for?',
+    answer: 'Aim for 67% or higher to be considered AI search ready. Most Leeds businesses score between 20% and 45% on their first check. The most impactful quick wins are typically structured data implementation (Organization and FAQ schema), allowing AI crawlers in robots.txt, and restructuring key pages with declarative opening sentences that AI can quote directly.'
+  },
+  {
+    question: 'Can I improve my score without a developer?',
+    answer: 'Some items — like writing declarative opening sentences, adding FAQ sections, and updating robots.txt — can be done without development skills. However, structured data implementation, schema markup, and technical optimisation typically require a developer or an SEO specialist with technical capabilities.'
+  },
+  {
+    question: 'How often should I reassess my AI search readiness?',
+    answer: 'Reassess quarterly. AI search platforms update their crawling and citation behaviour regularly, and Google AI Overviews expand to new query types throughout the year. Each reassessment should follow any major content or technical changes to your website.'
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AI Search Readiness Checker | SEO Leeds",
+    "description": description,
+    "url": "https://seo-leeds.uk/ai-search-readiness-checker/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Leeds", "url": "https://seo-leeds.uk" },
+    "datePublished": "2026-05-24",
+    "dateModified": "2026-05-24"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-leeds.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "AI Search Readiness Checker", "item": "https://seo-leeds.uk/ai-search-readiness-checker/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+    }))
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Hero -->
+  <section class="section-dark" style="padding: 4rem 1rem 3rem;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h1 class="section-heading reveal" style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem;">Is Your Website Ready for AI Search?</h1>
+      <p class="reveal reveal-delay-1" style="color: #94a3b8; font-size: 1.1rem; line-height: 1.7; max-width: 640px; margin: 0 auto;">Check your site against 22 readiness signals across structured data, content structure, technical foundations, and entity authority. Get your score instantly.</p>
+    </div>
+  </section>
+
+  <!-- Checker -->
+  <section style="padding: 3rem 1rem; background: #f8fafc;">
+    <div class="checker-layout" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+
+      <!-- Checklist -->
+      <div class="checklist-col">
+
+        <!-- Structured Data -->
+        <div class="checker-category reveal" data-category="structured-data">
+          <button class="category-header" type="button" aria-expanded="true">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+              <span class="category-title">Structured Data</span>
+              <span class="category-count" data-cat-count="structured-data">0/6</span>
+            </div>
+            <svg class="chevron cat-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="category-progress-wrap"><div class="category-progress-bar" data-cat-bar="structured-data"></div></div>
+          <div class="category-body">
+            <label class="check-item"><input type="checkbox" data-cat="structured-data" /><span class="checkmark"></span><span>Organization or LocalBusiness schema implemented</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="structured-data" /><span class="checkmark"></span><span>FAQ schema on relevant pages</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="structured-data" /><span class="checkmark"></span><span>Service or Product schema on offering pages</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="structured-data" /><span class="checkmark"></span><span>BreadcrumbList schema</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="structured-data" /><span class="checkmark"></span><span>Article schema on blog and resource content</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="structured-data" /><span class="checkmark"></span><span>Review or Rating schema</span></label>
+          </div>
+        </div>
+
+        <!-- Content Structure -->
+        <div class="checker-category reveal reveal-delay-1" data-category="content-structure">
+          <button class="category-header" type="button" aria-expanded="true">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+              <span class="category-title">Content Structure</span>
+              <span class="category-count" data-cat-count="content-structure">0/6</span>
+            </div>
+            <svg class="chevron cat-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="category-progress-wrap"><div class="category-progress-bar" data-cat-bar="content-structure"></div></div>
+          <div class="category-body">
+            <label class="check-item"><input type="checkbox" data-cat="content-structure" /><span class="checkmark"></span><span>Declarative opening sentences AI can quote directly</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="content-structure" /><span class="checkmark"></span><span>FAQ sections matching conversational queries</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="content-structure" /><span class="checkmark"></span><span>Clear entity definitions (who, what, where)</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="content-structure" /><span class="checkmark"></span><span>Factual claims with supporting data or sources</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="content-structure" /><span class="checkmark"></span><span>Content organised with clear heading hierarchy</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="content-structure" /><span class="checkmark"></span><span>Topic clusters with internal linking</span></label>
+          </div>
+        </div>
+
+        <!-- Technical Foundations -->
+        <div class="checker-category reveal reveal-delay-2" data-category="technical">
+          <button class="category-header" type="button" aria-expanded="true">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span class="category-title">Technical Foundations</span>
+              <span class="category-count" data-cat-count="technical">0/5</span>
+            </div>
+            <svg class="chevron cat-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="category-progress-wrap"><div class="category-progress-bar" data-cat-bar="technical"></div></div>
+          <div class="category-body">
+            <label class="check-item"><input type="checkbox" data-cat="technical" /><span class="checkmark"></span><span>Fast page load under 3 seconds on mobile</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="technical" /><span class="checkmark"></span><span>Clean HTML without excessive JavaScript rendering</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="technical" /><span class="checkmark"></span><span>XML sitemap submitted and current</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="technical" /><span class="checkmark"></span><span>robots.txt allows AI crawlers (GPTBot, ClaudeBot, etc.)</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="technical" /><span class="checkmark"></span><span>Mobile-responsive design</span></label>
+          </div>
+        </div>
+
+        <!-- Entity & Authority -->
+        <div class="checker-category reveal reveal-delay-3" data-category="entity">
+          <button class="category-header" type="button" aria-expanded="true">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="category-title">Entity &amp; Authority Signals</span>
+              <span class="category-count" data-cat-count="entity">0/5</span>
+            </div>
+            <svg class="chevron cat-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="category-progress-wrap"><div class="category-progress-bar" data-cat-bar="entity"></div></div>
+          <div class="category-body">
+            <label class="check-item"><input type="checkbox" data-cat="entity" /><span class="checkmark"></span><span>Consistent NAP across web citations</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="entity" /><span class="checkmark"></span><span>Google Business Profile claimed and optimised</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="entity" /><span class="checkmark"></span><span>Organisation expertise demonstrated (E-E-A-T)</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="entity" /><span class="checkmark"></span><span>Backlinks from authoritative sources</span></label>
+            <label class="check-item"><input type="checkbox" data-cat="entity" /><span class="checkmark"></span><span>Active social and professional profiles linked via sameAs</span></label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Score Panel -->
+      <div class="score-panel" id="scorePanel">
+        <div style="text-align: center;">
+          <div class="score-ring-wrap">
+            <svg viewBox="0 0 140 140" class="score-ring">
+              <circle cx="70" cy="70" r="62" fill="none" stroke="#1e293b" stroke-width="10" />
+              <circle cx="70" cy="70" r="62" fill="none" stroke="#334155" stroke-width="10" id="scoreArc"
+                stroke-dasharray="389.56" stroke-dashoffset="389.56" stroke-linecap="round"
+                transform="rotate(-90 70 70)" style="transition: stroke-dashoffset 0.6s ease, stroke 0.4s ease;" />
+              <text x="70" y="64" text-anchor="middle" fill="white" font-family="var(--font-heading)" font-size="36" font-weight="700" id="scoreText">0%</text>
+              <text x="70" y="84" text-anchor="middle" fill="#64748b" font-family="var(--font-heading)" font-size="11" font-weight="500" id="scoreLabel">NOT READY</text>
+            </svg>
+          </div>
+          <p id="scoreVerdict" style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.75rem; line-height: 1.5;">Check the items that apply to your website to calculate your AI search readiness score.</p>
+        </div>
+        <div class="score-cats">
+          <div class="score-cat-row"><span>Structured Data</span><span data-cat-pct="structured-data">0%</span></div>
+          <div class="score-cat-row"><span>Content Structure</span><span data-cat-pct="content-structure">0%</span></div>
+          <div class="score-cat-row"><span>Technical</span><span data-cat-pct="technical">0%</span></div>
+          <div class="score-cat-row"><span>Entity &amp; Authority</span><span data-cat-pct="entity">0%</span></div>
+        </div>
+        <a href="/contact/" class="btn-glow" style="display: block; text-align: center; margin-top: 1.25rem; text-decoration: none;">Get a Full AI Audit</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section style="padding: 3rem 1rem;">
+    <div class="prose" style="max-width: 760px; margin: 0 auto;">
+
+      <h2 class="section-heading reveal">Why AI Search Readiness Matters for Leeds Businesses</h2>
+
+      <p class="reveal">AI search is no longer a future concern. ChatGPT Search processes over 100 million weekly queries, Google AI Overviews appear on 30% of informational searches, and Perplexity handles 250 million queries per month. When a potential customer asks an AI assistant to recommend a service provider in Leeds, your website is either structured to be cited or it is invisible.</p>
+
+      <p class="reveal">The fundamental difference between traditional SEO and AI search readiness is the selection mechanism. Google ranks ten results on a page. AI search engines select one or two sources to cite in a synthesised answer. This winner-takes-all dynamic means that being on page one is no longer sufficient. Your content must be the source an AI chooses to reference.</p>
+
+      <h3 class="reveal">Structured Data Is the Foundation</h3>
+
+      <p class="reveal">Structured data gives AI systems machine-readable signals about your business identity, services, and content. Organization schema tells ChatGPT who you are. FAQ schema tells Perplexity what questions you answer. Service schema tells Google AI Overviews what you offer and where. Without structured data, AI systems must infer these signals from unstructured text, which reduces your citation probability significantly.</p>
+
+      <p class="reveal">Leeds businesses with comprehensive schema markup are already seeing measurable advantages in AI citation rates. A local professional services firm that implements Organization, FAQ, and Service schema gives AI systems three distinct structured signals that competitors without markup cannot match.</p>
+
+      <h3 class="reveal">Content That AI Can Quote</h3>
+
+      <p class="reveal">AI search engines do not cite vague marketing copy. They cite factual, declarative statements that directly answer user questions. The sentence "We provide excellent SEO services" is uncitable. The sentence "SEO Leeds provides technical SEO audits, content optimisation, and <a href="/ai-search-optimisation-leeds/">AI search optimisation</a> for businesses across West Yorkshire" gives an AI system a specific, factual claim it can extract and present to users.</p>
+
+      <p class="reveal">Content structure matters equally. Clear heading hierarchies, FAQ sections that mirror how people ask questions conversationally, and topic clusters with internal linking all help AI systems understand the scope and authority of your content. Each page should answer a specific question completely, with supporting data and sources where possible.</p>
+
+      <h3 class="reveal">Technical Access and Entity Signals</h3>
+
+      <p class="reveal">If AI crawlers cannot access your website, nothing else matters. GPTBot, ClaudeBot, and PerplexityBot must be allowed in your robots.txt. Your site must load quickly, render without excessive JavaScript, and serve clean HTML that crawlers can parse efficiently. Many Leeds businesses unknowingly block AI crawlers through overly aggressive bot protection or restrictive crawl rules.</p>
+
+      <p class="reveal">Entity signals — consistent NAP citations, a claimed Google Business Profile, backlinks from authoritative sources, and linked social profiles — confirm your business identity to AI systems. When multiple authoritative sources agree on who you are and what you do, AI search engines treat your website as a trustworthy source worth citing.</p>
+
+      <p class="reveal">The businesses that invest in AI search readiness now will establish citation dominance before their competitors recognise the shift. Use the checker above to identify your gaps, then explore our <a href="/ai-search-optimisation-leeds/">AI search optimisation service</a> to close them.</p>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-dark" style="padding: 3rem 1rem;">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <h2 class="section-heading reveal" style="text-align: center;">Frequently Asked Questions</h2>
+      {faqItems.map((item, i) => (
+        <details class={`faq-item reveal reveal-delay-${Math.min(i + 1, 5)}`}>
+          <summary>
+            {item.question}
+            <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="faq-content">
+            <p>{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 3rem 1rem;">
+    <div class="cta-box reveal" style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <h2 class="section-heading">Ready to Improve Your Score?</h2>
+      <p style="color: #94a3b8; margin-bottom: 1.5rem; line-height: 1.7;">Get a comprehensive AI search audit with actionable recommendations tailored to your Leeds business. We identify exactly what to fix and how to fix it.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/ai-search-optimisation-leeds/" class="btn-glow" style="text-decoration: none;">AI Search Optimisation</a>
+        <a href="/contact/" class="btn-ghost" style="text-decoration: none;">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <style is:inline>
+    /* Checker layout */
+    .checker-layout { position: relative; }
+    @media (max-width: 768px) {
+      .checker-layout { grid-template-columns: 1fr !important; }
+      .score-panel { position: relative !important; top: auto !important; order: -1; }
+    }
+    @media (min-width: 769px) {
+      .score-panel { position: sticky; top: 6rem; }
+    }
+
+    /* Score panel */
+    .score-panel {
+      background: var(--color-brand-dark, #0B1120);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #1e293b;
+    }
+    .score-ring-wrap { width: 160px; margin: 0 auto; }
+    .score-ring { width: 100%; height: auto; display: block; }
+    .score-cats { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .score-cat-row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.85rem; color: #94a3b8; padding: 0.4rem 0;
+      border-bottom: 1px solid #1e293b;
+    }
+    .score-cat-row span:last-child { font-weight: 600; font-family: var(--font-heading); }
+
+    /* Category cards */
+    .checker-category {
+      background: white;
+      border-radius: 0.75rem;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+    .checker-category:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .category-header {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 1rem 1.25rem;
+      background: none; border: none; cursor: pointer;
+      font-family: inherit; font-size: 1rem;
+    }
+    .category-title {
+      font-family: var(--font-heading);
+      font-weight: 600; font-size: 1.05rem; color: var(--color-brand, #1F2937);
+    }
+    .category-count {
+      font-size: 0.8rem; color: #64748b;
+      background: #f1f5f9; border-radius: 1rem;
+      padding: 0.15rem 0.6rem; font-weight: 500;
+    }
+    .cat-chevron {
+      width: 20px; height: 20px; color: #94a3b8;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    .category-header[aria-expanded="false"] .cat-chevron { transform: rotate(-90deg); }
+    .category-body {
+      padding: 0 1.25rem 1rem;
+      display: flex; flex-direction: column; gap: 0.1rem;
+      transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+      overflow: hidden;
+    }
+    .category-body.collapsed {
+      max-height: 0 !important; opacity: 0;
+      padding-top: 0; padding-bottom: 0;
+    }
+
+    /* Category progress */
+    .category-progress-wrap {
+      height: 3px; background: #e2e8f0; margin: 0 1.25rem;
+    }
+    .category-progress-bar {
+      height: 100%; width: 0; border-radius: 2px;
+      background: var(--color-accent, #059669);
+      transition: width 0.4s ease, background-color 0.4s ease;
+    }
+
+    /* Checkboxes */
+    .check-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.65rem 0.5rem; border-radius: 0.5rem;
+      cursor: pointer; transition: background 0.2s ease;
+      font-size: 0.95rem; color: #374151; line-height: 1.4;
+      user-select: none;
+    }
+    .check-item:hover { background: #f8fafc; }
+    .check-item input { display: none; }
+    .checkmark {
+      width: 22px; height: 22px; min-width: 22px;
+      border: 2px solid #cbd5e1; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+    .checkmark::after {
+      content: '';
+      width: 6px; height: 10px;
+      border: solid white; border-width: 0 2.5px 2.5px 0;
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      margin-top: -2px;
+    }
+    .check-item input:checked ~ .checkmark {
+      background: var(--color-accent, #059669);
+      border-color: var(--color-accent, #059669);
+      transform: scale(1.15);
+    }
+    .check-item input:checked ~ .checkmark::after {
+      transform: rotate(45deg) scale(1);
+    }
+    /* bounce back */
+    .check-item input:checked ~ .checkmark {
+      animation: checkBounce 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes checkBounce {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+    .check-item input:checked ~ span:last-child {
+      color: var(--color-accent, #059669);
+    }
+  </style>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var checkboxes = document.querySelectorAll('.check-item input[type="checkbox"]');
+      var scoreArc = document.getElementById('scoreArc');
+      var scoreText = document.getElementById('scoreText');
+      var scoreLabel = document.getElementById('scoreLabel');
+      var scoreVerdict = document.getElementById('scoreVerdict');
+      var totalItems = checkboxes.length;
+      var circumference = 2 * Math.PI * 62;
+
+      var catTotals = { 'structured-data': 6, 'content-structure': 6, 'technical': 5, 'entity': 5 };
+
+      function updateScore() {
+        var checked = document.querySelectorAll('.check-item input:checked').length;
+        var pct = Math.round((checked / totalItems) * 100);
+
+        // Arc
+        var offset = circumference - (pct / 100) * circumference;
+        scoreArc.style.strokeDashoffset = offset;
+
+        // Color
+        var color;
+        if (pct <= 33) { color = '#ef4444'; }
+        else if (pct <= 66) { color = '#f59e0b'; }
+        else { color = '#10b981'; }
+        scoreArc.style.stroke = color;
+        scoreText.textContent = pct + '%';
+        scoreText.setAttribute('fill', color);
+
+        // Label
+        if (pct <= 33) {
+          scoreLabel.textContent = 'NOT READY';
+          scoreVerdict.textContent = 'Your website has significant gaps in AI search readiness. Focus on structured data and technical foundations first.';
+        } else if (pct <= 66) {
+          scoreLabel.textContent = 'PARTIALLY READY';
+          scoreVerdict.textContent = 'Your website has a solid foundation but needs targeted improvements to maximise AI search visibility.';
+        } else {
+          scoreLabel.textContent = 'AI SEARCH READY';
+          scoreVerdict.textContent = 'Your website is well-positioned for AI search citation. Maintain and refine your implementation.';
+        }
+        scoreLabel.setAttribute('fill', color);
+
+        // Per-category
+        for (var cat in catTotals) {
+          var catChecked = document.querySelectorAll('input[data-cat="' + cat + '"]:checked').length;
+          var catPct = Math.round((catChecked / catTotals[cat]) * 100);
+          var countEl = document.querySelector('[data-cat-count="' + cat + '"]');
+          var pctEl = document.querySelector('[data-cat-pct="' + cat + '"]');
+          var barEl = document.querySelector('[data-cat-bar="' + cat + '"]');
+          if (countEl) countEl.textContent = catChecked + '/' + catTotals[cat];
+          if (pctEl) {
+            pctEl.textContent = catPct + '%';
+            if (catPct <= 33) pctEl.style.color = '#ef4444';
+            else if (catPct <= 66) pctEl.style.color = '#f59e0b';
+            else pctEl.style.color = '#10b981';
+          }
+          if (barEl) {
+            barEl.style.width = catPct + '%';
+            if (catPct <= 33) barEl.style.background = '#ef4444';
+            else if (catPct <= 66) barEl.style.background = '#f59e0b';
+            else barEl.style.background = '#10b981';
+          }
+        }
+      }
+
+      checkboxes.forEach(function(cb) {
+        cb.addEventListener('change', updateScore);
+      });
+
+      // Collapsible categories
+      document.querySelectorAll('.category-header').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          var body = btn.closest('.checker-category').querySelector('.category-body');
+          if (expanded) {
+            body.style.maxHeight = body.scrollHeight + 'px';
+            requestAnimationFrame(function() { body.classList.add('collapsed'); });
+          } else {
+            body.classList.remove('collapsed');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            setTimeout(function() { body.style.maxHeight = 'none'; }, 350);
+          }
+        });
+      });
+
+      // Init body heights
+      document.querySelectorAll('.category-body').forEach(function(b) {
+        b.style.maxHeight = 'none';
+      });
+    });
+  </script>
+
+</Base>

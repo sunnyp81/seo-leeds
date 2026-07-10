@@ -52,7 +52,15 @@ const navLinks = [
   {schema.map((s) => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
-</head>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL63SNVNPN"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GL63SNVNPN');
+    </script>
+  </head>
 <body class="bg-surface text-text min-h-screen flex flex-col">
   <a href="#main" class="skip-link">Skip to content</a>
 

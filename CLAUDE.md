@@ -4,6 +4,23 @@ Astro 5 + Tailwind site, one of a network of near-identical "SEO city clone" mic
 (seo-birmingham, seo-leeds, seoswansea, seo-furniture, seo-guildford, seoreading).
 CF Pages, git-connected (push = auto-deploy). GSC property: sc-domain:seo-leeds.uk.
 
+## 2026-08-01 — REACTIVATED (Sunny's call, supersedes the 2026-07-07 hold below)
+
+Sunny decided to reactivate the retired seed sites ("why retire when they're possible
+seeds"), reversing the June 2026 spam-sweep noindex from commit `cc1094f`. This resolves
+the open decision from the 2026-07-07 entry: option (b), reactivate. **The 2026-07-07
+line "no further recovery work should be attempted here" is SUPERSEDED — the decision is
+now made and recovery work is unblocked once the site is live and re-indexed.**
+
+Change: `src/layouts/Base.astro:36` robots meta flipped `noindex, nofollow` ->
+`index, follow`, on branch `claude/seo-location-analytics-setup-fudtpk` only. Verified in
+dist: all 15 built pages carry `index, follow`, zero robots-meta noindex (two grep hits
+on /free-seo-audit-leeds/ and /technical-seo-leeds/ are body copy about noindex
+directives, not meta tags). Build clean, 15 pages.
+
+**GO-LIVE = Sunny merging this branch to master (CF Pages auto-deploys master) +
+resubmitting sitemap-index.xml to GSC and Bing.** Not merged, not deployed by this pass.
+
 ## 2026-07-07 — GSC "recovery" pass: diagnosed, deliberately did NOT deploy a fix
 
 **Trigger:** clicks 0→2 impressions 1782→2906 over trailing 28d, flagged as a striking-distance
